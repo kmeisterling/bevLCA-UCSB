@@ -3,22 +3,16 @@ Code and input tables to calculate environmental impacts of beverage sold throug
 
 # Source (input) data
 data/
-- dfucsb.csv - [liter / yr]; Beverage sales (flow) data; each row represents one entry in the original data source
+- dfucsb.csv - [various units]; Beverage sales (flow) data; each row represents one entry in the original data source; includes container volume (liter_cont) [liter / yr], beverage volume (as drank) [liter / yr], and sugar contents [g sugar / liter of container volume]
 - [[maybe not necessary]] flow_bs_allscen_wide.csv - [liter / yr]; Beverage flow for scenarios, by bev_type and SSB_status
 - flow_bsc_allscen.csv - [liter / yr]; Beverage flows , by bev_type, SSB_status, and container type
-- cont_imp_l - [impact / liter]; three columns of impacts per liter; climate [gCO2e], blue water [liter h2o], plastic pollution [g plastic to enviroment
-- binb_imp_l
-- bev_imp_l
 
+- bev_imp_l - [various units / liter as-consumed volume]; impacts of beverages (not including container); three columns of impacts per liter; climate [gCO2e], blue water [liter h2o], plastic pollution [g plastic to enviroment]
+- cont_imp_l - [various units / liter as-consumed volume]; impacts of containers, excluding bag-in-box containers; three columns of impacts per liter; climate [gCO2e], blue water [liter h2o], plastic pollution [g plastic to enviroment]
+- cont_imp_l_binb - [various units / liter as-consumed volume]; impacts of bag-in-box containers, corrected for bag-in-box dilution; three columns of impacts per liter; climate [gCO2e], blue water [liter h2o], plastic pollution [g plastic to enviroment]
 
-# Calculated tables (intermediate objects, used to calculate final impacts or make polots)
-Generated data tables are in data-gen/
-- [[currently made by part1]] flow_dbsc_scen0.csv - beverage sales (flow) data for the baseline scenario, by distribution channel (d), bev_type (b), SSB_status (s), and container type (c); used for figure
-- 
-
-Calculated 
-
-
-
-# Overview
-
+# Procedure
+run scripts in main directory, in order
+- 1_impacts.R - Use source data to calculate impacts of beverages in the scenarios, and write intermediate objects [[either data-gen/ or data-tbls/]]
+- 2_polots_tables.R - Use output of "1_impacts.R" to make tables and figures for the manuscript and supplemental info docs
+- 3_scen6_scpecial.R - Calculate impacts for scenarios 5 and 6, by distribution channel (vending and dining)
