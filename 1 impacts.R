@@ -70,5 +70,6 @@ cont_imp_allscen <- bind_rows(xBinB, BinB) %>%
 # Combined table with cont and bev impacts --------------------------------
 
 imp_allscen <- bind_rows(bev_imp_allscen, cont_imp_allscen) %>%
-  write_csv("./data_gen/imp_bsc_allscen.csv")
+  write_csv("./data/data_gen/imp_bsc_allscen.csv")
 #View(imp_allscen)
+
