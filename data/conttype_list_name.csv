@@ -1,7 +1,7 @@
-﻿cont_type,cont_name
-plastic,Plastic (PET)
-glass,Glass
-alum_can,Aluminum Can
-carton,Carton
-bag_in_box,Bag-in-Box
-steel_bott_reuse,Steel bottle (reuse)
+﻿cont_type,cont_name,cont_name_2
+plastic,PET plastic,Plastic (PET)
+glass,Glass,Glass
+alum_can,Alum. can,Aluminum Can
+carton,Carton,Carton
+bag_in_box,Bag-in-box,Bag-in-Box
+steel_bott_reuse,Steel (reusable),Steel bottle (reuse)

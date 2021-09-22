@@ -70,9 +70,10 @@ flow_s0_fig <- flow_s0 %>%
   write_csv("./data/data_tbls/vol_scen0_dbsc_DATA.csv")
 #View(flow_s0_fig)
 
-flow_s0_fig %>%
+FIG1 <- flow_s0_fig %>%
+  left_join(cont_names) %>%
   ggplot() + theme_bw() +
-  geom_col(aes(y = vol_kL, x = bev_type, fill = cont_type), width = 0.8) +
+  geom_col(aes(y = vol_kL, x = bev_type, fill = cont_name), width = 0.8) +
   facet_grid(rows = vars(distrib),
              cols = vars(SSB_status),
              switch = "y") +
@@ -90,8 +91,13 @@ flow_s0_fig %>%
     panel.border = element_blank(),
     strip.placement = "outside") +
   scale_fill_brewer(palette = "Dark2")
+FIG1
+ggsave("./figs/FIG1_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
 
-ggsave("./figs/vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
+## Make B&W version
+FIG1 +
+  scale_fill_grey()
+ggsave("./figs/figsBW/FIG1bw_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
 
 
 # vol_bsc_s0 --------------------------------------------
@@ -173,14 +179,15 @@ ggsave("./figs/vol_scen0_bs.pdf", width=7, height=4, units="in")
 ## Bevtype, container type, scenario
 
 flow_scl %>%
-  group_by(scen, bev_type, cont_type) %>%
+  left_join(cont_names) %>%
+  group_by(scen, bev_type, cont_name) %>%
   summarize(vol_kL = sum(vol_kL)) %>%
   ungroup() %>%
   mutate(scen = recode(scen, scen0 = "Baseline")) %>%
 #  mutate(bev_type = recode(bev_type, "Water, UCSB" = "Water, tap")) %>%
 #  select(!vol) %>% 
   ggplot() + theme_bw() +
-  geom_col(aes(y = vol_kL, x = bev_type, fill = cont_type),
+  geom_col(aes(y = vol_kL, x = bev_type, fill = cont_name),
            width = 0.8) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0.5) +
@@ -264,7 +271,7 @@ imp_s0 <- temp_s0 %>%
   ungroup()
 #View(imp_s0)
 
-imp_s0 %>%
+FIG4 <- imp_s0 %>%
   filter(bev_type != "Water, Filtered tap") %>%
   mutate(item = recode(item, bev = "beverage", cont = "container")) %>%
 ggplot() + theme_bw() +
@@ -294,9 +301,17 @@ ggplot() + theme_bw() +
     ) +
   scale_fill_manual(values = col_vir1)
 #  scale_fill_brewer(palette = "Dark2")
-ggsave("./figs/imp_ibs_scen0.pdf", width=13, height=8, units="in")
+FIG4
+ggsave("./figs/FIG4_imp_ibs_scen0.pdf", width=13, height=8, units="in")
 
-# Data table for SUPP
+## BW version
+FIG4 +
+  scale_fill_grey(
+    start = 0.7,
+    end = 0.4)
+ggsave("./figs/figsBW/FIG4bw_imp_ibs_scen0.pdf", width=13, height=8, units="in")
+
+## Data table for SUPP
 
 #View(imp_s0)
 imp_s0 %>%
@@ -318,7 +333,7 @@ imp_i_allscen <- imp_scl %>%
   mutate(item = recode(item, bev = "beverage", cont = "container"))
 #View(imp_i_allscen)
 
-ggplot() + theme_bw() +
+FIG5 <- ggplot() + theme_bw() +
   geom_col(data = imp_i_allscen,
            aes(y = value, x = scen, fill = item),
            width = 0.8) +
@@ -341,9 +356,17 @@ ggplot() + theme_bw() +
     legend.key.size = unit(1, 'cm'),
     ) +
   scale_fill_manual(values = col_vir1)
-ggsave("./figs/imp_i_allscen.pdf", width=10, height=10, units="in")
+FIG5
+ggsave("./figs/FIG5_imp_i_allscen.pdf", width=10, height=10, units="in")
 
-# Make a data table for SUPP
+## BW version
+FIG5 + 
+  scale_fill_grey(
+    start = 0.7,
+    end = 0.35)
+ggsave("./figs/figsBW/FIG5bw_imp_ibs_scen0.pdf", width=13, height=8, units="in")
+
+## Make a data table for SUPP
 
 imp_i_allscen %>%
   pivot_wider(names_from = scen, values_from = value) %>%
@@ -430,6 +453,7 @@ tbl_imp_scen0 <- imp_s0 %>%
 
 c1 <- read_csv("./data/cont_imp_l.csv") %>%
   left_join(cont_names) %>%
+  select(!cont_name_2) %>%
   select(!cont_type) %>%
   rename(cont_type = cont_name)  %>%
   pivot_longer(!cont_type, names_to = "imp_type", values_to = "val")
@@ -439,7 +463,7 @@ c1$imp_type <- impname_l[
   match(c1$imp_type, names(impname_l)) ]
 #View(c1)
 
-c1 %>%
+FIG3 <- c1 %>%
   ggplot() + theme_bw() +
   geom_col(aes(y = val, x = cont_type), width = 0.8, fill = col_cont) +
   facet_grid(rows = vars(imp_type),
@@ -457,7 +481,32 @@ c1 %>%
     #    axis.text.y = element_text(size = 16),
     panel.border = element_blank(),
     strip.placement = "outside")
-ggsave("./figs/cont_imp_liter.pdf", width=4, height=8, units="in")
+ggsave("./figs/FIG3_cont_imp_liter.pdf", width=4, height=8, units="in")
+
+
+## B&W version
+
+c1 %>%
+  ggplot() + theme_bw() +
+  geom_col(aes(y = val, x = cont_type), width = 0.8) +
+  facet_grid(rows = vars(imp_type),
+             switch = "y",
+             scales = "free") +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0.4) +
+  labs(
+    x ="Container Category",
+    y = "Impacts per liter of container (no beverage)") +
+  theme(
+    text = element_text(size=14),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    #    legend.text = element_text(size = 16),
+    #    axis.text.y = element_text(size = 16),
+    panel.border = element_blank(),
+    strip.placement = "outside")
+ggsave("./figs/figsBW/FIG3bw_cont_imp_liter.pdf", width=4, height=8, units="in")
+
+
 
 # Per liter beverage impacts ----------------------------------------------
   
@@ -497,7 +546,32 @@ b1 %>%
       #    axis.text.y = element_text(size = 16),
       panel.border = element_blank() ) +
   scale_y_continuous(labels=function(x) format(x, big.mark = ",", scientific=FALSE))
-ggsave("./figs/bev_imp_liter.pdf", width=8, height=8, units="in")
+ggsave("./figs/FIG2_bev_imp_liter.pdf", width=8, height=8, units="in")
 
-#scales::viridis_pal()(5)
+## Make BW version
+b1 %>%
+  drop_na() %>%
+  filter(bev_type != "Water, tap") %>%
+  #  mutate(bev_type = recode(bev_type, "Water, UCSB" = "Water, tap")) %>%
+  ggplot() + theme_bw() +
+  geom_col(aes(y = val, x = bev_type), width = 0.8) +
+  facet_grid(rows = vars(imp_type),
+             cols = vars(SSB_status),
+             switch = "y",
+             scales = "free") +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0.41) +
+  labs(
+    x ="Beverage Category",
+    y = "Impacts per liter of beverage (no container)") +
+  theme(
+    text = element_text(size=14),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.placement = "outside",
+    #    legend.text = element_text(size = 16),
+    #    axis.text.y = element_text(size = 16),
+    panel.border = element_blank() ) +
+  scale_y_continuous(labels=function(x) format(x, big.mark = ",", scientific=FALSE))
+ggsave("./figs/figsBW/FIG2bw_bev_imp_liter.pdf", width=8, height=8, units="in")
+
 
