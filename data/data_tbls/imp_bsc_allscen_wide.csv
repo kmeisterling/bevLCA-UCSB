@@ -1,0 +1,1392 @@
+scen,SSB_status,cont_type,item,bev_type,"Climate
+[ t CO2eq (100yr) ]","Water Use
+[ M Liter (Blue) ]","Plastic Pollution
+[ kg plastic ]"
+scen0,non_SSB,alum_can,bev,Coffee,0.05400939020158046,0.0014046002481075137,0
+scen0,non_SSB,glass,bev,Coffee,0.3841983307535339,0.009991689754036786,0
+scen0,non_SSB,plastic,bev,Coffee,0.07993677615128562,0.0020788832311556993,0
+scen0,SSB,alum_can,bev,Coffee,0.005731577049792099,3.5089684269220243e-4,0
+scen0,SSB,glass,bev,Coffee,0.2650364896491473,0.016225982239824164,0
+scen0,SSB,plastic,bev,Coffee,0.016202708316020546,9.919572120836325e-4,0
+scen0,non_SSB,alum_can,bev,Coffee + milk,0.014588111816349997,0.005084241684757999,0
+scen0,non_SSB,glass,bev,Coffee + milk,0.33507186424065,0.11677908429880199,0
+scen0,non_SSB,plastic,bev,Coffee + milk,0.05694990535074999,0.019848153508309995,0
+scen0,SSB,alum_can,bev,Coffee + milk,3.6594566318314046,1.362426398357747,0
+scen0,SSB,glass,bev,Coffee + milk,12.224740604990917,4.551306652589074,0
+scen0,SSB,plastic,bev,Coffee + milk,1.6303310378408777,0.6069770098367784,0
+scen0,non_SSB,alum_can,bev,Juice,0.19491551899582654,0.043553931346704336,0
+scen0,non_SSB,glass,bev,Juice,0.6174661165650772,0.137972989469183,0
+scen0,non_SSB,plastic,bev,Juice,35.41475113749983,7.913436793795333,0
+scen0,non_SSB,carton,bev,Juice,1.0532344581372723,0.23534555646477953,0
+scen0,SSB,alum_can,bev,Juice,7.5615971708121235,2.0153140649491172,0
+scen0,SSB,glass,bev,Juice,4.765698775237175,1.2701522646722454,0
+scen0,SSB,plastic,bev,Juice,11.658014593632926,3.1070897125570047,0
+scen0,SSB,carton,bev,Juice,0.6376025477297617,0.1699335938242228,0
+scen0,SSB,bag_in_box,bev,Juice,61.06258354288421,16.27437704974811,0
+scen0,non_SSB,carton,bev,Almond milk,0.1541919882958,0.062305855873299995,0
+scen0,SSB,plastic,bev,Almond milk,2.424172147215311,1.013211577635162,0
+scen0,SSB,carton,bev,Almond milk,18.56990080683689,7.761510878935339,0
+scen0,non_SSB,plastic,bev,"Milk, animal",65.2382953706495,29.97675934289654,0
+scen0,non_SSB,carton,bev,"Milk, animal",1.863006176983306,0.856044559479456,0
+scen0,SSB,plastic,bev,"Milk, animal",0.5130572332082786,0.23980933966949322,0
+scen0,SSB,carton,bev,"Milk, animal",0.3835105720554732,0.1792576170611303,0
+scen0,SSB,bag_in_box,bev,"Milk, animal",26.55588683786185,12.412552196374879,0
+scen0,non_SSB,carton,bev,Plant milk,0,0,0
+scen0,non_SSB,bag_in_box,bev,Plant milk,0,0,0
+scen0,SSB,carton,bev,Plant milk,1.1027616216373826,0.18664192604202018,0
+scen0,SSB,bag_in_box,bev,Plant milk,2.419046538142118,0.40942257710577984,0
+scen0,non_SSB,carton,bev,Soy milk,6.3966535011113015,0.10567812471650002,0
+scen0,SSB,carton,bev,Soy milk,19.917868104804,0.9663140697799999,0
+scen0,non_SSB,plastic,bev,Probiotic,0.11333867810432999,0.019648513200959998,0
+scen0,SSB,glass,bev,Probiotic,1.5603685879712001,0.33247845357440003,0
+scen0,non_SSB,alum_can,bev,Soda,1.140437140905361,0.5012485539532657,0
+scen0,non_SSB,glass,bev,Soda,0.14182623364286984,0.06233591662026193,0
+scen0,non_SSB,plastic,bev,Soda,0.9190369603669201,0.4039380434837589,0
+scen0,non_SSB,bag_in_box,bev,Soda,1.7625046450613489,0.7746616389322135,0
+scen0,SSB,alum_can,bev,Soda,2.284888769360063,1.6533612303820417,0
+scen0,SSB,glass,bev,Soda,0.13573437576407543,0.09821832796757267,0
+scen0,SSB,plastic,bev,Soda,7.917297962763054,5.729011265910053,0
+scen0,SSB,carton,bev,Soda,3.2198873831680087e-4,2.3299326588301637e-4,0
+scen0,SSB,bag_in_box,bev,Soda,19.4096838671505,14.044980758037651,0
+scen0,non_SSB,alum_can,bev,Tea,0.07203950022030232,0.009155036319310755,0
+scen0,non_SSB,glass,bev,Tea,0.14932000248078653,0.01897611784827338,0
+scen0,non_SSB,plastic,bev,Tea,0.40995301710995224,0.052098289818436574,0
+scen0,non_SSB,bag_in_box,bev,Tea,0.7253963637089588,0.09218595402997927,0
+scen0,SSB,alum_can,bev,Tea,6.142540317312036,3.454874685961682,0
+scen0,SSB,glass,bev,Tea,3.8694899748668306,2.176396453446478,0
+scen0,SSB,plastic,bev,Tea,2.351684575997416,1.3227060941026743,0
+scen0,SSB,bag_in_box,bev,Tea,0.1270494425199182,0.07145901860676569,0
+scen0,non_SSB,plastic,bev,"Water, bottled",3.9618091123512,0.2191644018861,0
+scen0,non_SSB,steel_bott_reuse,bev,"Water, Filtered tap",0,0,0
+scen1,non_SSB,alum_can,bev,Coffee,0,0,0
+scen1,non_SSB,glass,bev,Coffee,0,0,0
+scen1,non_SSB,plastic,bev,Coffee,0,0,0
+scen1,SSB,alum_can,bev,Coffee,0,0,0
+scen1,SSB,glass,bev,Coffee,0,0,0
+scen1,SSB,plastic,bev,Coffee,0,0,0
+scen1,non_SSB,alum_can,bev,Coffee + milk,0,0,0
+scen1,non_SSB,glass,bev,Coffee + milk,0,0,0
+scen1,non_SSB,plastic,bev,Coffee + milk,0,0,0
+scen1,SSB,alum_can,bev,Coffee + milk,0,0,0
+scen1,SSB,glass,bev,Coffee + milk,0,0,0
+scen1,SSB,plastic,bev,Coffee + milk,0,0,0
+scen1,non_SSB,alum_can,bev,Juice,0,0,0
+scen1,non_SSB,glass,bev,Juice,0,0,0
+scen1,non_SSB,plastic,bev,Juice,0,0,0
+scen1,non_SSB,carton,bev,Juice,0,0,0
+scen1,SSB,alum_can,bev,Juice,0,0,0
+scen1,SSB,glass,bev,Juice,0,0,0
+scen1,SSB,plastic,bev,Juice,0,0,0
+scen1,SSB,carton,bev,Juice,0,0,0
+scen1,SSB,bag_in_box,bev,Juice,0,0,0
+scen1,non_SSB,carton,bev,Almond milk,0,0,0
+scen1,SSB,plastic,bev,Almond milk,0,0,0
+scen1,SSB,carton,bev,Almond milk,0,0,0
+scen1,non_SSB,plastic,bev,"Milk, animal",0,0,0
+scen1,non_SSB,carton,bev,"Milk, animal",0,0,0
+scen1,SSB,plastic,bev,"Milk, animal",0,0,0
+scen1,SSB,carton,bev,"Milk, animal",0,0,0
+scen1,SSB,bag_in_box,bev,"Milk, animal",0,0,0
+scen1,non_SSB,carton,bev,Plant milk,0,0,0
+scen1,non_SSB,bag_in_box,bev,Plant milk,0,0,0
+scen1,SSB,carton,bev,Plant milk,0,0,0
+scen1,SSB,bag_in_box,bev,Plant milk,0,0,0
+scen1,non_SSB,carton,bev,Soy milk,0,0,0
+scen1,SSB,carton,bev,Soy milk,0,0,0
+scen1,non_SSB,plastic,bev,Probiotic,0,0,0
+scen1,SSB,glass,bev,Probiotic,0,0,0
+scen1,non_SSB,alum_can,bev,Soda,0,0,0
+scen1,non_SSB,glass,bev,Soda,0,0,0
+scen1,non_SSB,plastic,bev,Soda,0,0,0
+scen1,non_SSB,bag_in_box,bev,Soda,0,0,0
+scen1,SSB,alum_can,bev,Soda,0,0,0
+scen1,SSB,glass,bev,Soda,0,0,0
+scen1,SSB,plastic,bev,Soda,0,0,0
+scen1,SSB,carton,bev,Soda,0,0,0
+scen1,SSB,bag_in_box,bev,Soda,0,0,0
+scen1,non_SSB,alum_can,bev,Tea,0,0,0
+scen1,non_SSB,glass,bev,Tea,0,0,0
+scen1,non_SSB,plastic,bev,Tea,0,0,0
+scen1,non_SSB,bag_in_box,bev,Tea,0,0,0
+scen1,SSB,alum_can,bev,Tea,0,0,0
+scen1,SSB,glass,bev,Tea,0,0,0
+scen1,SSB,plastic,bev,Tea,0,0,0
+scen1,SSB,bag_in_box,bev,Tea,0,0,0
+scen1,non_SSB,plastic,bev,"Water, bottled",0,0,0
+scen1,non_SSB,steel_bott_reuse,bev,"Water, Filtered tap",5.845938304861199,1.8816953799999998,0
+scen2_1,non_SSB,alum_can,bev,Coffee,0.16259816495033388,0.004228624355480729,0
+scen2_1,non_SSB,glass,bev,Coffee,1.1566496737761356,0.030080517715452632,0
+scen2_1,non_SSB,plastic,bev,Coffee,0.2406539504655306,0.006258589428066642,0
+scen2_1,SSB,alum_can,bev,Coffee,0,0,0
+scen2_1,SSB,glass,bev,Coffee,0,0,0
+scen2_1,SSB,plastic,bev,Coffee,0,0,0
+scen2_1,non_SSB,alum_can,bev,Coffee + milk,0.04391831188769275,0.01530638884830529,0
+scen2_1,non_SSB,glass,bev,Coffee + milk,1.0087522514064096,0.3515698474730487,0
+scen2_1,non_SSB,plastic,bev,Coffee + milk,0.17145081808089785,0.05975395631364604,0
+scen2_1,SSB,alum_can,bev,Coffee + milk,0,0,0
+scen2_1,SSB,glass,bev,Coffee + milk,0,0,0
+scen2_1,SSB,plastic,bev,Coffee + milk,0,0,0
+scen2_1,non_SSB,alum_can,bev,Juice,0.5868050787042649,0.13112177133689507,0
+scen2_1,non_SSB,glass,bev,Juice,1.8589194692904116,0.4153761145425276,0
+scen2_1,non_SSB,plastic,bev,Juice,106.61827203701264,23.823884955531554,0
+scen2_1,non_SSB,carton,bev,Juice,3.1708266857628677,0.7085221766614233,0
+scen2_1,SSB,alum_can,bev,Juice,0,0,0
+scen2_1,SSB,glass,bev,Juice,0,0,0
+scen2_1,SSB,plastic,bev,Juice,0,0,0
+scen2_1,SSB,carton,bev,Juice,0,0,0
+scen2_1,SSB,bag_in_box,bev,Juice,0,0,0
+scen2_1,non_SSB,carton,bev,Almond milk,0.46420529533140004,0.1875759470139,0
+scen2_1,SSB,plastic,bev,Almond milk,0,0,0
+scen2_1,SSB,carton,bev,Almond milk,0,0,0
+scen2_1,non_SSB,plastic,bev,"Milk, animal",196.40387371948597,90.24686532736207,0
+scen2_1,non_SSB,carton,bev,"Milk, animal",5.608693909673636,2.5771744433699206,0
+scen2_1,SSB,plastic,bev,"Milk, animal",0,0,0
+scen2_1,SSB,carton,bev,"Milk, animal",0,0,0
+scen2_1,SSB,bag_in_box,bev,"Milk, animal",0,0,0
+scen2_1,non_SSB,carton,bev,Plant milk,0,0,0
+scen2_1,non_SSB,bag_in_box,bev,Plant milk,0,0,0
+scen2_1,SSB,carton,bev,Plant milk,0,0,0
+scen2_1,SSB,bag_in_box,bev,Plant milk,0,0,0
+scen2_1,non_SSB,carton,bev,Soy milk,19.2575106537266,0.31815035975300004,0
+scen2_1,SSB,carton,bev,Soy milk,0,0,0
+scen2_1,non_SSB,plastic,bev,Probiotic,0.3412130583861,0.0591530569632,0
+scen2_1,SSB,glass,bev,Probiotic,0,0,0
+scen2_1,non_SSB,alum_can,bev,Soda,3.4333556835552757,1.509039393633815,0
+scen2_1,non_SSB,glass,bev,Soda,0.4269765407398233,0.18766608517142686,0
+scen2_1,non_SSB,plastic,bev,Soda,2.766816914405436,1.2160801570336173,0
+scen2_1,non_SSB,bag_in_box,bev,Soda,5.306127907768763,2.33216618914104,0
+scen2_1,SSB,alum_can,bev,Soda,0,0,0
+scen2_1,SSB,glass,bev,Soda,0,0,0
+scen2_1,SSB,plastic,bev,Soda,0,0,0
+scen2_1,SSB,carton,bev,Soda,0,0,0
+scen2_1,SSB,bag_in_box,bev,Soda,0,0,0
+scen2_1,non_SSB,alum_can,bev,Tea,0.21687930769247388,0.027561795025779514,0
+scen2_1,non_SSB,glass,bev,Tea,0.4495369715730596,0.057128759764278336,0
+scen2_1,non_SSB,plastic,bev,Tea,1.2341885530209502,0.15684507795349847,0
+scen2_1,non_SSB,bag_in_box,bev,Tea,2.1838499806735157,0.2775314352244437,0
+scen2_1,SSB,alum_can,bev,Tea,0,0,0
+scen2_1,SSB,glass,bev,Tea,0,0,0
+scen2_1,SSB,plastic,bev,Tea,0,0,0
+scen2_1,SSB,bag_in_box,bev,Tea,0,0,0
+scen2_1,non_SSB,plastic,bev,"Water, bottled",11.927268868816002,0.659807848798,0
+scen2_1,non_SSB,steel_bott_reuse,bev,"Water, Filtered tap",0,0,0
+scen2_2,non_SSB,alum_can,bev,Coffee,0.08324575450371163,0.0021649384855744755,0
+scen2_2,non_SSB,glass,bev,Coffee,0.5921725796805717,0.015400391473360083,0
+scen2_2,non_SSB,plastic,bev,Coffee,0.12320815359091665,0.00320422434796544,0
+scen2_2,SSB,alum_can,bev,Coffee,0,0,0
+scen2_2,SSB,glass,bev,Coffee,0,0,0
+scen2_2,SSB,plastic,bev,Coffee,0,0,0
+scen2_2,non_SSB,alum_can,bev,Coffee + milk,0.6308677605465736,0.21986972722171952,0
+scen2_2,non_SSB,glass,bev,Coffee + milk,14.490294513560562,5.050150445631681,0
+scen2_2,non_SSB,plastic,bev,Coffee + milk,2.4628176493478686,0.8583400177080002,0
+scen2_2,SSB,alum_can,bev,Coffee + milk,0,0,0
+scen2_2,SSB,glass,bev,Coffee + milk,0,0,0
+scen2_2,SSB,plastic,bev,Coffee + milk,0,0,0
+scen2_2,non_SSB,alum_can,bev,Juice,0.6287292043159028,0.14048972981483945,0
+scen2_2,non_SSB,glass,bev,Juice,1.9917294536629684,0.4450525454974331,0
+scen2_2,non_SSB,plastic,bev,Juice,114.23558482381662,25.52597578889376,0
+scen2_2,non_SSB,carton,bev,Juice,3.3973655162722944,0.7591423464775656,0
+scen2_2,SSB,alum_can,bev,Juice,0,0,0
+scen2_2,SSB,glass,bev,Juice,0,0,0
+scen2_2,SSB,plastic,bev,Juice,0,0,0
+scen2_2,SSB,carton,bev,Juice,0,0,0
+scen2_2,SSB,bag_in_box,bev,Juice,0,0,0
+scen2_2,non_SSB,carton,bev,Almond milk,20.901262145133998,8.445776211709001,0
+scen2_2,SSB,plastic,bev,Almond milk,0,0,0
+scen2_2,SSB,carton,bev,Almond milk,0,0,0
+scen2_2,non_SSB,plastic,bev,"Milk, animal",91.74065668397446,42.15449793331129,0
+scen2_2,non_SSB,carton,bev,"Milk, animal",2.6198325555827244,1.2038035266127018,0
+scen2_2,SSB,plastic,bev,"Milk, animal",0,0,0
+scen2_2,SSB,carton,bev,"Milk, animal",0,0,0
+scen2_2,SSB,bag_in_box,bev,"Milk, animal",0,0,0
+scen2_2,non_SSB,carton,bev,Plant milk,1.073347953336315,0.15575805354273373,0
+scen2_2,non_SSB,bag_in_box,bev,Plant milk,2.354523951318585,0.34167491216356627,0
+scen2_2,SSB,carton,bev,Plant milk,0,0,0
+scen2_2,SSB,bag_in_box,bev,Plant milk,0,0,0
+scen2_2,non_SSB,carton,bev,Soy milk,25.639113176829202,0.423579829586,0
+scen2_2,SSB,carton,bev,Soy milk,0,0,0
+scen2_2,non_SSB,plastic,bev,Probiotic,1.6297750664666,0.2825395305792,0
+scen2_2,SSB,glass,bev,Probiotic,0,0,0
+scen2_2,non_SSB,alum_can,bev,Soda,4.967212375666665,2.183204958148848,0
+scen2_2,non_SSB,glass,bev,Soda,0.6177289371563145,0.27150618423289796,0
+scen2_2,non_SSB,plastic,bev,Soda,4.0028964328586945,1.7593657525063107,0
+scen2_2,non_SSB,bag_in_box,bev,Soda,7.676648340450025,3.374064857975043,0
+scen2_2,SSB,alum_can,bev,Soda,0,0,0
+scen2_2,SSB,glass,bev,Soda,0,0,0
+scen2_2,SSB,plastic,bev,Soda,0,0,0
+scen2_2,SSB,carton,bev,Soda,0,0,0
+scen2_2,SSB,bag_in_box,bev,Soda,0,0,0
+scen2_2,non_SSB,alum_can,bev,Tea,0.5370875161192443,0.06825499485259266,0
+scen2_2,non_SSB,glass,bev,Tea,1.1132491063107555,0.14147566223457675,0
+scen2_2,non_SSB,plastic,bev,Tea,3.056387773538753,0.38841664624373473,0
+scen2_2,non_SSB,bag_in_box,bev,Tea,5.408162605167245,0.6872885697378958,0
+scen2_2,SSB,alum_can,bev,Tea,0,0,0
+scen2_2,SSB,glass,bev,Tea,0,0,0
+scen2_2,SSB,plastic,bev,Tea,0,0,0
+scen2_2,SSB,bag_in_box,bev,Tea,0,0,0
+scen2_2,non_SSB,plastic,bev,"Water, bottled",3.9618091123512,0.2191644018861,0
+scen2_2,non_SSB,steel_bott_reuse,bev,"Water, Filtered tap",0,0,0
+scen2_3,non_SSB,alum_can,bev,Coffee,0.05400939020158046,0.0014046002481075137,0
+scen2_3,non_SSB,glass,bev,Coffee,0.3841983307535339,0.009991689754036786,0
+scen2_3,non_SSB,plastic,bev,Coffee,0.07993677615128562,0.0020788832311556993,0
+scen2_3,SSB,alum_can,bev,Coffee,0,0,0
+scen2_3,SSB,glass,bev,Coffee,0,0,0
+scen2_3,SSB,plastic,bev,Coffee,0,0,0
+scen2_3,non_SSB,alum_can,bev,Coffee + milk,0.014588111816349997,0.005084241684757999,0
+scen2_3,non_SSB,glass,bev,Coffee + milk,0.33507186424065,0.11677908429880199,0
+scen2_3,non_SSB,plastic,bev,Coffee + milk,0.05694990535074999,0.019848153508309995,0
+scen2_3,SSB,alum_can,bev,Coffee + milk,0,0,0
+scen2_3,SSB,glass,bev,Coffee + milk,0,0,0
+scen2_3,SSB,plastic,bev,Coffee + milk,0,0,0
+scen2_3,non_SSB,alum_can,bev,Juice,0.19491551899582654,0.043553931346704336,0
+scen2_3,non_SSB,glass,bev,Juice,0.6174661165650772,0.137972989469183,0
+scen2_3,non_SSB,plastic,bev,Juice,35.41475113749983,7.913436793795333,0
+scen2_3,non_SSB,carton,bev,Juice,1.0532344581372723,0.23534555646477953,0
+scen2_3,SSB,alum_can,bev,Juice,0,0,0
+scen2_3,SSB,glass,bev,Juice,0,0,0
+scen2_3,SSB,plastic,bev,Juice,0,0,0
+scen2_3,SSB,carton,bev,Juice,0,0,0
+scen2_3,SSB,bag_in_box,bev,Juice,0,0,0
+scen2_3,non_SSB,carton,bev,Almond milk,0.1541919882958,0.062305855873299995,0
+scen2_3,SSB,plastic,bev,Almond milk,0,0,0
+scen2_3,SSB,carton,bev,Almond milk,0,0,0
+scen2_3,non_SSB,plastic,bev,"Milk, animal",65.2382953706495,29.97675934289654,0
+scen2_3,non_SSB,carton,bev,"Milk, animal",1.863006176983306,0.856044559479456,0
+scen2_3,SSB,plastic,bev,"Milk, animal",0,0,0
+scen2_3,SSB,carton,bev,"Milk, animal",0,0,0
+scen2_3,SSB,bag_in_box,bev,"Milk, animal",0,0,0
+scen2_3,non_SSB,carton,bev,Plant milk,0,0,0
+scen2_3,non_SSB,bag_in_box,bev,Plant milk,0,0,0
+scen2_3,SSB,carton,bev,Plant milk,0,0,0
+scen2_3,SSB,bag_in_box,bev,Plant milk,0,0,0
+scen2_3,non_SSB,carton,bev,Soy milk,6.3966535011113015,0.10567812471650002,0
+scen2_3,SSB,carton,bev,Soy milk,0,0,0
+scen2_3,non_SSB,plastic,bev,Probiotic,0.11333867810432999,0.019648513200959998,0
+scen2_3,SSB,glass,bev,Probiotic,0,0,0
+scen2_3,non_SSB,alum_can,bev,Soda,1.140437140905361,0.5012485539532657,0
+scen2_3,non_SSB,glass,bev,Soda,0.14182623364286984,0.06233591662026193,0
+scen2_3,non_SSB,plastic,bev,Soda,0.9190369603669201,0.4039380434837589,0
+scen2_3,non_SSB,bag_in_box,bev,Soda,1.7625046450613489,0.7746616389322135,0
+scen2_3,SSB,alum_can,bev,Soda,0,0,0
+scen2_3,SSB,glass,bev,Soda,0,0,0
+scen2_3,SSB,plastic,bev,Soda,0,0,0
+scen2_3,SSB,carton,bev,Soda,0,0,0
+scen2_3,SSB,bag_in_box,bev,Soda,0,0,0
+scen2_3,non_SSB,alum_can,bev,Tea,0.07203950022030232,0.009155036319310755,0
+scen2_3,non_SSB,glass,bev,Tea,0.14932000248078653,0.01897611784827338,0
+scen2_3,non_SSB,plastic,bev,Tea,0.40995301710995224,0.052098289818436574,0
+scen2_3,non_SSB,bag_in_box,bev,Tea,0.7253963637089588,0.09218595402997927,0
+scen2_3,SSB,alum_can,bev,Tea,0,0,0
+scen2_3,SSB,glass,bev,Tea,0,0,0
+scen2_3,SSB,plastic,bev,Tea,0,0,0
+scen2_3,SSB,bag_in_box,bev,Tea,0,0,0
+scen2_3,non_SSB,plastic,bev,"Water, bottled",27.785694732589597,1.5370844466163,0
+scen2_3,non_SSB,steel_bott_reuse,bev,"Water, Filtered tap",0,0,0
+scen2_4,non_SSB,alum_can,bev,Coffee,0.05400939020158046,0.0014046002481075137,0
+scen2_4,non_SSB,glass,bev,Coffee,0.3841983307535339,0.009991689754036786,0
+scen2_4,non_SSB,plastic,bev,Coffee,0.07993677615128562,0.0020788832311556993,0
+scen2_4,SSB,alum_can,bev,Coffee,0,0,0
+scen2_4,SSB,glass,bev,Coffee,0,0,0
+scen2_4,SSB,plastic,bev,Coffee,0,0,0
+scen2_4,non_SSB,alum_can,bev,Coffee + milk,0.014588111816349997,0.005084241684757999,0
+scen2_4,non_SSB,glass,bev,Coffee + milk,0.33507186424065,0.11677908429880199,0
+scen2_4,non_SSB,plastic,bev,Coffee + milk,0.05694990535074999,0.019848153508309995,0
+scen2_4,SSB,alum_can,bev,Coffee + milk,0,0,0
+scen2_4,SSB,glass,bev,Coffee + milk,0,0,0
+scen2_4,SSB,plastic,bev,Coffee + milk,0,0,0
+scen2_4,non_SSB,alum_can,bev,Juice,0.19491551899582654,0.043553931346704336,0
+scen2_4,non_SSB,glass,bev,Juice,0.6174661165650772,0.137972989469183,0
+scen2_4,non_SSB,plastic,bev,Juice,35.41475113749983,7.913436793795333,0
+scen2_4,non_SSB,carton,bev,Juice,1.0532344581372723,0.23534555646477953,0
+scen2_4,SSB,alum_can,bev,Juice,0,0,0
+scen2_4,SSB,glass,bev,Juice,0,0,0
+scen2_4,SSB,plastic,bev,Juice,0,0,0
+scen2_4,SSB,carton,bev,Juice,0,0,0
+scen2_4,SSB,bag_in_box,bev,Juice,0,0,0
+scen2_4,non_SSB,carton,bev,Almond milk,0.1541919882958,0.062305855873299995,0
+scen2_4,SSB,plastic,bev,Almond milk,0,0,0
+scen2_4,SSB,carton,bev,Almond milk,0,0,0
+scen2_4,non_SSB,plastic,bev,"Milk, animal",65.2382953706495,29.97675934289654,0
+scen2_4,non_SSB,carton,bev,"Milk, animal",1.863006176983306,0.856044559479456,0
+scen2_4,SSB,plastic,bev,"Milk, animal",0,0,0
+scen2_4,SSB,carton,bev,"Milk, animal",0,0,0
+scen2_4,SSB,bag_in_box,bev,"Milk, animal",0,0,0
+scen2_4,non_SSB,carton,bev,Plant milk,0,0,0
+scen2_4,non_SSB,bag_in_box,bev,Plant milk,0,0,0
+scen2_4,SSB,carton,bev,Plant milk,0,0,0
+scen2_4,SSB,bag_in_box,bev,Plant milk,0,0,0
+scen2_4,non_SSB,carton,bev,Soy milk,6.3966535011113015,0.10567812471650002,0
+scen2_4,SSB,carton,bev,Soy milk,0,0,0
+scen2_4,non_SSB,plastic,bev,Probiotic,0.11333867810432999,0.019648513200959998,0
+scen2_4,SSB,glass,bev,Probiotic,0,0,0
+scen2_4,non_SSB,alum_can,bev,Soda,1.140437140905361,0.5012485539532657,0
+scen2_4,non_SSB,glass,bev,Soda,0.14182623364286984,0.06233591662026193,0
+scen2_4,non_SSB,plastic,bev,Soda,0.9190369603669201,0.4039380434837589,0
+scen2_4,non_SSB,bag_in_box,bev,Soda,1.7625046450613489,0.7746616389322135,0
+scen2_4,SSB,alum_can,bev,Soda,0,0,0
+scen2_4,SSB,glass,bev,Soda,0,0,0
+scen2_4,SSB,plastic,bev,Soda,0,0,0
+scen2_4,SSB,carton,bev,Soda,0,0,0
+scen2_4,SSB,bag_in_box,bev,Soda,0,0,0
+scen2_4,non_SSB,alum_can,bev,Tea,0.07203950022030232,0.009155036319310755,0
+scen2_4,non_SSB,glass,bev,Tea,0.14932000248078653,0.01897611784827338,0
+scen2_4,non_SSB,plastic,bev,Tea,0.40995301710995224,0.052098289818436574,0
+scen2_4,non_SSB,bag_in_box,bev,Tea,0.7253963637089588,0.09218595402997927,0
+scen2_4,SSB,alum_can,bev,Tea,0,0,0
+scen2_4,SSB,glass,bev,Tea,0,0,0
+scen2_4,SSB,plastic,bev,Tea,0,0,0
+scen2_4,SSB,bag_in_box,bev,Tea,0,0,0
+scen2_4,non_SSB,plastic,bev,"Water, bottled",3.9618091123512,0.2191644018861,0
+scen2_4,non_SSB,steel_bott_reuse,bev,"Water, Filtered tap",3.9041281910904,1.25666396,0
+scen3_1,non_SSB,alum_can,bev,Coffee,0,0,0
+scen3_1,non_SSB,glass,bev,Coffee,0,0,0
+scen3_1,non_SSB,plastic,bev,Coffee,0,0,0
+scen3_1,SSB,alum_can,bev,Coffee,0,0,0
+scen3_1,SSB,glass,bev,Coffee,0,0,0
+scen3_1,SSB,plastic,bev,Coffee,0,0,0
+scen3_1,non_SSB,alum_can,bev,Coffee + milk,0,0,0
+scen3_1,non_SSB,glass,bev,Coffee + milk,0,0,0
+scen3_1,non_SSB,plastic,bev,Coffee + milk,0,0,0
+scen3_1,SSB,alum_can,bev,Coffee + milk,0,0,0
+scen3_1,SSB,glass,bev,Coffee + milk,0,0,0
+scen3_1,SSB,plastic,bev,Coffee + milk,0,0,0
+scen3_1,non_SSB,alum_can,bev,Juice,0,0,0
+scen3_1,non_SSB,glass,bev,Juice,0,0,0
+scen3_1,non_SSB,plastic,bev,Juice,0,0,0
+scen3_1,non_SSB,carton,bev,Juice,0,0,0
+scen3_1,SSB,alum_can,bev,Juice,0,0,0
+scen3_1,SSB,glass,bev,Juice,0,0,0
+scen3_1,SSB,plastic,bev,Juice,0,0,0
+scen3_1,SSB,carton,bev,Juice,0,0,0
+scen3_1,SSB,bag_in_box,bev,Juice,0,0,0
+scen3_1,non_SSB,carton,bev,Almond milk,0,0,0
+scen3_1,SSB,plastic,bev,Almond milk,0,0,0
+scen3_1,SSB,carton,bev,Almond milk,0,0,0
+scen3_1,non_SSB,plastic,bev,"Milk, animal",0,0,0
+scen3_1,non_SSB,carton,bev,"Milk, animal",0,0,0
+scen3_1,SSB,plastic,bev,"Milk, animal",0,0,0
+scen3_1,SSB,carton,bev,"Milk, animal",0,0,0
+scen3_1,SSB,bag_in_box,bev,"Milk, animal",0,0,0
+scen3_1,non_SSB,carton,bev,Plant milk,0,0,0
+scen3_1,non_SSB,bag_in_box,bev,Plant milk,0,0,0
+scen3_1,SSB,carton,bev,Plant milk,0,0,0
+scen3_1,SSB,bag_in_box,bev,Plant milk,0,0,0
+scen3_1,non_SSB,carton,bev,Soy milk,0,0,0
+scen3_1,SSB,carton,bev,Soy milk,0,0,0
+scen3_1,non_SSB,plastic,bev,Probiotic,0,0,0
+scen3_1,SSB,glass,bev,Probiotic,0,0,0
+scen3_1,non_SSB,alum_can,bev,Soda,0,0,0
+scen3_1,non_SSB,glass,bev,Soda,0,0,0
+scen3_1,non_SSB,plastic,bev,Soda,0,0,0
+scen3_1,non_SSB,bag_in_box,bev,Soda,0,0,0
+scen3_1,SSB,alum_can,bev,Soda,0,0,0
+scen3_1,SSB,glass,bev,Soda,0,0,0
+scen3_1,SSB,plastic,bev,Soda,0,0,0
+scen3_1,SSB,carton,bev,Soda,0,0,0
+scen3_1,SSB,bag_in_box,bev,Soda,0,0,0
+scen3_1,non_SSB,alum_can,bev,Tea,0,0,0
+scen3_1,non_SSB,glass,bev,Tea,0,0,0
+scen3_1,non_SSB,plastic,bev,Tea,0,0,0
+scen3_1,non_SSB,bag_in_box,bev,Tea,0,0,0
+scen3_1,SSB,alum_can,bev,Tea,0,0,0
+scen3_1,SSB,glass,bev,Tea,0,0,0
+scen3_1,SSB,plastic,bev,Tea,0,0,0
+scen3_1,SSB,bag_in_box,bev,Tea,0,0,0
+scen3_1,non_SSB,plastic,bev,"Water, bottled",35.673256281855195,1.9734186212981,0
+scen3_1,non_SSB,steel_bott_reuse,bev,"Water, Filtered tap",0,0,0
+scen3_2,non_SSB,alum_can,bev,Coffee,0,0,0
+scen3_2,non_SSB,glass,bev,Coffee,0,0,0
+scen3_2,non_SSB,plastic,bev,Coffee,0,0,0
+scen3_2,SSB,alum_can,bev,Coffee,0,0,0
+scen3_2,SSB,glass,bev,Coffee,0,0,0
+scen3_2,SSB,plastic,bev,Coffee,0,0,0
+scen3_2,non_SSB,alum_can,bev,Coffee + milk,0,0,0
+scen3_2,non_SSB,glass,bev,Coffee + milk,0,0,0
+scen3_2,non_SSB,plastic,bev,Coffee + milk,0,0,0
+scen3_2,SSB,alum_can,bev,Coffee + milk,0,0,0
+scen3_2,SSB,glass,bev,Coffee + milk,0,0,0
+scen3_2,SSB,plastic,bev,Coffee + milk,0,0,0
+scen3_2,non_SSB,alum_can,bev,Juice,0,0,0
+scen3_2,non_SSB,glass,bev,Juice,0,0,0
+scen3_2,non_SSB,plastic,bev,Juice,0,0,0
+scen3_2,non_SSB,carton,bev,Juice,0,0,0
+scen3_2,SSB,alum_can,bev,Juice,0,0,0
+scen3_2,SSB,glass,bev,Juice,0,0,0
+scen3_2,SSB,plastic,bev,Juice,0,0,0
+scen3_2,SSB,carton,bev,Juice,0,0,0
+scen3_2,SSB,bag_in_box,bev,Juice,0,0,0
+scen3_2,non_SSB,carton,bev,Almond milk,0,0,0
+scen3_2,SSB,plastic,bev,Almond milk,0,0,0
+scen3_2,SSB,carton,bev,Almond milk,0,0,0
+scen3_2,non_SSB,plastic,bev,"Milk, animal",0,0,0
+scen3_2,non_SSB,carton,bev,"Milk, animal",0,0,0
+scen3_2,SSB,plastic,bev,"Milk, animal",0,0,0
+scen3_2,SSB,carton,bev,"Milk, animal",0,0,0
+scen3_2,SSB,bag_in_box,bev,"Milk, animal",0,0,0
+scen3_2,non_SSB,carton,bev,Plant milk,0,0,0
+scen3_2,non_SSB,bag_in_box,bev,Plant milk,0,0,0
+scen3_2,SSB,carton,bev,Plant milk,0,0,0
+scen3_2,SSB,bag_in_box,bev,Plant milk,0,0,0
+scen3_2,non_SSB,carton,bev,Soy milk,0,0,0
+scen3_2,SSB,carton,bev,Soy milk,0,0,0
+scen3_2,non_SSB,plastic,bev,Probiotic,0,0,0
+scen3_2,SSB,glass,bev,Probiotic,0,0,0
+scen3_2,non_SSB,alum_can,bev,Soda,0,0,0
+scen3_2,non_SSB,glass,bev,Soda,0,0,0
+scen3_2,non_SSB,plastic,bev,Soda,0,0,0
+scen3_2,non_SSB,bag_in_box,bev,Soda,0,0,0
+scen3_2,SSB,alum_can,bev,Soda,0,0,0
+scen3_2,SSB,glass,bev,Soda,0,0,0
+scen3_2,SSB,plastic,bev,Soda,0,0,0
+scen3_2,SSB,carton,bev,Soda,0,0,0
+scen3_2,SSB,bag_in_box,bev,Soda,0,0,0
+scen3_2,non_SSB,alum_can,bev,Tea,0,0,0
+scen3_2,non_SSB,glass,bev,Tea,0,0,0
+scen3_2,non_SSB,plastic,bev,Tea,0,0,0
+scen3_2,non_SSB,bag_in_box,bev,Tea,0,0,0
+scen3_2,SSB,alum_can,bev,Tea,0,0,0
+scen3_2,SSB,glass,bev,Tea,0,0,0
+scen3_2,SSB,plastic,bev,Tea,0,0,0
+scen3_2,SSB,bag_in_box,bev,Tea,0,0,0
+scen3_2,non_SSB,plastic,bev,"Water, bottled",3.9618091123512,0.2191644018861,0
+scen3_2,non_SSB,steel_bott_reuse,bev,"Water, Filtered tap",5.196698676624,1.6727176000000001,0
+scen4,non_SSB,alum_can,bev,Coffee,0.05400939020158046,0.0014046002481075137,0
+scen4,non_SSB,glass,bev,Coffee,0.3841983307535339,0.009991689754036786,0
+scen4,non_SSB,plastic,bev,Coffee,0.07993677615128562,0.0020788832311556993,0
+scen4,SSB,alum_can,bev,Coffee,0.005731577049792099,3.5089684269220243e-4,0
+scen4,SSB,glass,bev,Coffee,0.2650364896491473,0.016225982239824164,0
+scen4,SSB,plastic,bev,Coffee,0.016202708316020546,9.919572120836325e-4,0
+scen4,non_SSB,alum_can,bev,Coffee + milk,0.014588111816349997,0.005084241684757999,0
+scen4,non_SSB,glass,bev,Coffee + milk,0.33507186424065,0.11677908429880199,0
+scen4,non_SSB,plastic,bev,Coffee + milk,0.05694990535074999,0.019848153508309995,0
+scen4,SSB,alum_can,bev,Coffee + milk,3.6594566318314046,1.362426398357747,0
+scen4,SSB,glass,bev,Coffee + milk,12.224740604990917,4.551306652589074,0
+scen4,SSB,plastic,bev,Coffee + milk,1.6303310378408777,0.6069770098367784,0
+scen4,non_SSB,alum_can,bev,Juice,0.19491551899582654,0.043553931346704336,0
+scen4,non_SSB,glass,bev,Juice,0.6174661165650772,0.137972989469183,0
+scen4,non_SSB,plastic,bev,Juice,35.41475113749983,7.913436793795333,0
+scen4,non_SSB,carton,bev,Juice,1.0532344581372723,0.23534555646477953,0
+scen4,SSB,alum_can,bev,Juice,7.5615971708121235,2.0153140649491172,0
+scen4,SSB,glass,bev,Juice,4.765698775237175,1.2701522646722454,0
+scen4,SSB,plastic,bev,Juice,11.658014593632926,3.1070897125570047,0
+scen4,SSB,carton,bev,Juice,0.6376025477297617,0.1699335938242228,0
+scen4,SSB,bag_in_box,bev,Juice,61.06258354288421,16.27437704974811,0
+scen4,non_SSB,carton,bev,Almond milk,0.1541919882958,0.062305855873299995,0
+scen4,SSB,plastic,bev,Almond milk,2.424172147215311,1.013211577635162,0
+scen4,SSB,carton,bev,Almond milk,18.56990080683689,7.761510878935339,0
+scen4,non_SSB,plastic,bev,"Milk, animal",65.2382953706495,29.97675934289654,0
+scen4,non_SSB,carton,bev,"Milk, animal",1.863006176983306,0.856044559479456,0
+scen4,SSB,plastic,bev,"Milk, animal",0.5130572332082786,0.23980933966949322,0
+scen4,SSB,carton,bev,"Milk, animal",0.3835105720554732,0.1792576170611303,0
+scen4,SSB,bag_in_box,bev,"Milk, animal",26.55588683786185,12.412552196374879,0
+scen4,non_SSB,carton,bev,Plant milk,0,0,0
+scen4,non_SSB,bag_in_box,bev,Plant milk,0,0,0
+scen4,SSB,carton,bev,Plant milk,1.1027616216373826,0.18664192604202018,0
+scen4,SSB,bag_in_box,bev,Plant milk,2.419046538142118,0.40942257710577984,0
+scen4,non_SSB,carton,bev,Soy milk,6.3966535011113015,0.10567812471650002,0
+scen4,SSB,carton,bev,Soy milk,19.917868104804,0.9663140697799999,0
+scen4,non_SSB,plastic,bev,Probiotic,0.11333867810432999,0.019648513200959998,0
+scen4,SSB,glass,bev,Probiotic,1.5603685879712001,0.33247845357440003,0
+scen4,non_SSB,alum_can,bev,Soda,1.140437140905361,0.5012485539532657,0
+scen4,non_SSB,glass,bev,Soda,0.14182623364286984,0.06233591662026193,0
+scen4,non_SSB,plastic,bev,Soda,0.9190369603669201,0.4039380434837589,0
+scen4,non_SSB,bag_in_box,bev,Soda,1.7625046450613489,0.7746616389322135,0
+scen4,SSB,alum_can,bev,Soda,2.284888769360063,1.6533612303820417,0
+scen4,SSB,glass,bev,Soda,0.13573437576407543,0.09821832796757267,0
+scen4,SSB,plastic,bev,Soda,7.917297962763054,5.729011265910053,0
+scen4,SSB,carton,bev,Soda,3.2198873831680087e-4,2.3299326588301637e-4,0
+scen4,SSB,bag_in_box,bev,Soda,19.4096838671505,14.044980758037651,0
+scen4,non_SSB,alum_can,bev,Tea,0.07203950022030232,0.009155036319310755,0
+scen4,non_SSB,glass,bev,Tea,0.14932000248078653,0.01897611784827338,0
+scen4,non_SSB,plastic,bev,Tea,0.40995301710995224,0.052098289818436574,0
+scen4,non_SSB,bag_in_box,bev,Tea,0.7253963637089588,0.09218595402997927,0
+scen4,SSB,alum_can,bev,Tea,6.142540317312036,3.454874685961682,0
+scen4,SSB,glass,bev,Tea,3.8694899748668306,2.176396453446478,0
+scen4,SSB,plastic,bev,Tea,2.351684575997416,1.3227060941026743,0
+scen4,SSB,bag_in_box,bev,Tea,0.1270494425199182,0.07145901860676569,0
+scen4,non_SSB,plastic,bev,"Water, bottled",0,0,0
+scen4,non_SSB,steel_bott_reuse,bev,"Water, Filtered tap",0.6492396282371999,0.20897778,0
+scen5_1,non_SSB,alum_can,bev,Coffee,0.13394616635286608,0.003483483479263213,0
+scen5_1,non_SSB,glass,bev,Coffee,0.3841983307535339,0.009991689754036786,0
+scen5_1,SSB,alum_can,bev,Coffee,0.021934285365812645,0.0013428540547758348,0
+scen5_1,SSB,glass,bev,Coffee,0.2650364896491473,0.016225982239824164,0
+scen5_1,non_SSB,alum_can,bev,Coffee + milk,0.07153801716709998,0.024932395193067995,0
+scen5_1,non_SSB,glass,bev,Coffee + milk,0.33507186424065,0.11677908429880199,0
+scen5_1,SSB,alum_can,bev,Coffee + milk,5.2897876696722825,1.969403408194525,0
+scen5_1,SSB,glass,bev,Coffee + milk,12.224740604990917,4.551306652589074,0
+scen5_1,non_SSB,alum_can,bev,Juice,35.60966665649565,7.956990725142036,0
+scen5_1,non_SSB,glass,bev,Juice,0.6174661165650772,0.137972989469183,0
+scen5_1,non_SSB,carton,bev,Juice,1.0532344581372723,0.23534555646477953,0
+scen5_1,SSB,alum_can,bev,Juice,19.219611764445048,5.122403777506121,0
+scen5_1,SSB,glass,bev,Juice,4.765698775237175,1.2701522646722454,0
+scen5_1,SSB,carton,bev,Juice,0.6376025477297617,0.1699335938242228,0
+scen5_1,SSB,bag_in_box,bev,Juice,61.06258354288421,16.27437704974811,0
+scen5_1,non_SSB,carton,bev,Almond milk,0.1541919882958,0.062305855873299995,0
+scen5_1,SSB,alum_can,bev,Almond milk,2.424172147215311,1.013211577635162,0
+scen5_1,SSB,carton,bev,Almond milk,18.56990080683689,7.761510878935339,0
+scen5_1,non_SSB,alum_can,bev,"Milk, animal",65.2382953706495,29.97675934289654,0
+scen5_1,non_SSB,carton,bev,"Milk, animal",1.863006176983306,0.856044559479456,0
+scen5_1,SSB,alum_can,bev,"Milk, animal",0.5130572332082786,0.23980933966949322,0
+scen5_1,SSB,carton,bev,"Milk, animal",0.3835105720554732,0.1792576170611303,0
+scen5_1,SSB,bag_in_box,bev,"Milk, animal",26.55588683786185,12.412552196374879,0
+scen5_1,SSB,carton,bev,Plant milk,1.1027616216373826,0.18664192604202018,0
+scen5_1,SSB,bag_in_box,bev,Plant milk,2.419046538142118,0.40942257710577984,0
+scen5_1,non_SSB,carton,bev,Soy milk,6.3966535011113015,0.10567812471650002,0
+scen5_1,SSB,carton,bev,Soy milk,19.917868104804,0.9663140697799999,0
+scen5_1,non_SSB,alum_can,bev,Probiotic,0.11333867810432999,0.019648513200959998,0
+scen5_1,SSB,glass,bev,Probiotic,1.5603685879712001,0.33247845357440003,0
+scen5_1,non_SSB,alum_can,bev,Soda,2.0594741012722815,0.9051865974370246,0
+scen5_1,non_SSB,glass,bev,Soda,0.14182623364286984,0.06233591662026193,0
+scen5_1,non_SSB,bag_in_box,bev,Soda,1.7625046450613489,0.7746616389322135,0
+scen5_1,SSB,alum_can,bev,Soda,10.202186732123115,7.382372496292094,0
+scen5_1,SSB,glass,bev,Soda,0.13573437576407543,0.09821832796757267,0
+scen5_1,SSB,carton,bev,Soda,3.2198873831680087e-4,2.3299326588301637e-4,0
+scen5_1,SSB,bag_in_box,bev,Soda,19.4096838671505,14.044980758037651,0
+scen5_1,non_SSB,alum_can,bev,Tea,0.48199251733025456,0.06125332613774733,0
+scen5_1,non_SSB,glass,bev,Tea,0.14932000248078653,0.01897611784827338,0
+scen5_1,non_SSB,bag_in_box,bev,Tea,0.7253963637089588,0.09218595402997927,0
+scen5_1,SSB,alum_can,bev,Tea,8.494224893309452,4.777580780064357,0
+scen5_1,SSB,glass,bev,Tea,3.869489974866831,2.1763964534464786,0
+scen5_1,SSB,bag_in_box,bev,Tea,0.12704944251991823,0.0714590186067657,0
+scen5_1,non_SSB,alum_can,bev,"Water, bottled",3.9618091123512,0.2191644018861,0
+scen5_2,non_SSB,alum_can,bev,Coffee,0.05400949692975929,0.0014046030237438597,0
+scen5_2,non_SSB,glass,bev,Coffee,0.3841990899694406,0.009991709498656139,0
+scen5_2,SSB,alum_can,bev,Coffee,0.005731582988029863,3.508972062411636e-4,0
+scen5_2,SSB,glass,bev,Coffee,0.2650367642419301,0.016225999050858836,0
+scen5_2,non_SSB,alum_can,bev,Coffee + milk,0.014588111816349997,0.005084241684757999,0
+scen5_2,non_SSB,glass,bev,Coffee + milk,0.33507186424065,0.11677908429880199,0
+scen5_2,SSB,alum_can,bev,Coffee + milk,3.6594565890618354,1.362426382434511,0
+scen5_2,SSB,glass,bev,Coffee + milk,12.224740462115362,4.551306599396087,0
+scen5_2,non_SSB,alum_can,bev,Juice,0.19491587046154388,0.0435540098818246,0
+scen5_2,non_SSB,glass,bev,Juice,0.6174672299611409,0.13797323825786834,0
+scen5_2,non_SSB,carton,bev,Juice,1.053236357297515,0.23534598083270702,0
+scen5_2,SSB,alum_can,bev,Juice,7.56159644426837,2.0153138713109464,0
+scen5_2,SSB,glass,bev,Juice,4.765698317332768,1.270152142631733,0
+scen5_2,SSB,carton,bev,Juice,0.6376024864667589,0.16993357749643007,0
+scen5_2,SSB,bag_in_box,bev,Juice,61.062577675785285,16.274375486051085,0
+scen5_2,non_SSB,carton,bev,Almond milk,0.1541919882958,0.062305855873299995,0
+scen5_2,SSB,carton,bev,Almond milk,18.569901901266,7.7615113363649995,0
+scen5_2,non_SSB,carton,bev,"Milk, animal",1.8630075428581998,0.8560451870939999,0
+scen5_2,SSB,carton,bev,"Milk, animal",0.3835105386419905,0.17925760144325237,0
+scen5_2,SSB,bag_in_box,bev,"Milk, animal",26.55588452417161,12.412551114927249,0
+scen5_2,SSB,carton,bev,Plant milk,1.1027616216373826,0.18664192604202018,0
+scen5_2,SSB,bag_in_box,bev,Plant milk,2.419046538142118,0.40942257710577984,0
+scen5_2,non_SSB,carton,bev,Soy milk,6.3966535011113015,0.10567812471650002,0
+scen5_2,SSB,carton,bev,Soy milk,19.917868104804,0.9663140697799999,0
+scen5_2,SSB,glass,bev,Probiotic,1.5603685879712001,0.33247845357440003,0
+scen5_2,non_SSB,alum_can,bev,Soda,1.140437067799876,0.5012485218217106,0
+scen5_2,non_SSB,glass,bev,Soda,0.14182622455137742,0.06233591262434031,0
+scen5_2,non_SSB,bag_in_box,bev,Soda,1.7625045320794468,0.7746615892740493,0
+scen5_2,SSB,alum_can,bev,Soda,2.2848888097767337,1.6533612596278227,0
+scen5_2,SSB,glass,bev,Soda,0.13573437816503764,0.09821832970492542,0
+scen5_2,SSB,carton,bev,Soda,3.219887440123572e-4,2.3299327000436012e-4,0
+scen5_2,SSB,bag_in_box,bev,Soda,19.409684210482222,14.044981006474849,0
+scen5_2,non_SSB,alum_can,bev,Tea,0.07203952131010742,0.009155038999478317,0
+scen5_2,non_SSB,glass,bev,Tea,0.14932004619471764,0.01897612340359547,0
+scen5_2,non_SSB,bag_in_box,bev,Tea,0.725396576071175,0.09218598101772624,0
+scen5_2,SSB,alum_can,bev,Tea,6.142540281195114,3.4548746656477016,0
+scen5_2,SSB,glass,bev,Tea,3.8694899521149946,2.176396440649697,0
+scen5_2,SSB,bag_in_box,bev,Tea,0.12704944177289262,0.07145901818660079,0
+scen5_2,non_SSB,steel_bott_reuse,bev,"Water, Filtered tap",2.0989993521588,0.67562762,0
+scen6_1,non_SSB,alum_can,bev,Coffee,0.05400939020158046,0.0014046002481075137,0
+scen6_1,non_SSB,glass,bev,Coffee,0.3841983307535339,0.009991689754036786,0
+scen6_1,non_SSB,plastic,bev,Coffee,0.07993677615128562,0.0020788832311556993,0
+scen6_1,SSB,alum_can,bev,Coffee,0.005731577049792099,3.5089684269220243e-4,0
+scen6_1,SSB,glass,bev,Coffee,0.2650364896491473,0.016225982239824164,0
+scen6_1,SSB,plastic,bev,Coffee,0.016202708316020546,9.919572120836325e-4,0
+scen6_1,non_SSB,alum_can,bev,Coffee + milk,0.5388477274774257,0.18779894973846673,0
+scen6_1,non_SSB,glass,bev,Coffee + milk,5.971461376954432,2.0811708351184275,0
+scen6_1,non_SSB,plastic,bev,Coffee + milk,0.05694993140064211,0.019848162587205818,0
+scen6_1,SSB,alum_can,bev,Coffee + milk,3.124906743588628,1.1634119128064682,0
+scen6_1,SSB,glass,bev,Coffee + milk,6.477721528657151,2.411674655490055,0
+scen6_1,SSB,plastic,bev,Coffee + milk,1.6303308855114218,0.6069769531240768,0
+scen6_1,non_SSB,alum_can,bev,Juice,0.25239207433602,0.05639708492538598,0
+scen6_1,non_SSB,glass,bev,Juice,0.6174660552669446,0.13797297577209686,0
+scen6_1,non_SSB,plastic,bev,Juice,35.414747621747225,7.9134360081993576,0
+scen6_1,non_SSB,carton,bev,Juice,1.0532343535788136,0.23534553310116052,0
+scen6_1,SSB,alum_can,bev,Juice,7.502241141769359,1.99949451816988,0
+scen6_1,SSB,glass,bev,Juice,4.765698456224886,1.2701521796492083,0
+scen6_1,SSB,plastic,bev,Juice,11.658013813254202,3.1070895045707574,0
+scen6_1,SSB,carton,bev,Juice,0.637602505049127,0.1699335824489959,0
+scen6_1,SSB,bag_in_box,bev,Juice,61.06257945540082,16.274375960353556,0
+scen6_1,non_SSB,carton,bev,Almond milk,0.1541919882958,0.062305855873299995,0
+scen6_1,SSB,plastic,bev,Almond milk,2.424172147215311,1.013211577635162,0
+scen6_1,SSB,carton,bev,Almond milk,18.56990080683689,7.761510878935339,0
+scen6_1,non_SSB,plastic,bev,"Milk, animal",65.2382953706495,29.97675934289654,0
+scen6_1,non_SSB,carton,bev,"Milk, animal",1.863006176983306,0.856044559479456,0
+scen6_1,SSB,plastic,bev,"Milk, animal",0.5130572332082786,0.23980933966949322,0
+scen6_1,SSB,carton,bev,"Milk, animal",0.3835105720554732,0.1792576170611303,0
+scen6_1,SSB,bag_in_box,bev,"Milk, animal",26.55588683786185,12.412552196374879,0
+scen6_1,non_SSB,carton,bev,Plant milk,0,0,0
+scen6_1,non_SSB,bag_in_box,bev,Plant milk,0,0,0
+scen6_1,SSB,carton,bev,Plant milk,1.1027616216373826,0.18664192604202018,0
+scen6_1,SSB,bag_in_box,bev,Plant milk,2.419046538142118,0.40942257710577984,0
+scen6_1,non_SSB,carton,bev,Soy milk,6.3966535011113015,0.10567812471650002,0
+scen6_1,SSB,carton,bev,Soy milk,19.917868104804,0.9663140697799999,0
+scen6_1,non_SSB,plastic,bev,Probiotic,0.11333867810432999,0.019648513200959998,0
+scen6_1,SSB,glass,bev,Probiotic,1.5603685879712001,0.33247845357440003,0
+scen6_1,non_SSB,alum_can,bev,Soda,1.5587796723335317,0.6851197919322822,0
+scen6_1,non_SSB,glass,bev,Soda,0.14182622163621597,0.0623359113430593,0
+scen6_1,non_SSB,plastic,bev,Soda,2.9534059396432335,1.2980903579726597,0
+scen6_1,non_SSB,bag_in_box,bev,Soda,1.7625044958521179,0.7746615733512985,0
+scen6_1,SSB,alum_can,bev,Soda,1.349235450941157,0.9763160531739675,0
+scen6_1,SSB,glass,bev,Soda,0.1357343745773191,0.09821832710882762,0
+scen6_1,SSB,plastic,bev,Soda,3.3672855562387776,2.4365909907596457,0
+scen6_1,SSB,carton,bev,Soda,3.2198873550158053e-4,2.329932638459036e-4,0
+scen6_1,SSB,bag_in_box,bev,Soda,19.409683697447242,14.04498063523921,0
+scen6_1,non_SSB,alum_can,bev,Tea,0.07203948296228573,0.009155034126100527,0
+scen6_1,non_SSB,glass,bev,Tea,0.1513782749293546,0.0192376904433643,0
+scen6_1,non_SSB,plastic,bev,Tea,1.0432728948177095,0.13258283599692242,0
+scen6_1,non_SSB,bag_in_box,bev,Tea,0.7253961899306502,0.09218593194561277,0
+scen6_1,SSB,alum_can,bev,Tea,6.1425400546771,3.4548745382425388,0
+scen6_1,SSB,glass,bev,Tea,3.8665542848627075,2.174745273225082,0
+scen6_1,SSB,plastic,bev,Tea,1.4484541799129944,0.814683733674968,0
+scen6_1,SSB,bag_in_box,bev,Tea,0.12704943708769956,0.07145901555141175,0
+scen6_1,non_SSB,plastic,bev,"Water, bottled",3.9618091123512,0.2191644018861,0
+scen6_2,non_SSB,alum_can,bev,Coffee,0.05400939020158046,0.0014046002481075137,0
+scen6_2,non_SSB,glass,bev,Coffee,0.3841983307535339,0.009991689754036786,0
+scen6_2,non_SSB,plastic,bev,Coffee,0.07993677615128562,0.0020788832311556993,0
+scen6_2,SSB,alum_can,bev,Coffee,0.005731577049792099,3.5089684269220243e-4,0
+scen6_2,SSB,glass,bev,Coffee,0.2650364896491473,0.016225982239824164,0
+scen6_2,SSB,plastic,bev,Coffee,0.016202708316020546,9.919572120836325e-4,0
+scen6_2,non_SSB,alum_can,bev,Coffee + milk,0.014588111816349997,0.005084241684757999,0
+scen6_2,non_SSB,glass,bev,Coffee + milk,0.33507186424065,0.11677908429880199,0
+scen6_2,non_SSB,plastic,bev,Coffee + milk,0.05694990535074999,0.019848153508309995,0
+scen6_2,SSB,alum_can,bev,Coffee + milk,3.124906743588628,1.1634119128064682,0
+scen6_2,SSB,glass,bev,Coffee + milk,6.477721528657151,2.411674655490055,0
+scen6_2,SSB,plastic,bev,Coffee + milk,1.6303308855114218,0.6069769531240768,0
+scen6_2,non_SSB,alum_can,bev,Juice,0.19491551899582654,0.043553931346704336,0
+scen6_2,non_SSB,glass,bev,Juice,0.6174661165650772,0.137972989469183,0
+scen6_2,non_SSB,plastic,bev,Juice,35.41475113749983,7.913436793795333,0
+scen6_2,non_SSB,carton,bev,Juice,1.0532344581372723,0.23534555646477953,0
+scen6_2,SSB,alum_can,bev,Juice,7.502241141769359,1.99949451816988,0
+scen6_2,SSB,glass,bev,Juice,4.765698456224886,1.2701521796492083,0
+scen6_2,SSB,plastic,bev,Juice,11.658013813254202,3.1070895045707574,0
+scen6_2,SSB,carton,bev,Juice,0.637602505049127,0.1699335824489959,0
+scen6_2,SSB,bag_in_box,bev,Juice,61.06257945540082,16.274375960353556,0
+scen6_2,non_SSB,carton,bev,Almond milk,0.1541919882958,0.062305855873299995,0
+scen6_2,SSB,plastic,bev,Almond milk,2.424172147215311,1.013211577635162,0
+scen6_2,SSB,carton,bev,Almond milk,18.56990080683689,7.761510878935339,0
+scen6_2,non_SSB,plastic,bev,"Milk, animal",65.2382953706495,29.97675934289654,0
+scen6_2,non_SSB,carton,bev,"Milk, animal",1.863006176983306,0.856044559479456,0
+scen6_2,SSB,plastic,bev,"Milk, animal",0.5130572332082786,0.23980933966949322,0
+scen6_2,SSB,carton,bev,"Milk, animal",0.3835105720554732,0.1792576170611303,0
+scen6_2,SSB,bag_in_box,bev,"Milk, animal",26.55588683786185,12.412552196374879,0
+scen6_2,SSB,carton,bev,Plant milk,1.1027616216373826,0.18664192604202018,0
+scen6_2,SSB,bag_in_box,bev,Plant milk,2.419046538142118,0.40942257710577984,0
+scen6_2,non_SSB,carton,bev,Soy milk,6.3966535011113015,0.10567812471650002,0
+scen6_2,SSB,carton,bev,Soy milk,19.917868104804,0.9663140697799999,0
+scen6_2,non_SSB,plastic,bev,Probiotic,0.11333867810432999,0.019648513200959998,0
+scen6_2,SSB,glass,bev,Probiotic,1.5603685879712001,0.33247845357440003,0
+scen6_2,non_SSB,alum_can,bev,Soda,1.140437140905361,0.5012485539532657,0
+scen6_2,non_SSB,glass,bev,Soda,0.14182623364286986,0.062335916620261944,0
+scen6_2,non_SSB,plastic,bev,Soda,0.9190369603669201,0.4039380434837589,0
+scen6_2,non_SSB,bag_in_box,bev,Soda,1.7625046450613493,0.7746616389322137,0
+scen6_2,SSB,alum_can,bev,Soda,1.349235450941157,0.9763160531739675,0
+scen6_2,SSB,glass,bev,Soda,0.1357343745773191,0.09821832710882762,0
+scen6_2,SSB,plastic,bev,Soda,3.3672855562387776,2.4365909907596457,0
+scen6_2,SSB,carton,bev,Soda,3.2198873550158053e-4,2.329932638459036e-4,0
+scen6_2,SSB,bag_in_box,bev,Soda,19.409683697447242,14.04498063523921,0
+scen6_2,non_SSB,alum_can,bev,Tea,0.07203950022030232,0.009155036319310755,0
+scen6_2,non_SSB,glass,bev,Tea,0.14932000248078653,0.01897611784827338,0
+scen6_2,non_SSB,plastic,bev,Tea,0.40995301710995224,0.052098289818436574,0
+scen6_2,non_SSB,bag_in_box,bev,Tea,0.7253963637089588,0.09218595402997927,0
+scen6_2,SSB,alum_can,bev,Tea,6.1425400546771,3.4548745382425388,0
+scen6_2,SSB,glass,bev,Tea,3.8665542848627075,2.174745273225082,0
+scen6_2,SSB,plastic,bev,Tea,1.4484541799129944,0.814683733674968,0
+scen6_2,SSB,bag_in_box,bev,Tea,0.12704943708769956,0.07145901555141175,0
+scen6_2,non_SSB,plastic,bev,"Water, bottled",6.4493022614496,0.3567707157588,0
+scen0,non_SSB,alum_can,cont,Coffee,0.034452864258646944,5.339568146050767e-4,0.0033358957329885346
+scen0,SSB,alum_can,cont,Coffee,0.0035735615364370144,5.5383712670920604e-5,3.4600980027314456e-4
+scen0,non_SSB,glass,cont,Coffee,0.6130194459706145,0.002162661908057677,0.04746010156376574
+scen0,SSB,glass,cont,Coffee,0.4133286591625838,0.0014581758418187665,0.031999996528677285
+scen0,non_SSB,plastic,cont,Coffee,0.03834041297241276,0.0011005249468351637,0.2172413533456582
+scen0,SSB,plastic,cont,Coffee,0.007595718161011982,2.1802783739803184e-4,0.04303824515708121
+scen0,non_SSB,alum_can,cont,Coffee + milk,0.004764734252399999,7.384472607999999e-5,4.6134499999999994e-4
+scen0,SSB,alum_can,cont,Coffee + milk,1.1722341556149503,0.01816750012435722,0.11350147518715777
+scen0,non_SSB,glass,cont,Coffee + milk,0.27374127156341993,9.657276364799999e-4,0.02119311
+scen0,SSB,glass,cont,Coffee + milk,9.79490296060381,0.03455528803410039,0.7583235611415992
+scen0,non_SSB,plastic,cont,Coffee + milk,0.013985780392399998,4.0144847249999984e-4,0.0792451
+scen0,SSB,plastic,cont,Coffee + milk,0.3926699447468355,0.011271215841551304,2.224914746649876
+scen0,non_SSB,alum_can,cont,Juice,0.054378594658649644,8.427694420020777e-4,0.005265202931340449
+scen0,SSB,alum_can,cont,Juice,2.042795253922864,0.0316596158300906,0.1977934815454481
+scen0,SSB,bag_in_box,cont,Juice,1.6597371560499354,0.033165353672550676,3.264784381944403
+scen0,non_SSB,carton,cont,Juice,0.12044478055318013,0.004763452561235626,0.26880270802108486
+scen0,SSB,carton,cont,Juice,0.07060617924272629,0.002792393193031112,0.15757538098620272
+scen0,non_SSB,glass,cont,Juice,0.43088106562741646,0.0015200987075708237,0.033358907732856914
+scen0,SSB,glass,cont,Juice,3.220331718737273,0.011360958914436878,0.24931879640179247
+scen0,non_SSB,plastic,cont,Juice,7.428820305330358,0.21323719380524941,42.092581998344436
+scen0,SSB,plastic,cont,Juice,2.3680452419437255,0.06797247765350242,13.417626813611966
+scen0,non_SSB,carton,cont,Almond milk,0.054085473286,0.002139018271,0.12070528599999998
+scen0,SSB,carton,cont,Almond milk,6.4370737244469,0.2545788632662301,14.365942973333864
+scen0,SSB,plastic,cont,Almond milk,1.5413990605158747,0.04424438829979701,8.733750942983708
+scen0,SSB,bag_in_box,cont,"Milk, animal",2.886625813358962,0.05768391579716204,5.678274472027494
+scen0,non_SSB,carton,cont,"Milk, animal",0.16762430902716577,0.006629348656650632,0.3740956477293832
+scen0,SSB,carton,cont,"Milk, animal",0.03426351870273087,0.0013550827621741956,0.07646762749971212
+scen0,non_SSB,plastic,cont,"Milk, animal",10.767082584479224,0.3090588251456732,61.00757427729754
+scen0,SSB,plastic,cont,"Milk, animal",0.08408009019540323,0.002413438709144109,0.47640782055783226
+scen0,non_SSB,bag_in_box,cont,Plant milk,0,0,0
+scen0,SSB,bag_in_box,cont,Plant milk,0.1111364850692193,0.0022210311743962726,0.21852999664146117
+scen0,non_SSB,carton,cont,Plant milk,0,0,0
+scen0,SSB,carton,cont,Plant milk,0.24984477201553063,0.009881073415574315,0.5575912131205422
+scen0,non_SSB,carton,cont,Soy milk,1.1141620197260003,0.044063826611,2.486531726
+scen0,SSB,carton,cont,Soy milk,3.35163136522,0.13255316617,7.480005219999999
+scen0,SSB,glass,cont,Probiotic,3.6007130048960003,0.012702900224,0.278768
+scen0,non_SSB,plastic,cont,Probiotic,0.0808972202892,0.0023220774674999997,0.45837330000000004
+scen0,non_SSB,alum_can,cont,Soda,5.9801769143975685,0.09268187956782512,0.5790301352448091
+scen0,SSB,alum_can,cont,Soda,5.357040343233703,0.08302439460214249,0.5186949882680835
+scen0,non_SSB,bag_in_box,cont,Soda,0.7682067606323436,0.015352394514580231,1.5105410317446626
+scen0,SSB,bag_in_box,cont,Soda,3.782539666515904,0.07559298382065807,7.437686913573725
+scen0,SSB,carton,cont,Soda,3.094438820182244e-4,1.2238149678122248e-5,6.906015610226426e-4
+scen0,non_SSB,glass,cont,Soda,1.8602099703114745,0.006562606243937282,0.1440178687661798
+scen0,SSB,glass,cont,Soda,0.7959988171421248,0.00280819202719837,0.06162640509125637
+scen0,non_SSB,plastic,cont,Soda,3.623512426454836,0.10400946446117044,20.531253639710634
+scen0,SSB,plastic,cont,Soda,13.95696346591523,0.40062131013973995,79.08181985710435
+scen0,non_SSB,alum_can,cont,Tea,0.2323732332305788,0.0036013630240957877,0.022499519092961492
+scen0,SSB,alum_can,cont,Tea,13.89274885648612,0.2153123719940312,1.3451642592589914
+scen0,non_SSB,bag_in_box,cont,Tea,0.1944894100375717,0.003886815769945786,0.38242859755586894
+scen0,SSB,bag_in_box,cont,Tea,0.023884607459858393,4.773271147051574e-4,0.04696480354524981
+scen0,non_SSB,glass,cont,Tea,1.2047477294711602,0.004250211050354099,0.09327183660362753
+scen0,SSB,glass,cont,Tea,21.890546980885134,0.07722732519055624,1.6947710057618557
+scen0,non_SSB,plastic,cont,Tea,0.9942683034528386,0.028539522320342514,5.6336428088607935
+scen0,SSB,plastic,cont,Tea,3.999201973163244,0.11479327418996217,22.65995542556454
+scen0,non_SSB,plastic,cont,"Water, bottled",20.285096944596,0.582264339525,114.937779
+scen0,non_SSB,steel_bott_reuse,cont,"Water, Filtered tap",0,0,0
+scen1,non_SSB,alum_can,cont,Coffee,0,0,0
+scen1,SSB,alum_can,cont,Coffee,0,0,0
+scen1,non_SSB,glass,cont,Coffee,0,0,0
+scen1,SSB,glass,cont,Coffee,0,0,0
+scen1,non_SSB,plastic,cont,Coffee,0,0,0
+scen1,SSB,plastic,cont,Coffee,0,0,0
+scen1,non_SSB,alum_can,cont,Coffee + milk,0,0,0
+scen1,SSB,alum_can,cont,Coffee + milk,0,0,0
+scen1,non_SSB,glass,cont,Coffee + milk,0,0,0
+scen1,SSB,glass,cont,Coffee + milk,0,0,0
+scen1,non_SSB,plastic,cont,Coffee + milk,0,0,0
+scen1,SSB,plastic,cont,Coffee + milk,0,0,0
+scen1,non_SSB,alum_can,cont,Juice,0,0,0
+scen1,SSB,alum_can,cont,Juice,0,0,0
+scen1,SSB,bag_in_box,cont,Juice,0,0,0
+scen1,non_SSB,carton,cont,Juice,0,0,0
+scen1,SSB,carton,cont,Juice,0,0,0
+scen1,non_SSB,glass,cont,Juice,0,0,0
+scen1,SSB,glass,cont,Juice,0,0,0
+scen1,non_SSB,plastic,cont,Juice,0,0,0
+scen1,SSB,plastic,cont,Juice,0,0,0
+scen1,non_SSB,carton,cont,Almond milk,0,0,0
+scen1,SSB,carton,cont,Almond milk,0,0,0
+scen1,SSB,plastic,cont,Almond milk,0,0,0
+scen1,SSB,bag_in_box,cont,"Milk, animal",0,0,0
+scen1,non_SSB,carton,cont,"Milk, animal",0,0,0
+scen1,SSB,carton,cont,"Milk, animal",0,0,0
+scen1,non_SSB,plastic,cont,"Milk, animal",0,0,0
+scen1,SSB,plastic,cont,"Milk, animal",0,0,0
+scen1,non_SSB,bag_in_box,cont,Plant milk,0,0,0
+scen1,SSB,bag_in_box,cont,Plant milk,0,0,0
+scen1,non_SSB,carton,cont,Plant milk,0,0,0
+scen1,SSB,carton,cont,Plant milk,0,0,0
+scen1,non_SSB,carton,cont,Soy milk,0,0,0
+scen1,SSB,carton,cont,Soy milk,0,0,0
+scen1,SSB,glass,cont,Probiotic,0,0,0
+scen1,non_SSB,plastic,cont,Probiotic,0,0,0
+scen1,non_SSB,alum_can,cont,Soda,0,0,0
+scen1,SSB,alum_can,cont,Soda,0,0,0
+scen1,non_SSB,bag_in_box,cont,Soda,0,0,0
+scen1,SSB,bag_in_box,cont,Soda,0,0,0
+scen1,SSB,carton,cont,Soda,0,0,0
+scen1,non_SSB,glass,cont,Soda,0,0,0
+scen1,SSB,glass,cont,Soda,0,0,0
+scen1,non_SSB,plastic,cont,Soda,0,0,0
+scen1,SSB,plastic,cont,Soda,0,0,0
+scen1,non_SSB,alum_can,cont,Tea,0,0,0
+scen1,SSB,alum_can,cont,Tea,0,0,0
+scen1,non_SSB,bag_in_box,cont,Tea,0,0,0
+scen1,SSB,bag_in_box,cont,Tea,0,0,0
+scen1,non_SSB,glass,cont,Tea,0,0,0
+scen1,SSB,glass,cont,Tea,0,0,0
+scen1,non_SSB,plastic,cont,Tea,0,0,0
+scen1,SSB,plastic,cont,Tea,0,0,0
+scen1,non_SSB,plastic,cont,"Water, bottled",0,0,0
+scen1,non_SSB,steel_bott_reuse,cont,"Water, Filtered tap",16.050579337092998,0.18882813138299998,2.352119225
+scen2_1,non_SSB,alum_can,cont,Coffee,0.10372219506331345,0.001607505618809422,0.010042892960374738
+scen2_1,SSB,alum_can,cont,Coffee,0,0,0
+scen2_1,non_SSB,glass,cont,Coffee,1.8455279095296193,0.006510809626728131,0.14288118036183575
+scen2_1,SSB,glass,cont,Coffee,0,0,0
+scen2_1,non_SSB,plastic,cont,Coffee,0.11542586889955046,0.003313189357805877,0.6540167417831252
+scen2_1,SSB,plastic,cont,Coffee,0,0,0
+scen2_1,non_SSB,alum_can,cont,Coffee + milk,0.014344494173971387,2.223136038488443e-4,0.0013889044622703687
+scen2_1,SSB,alum_can,cont,Coffee + milk,0,0,0
+scen2_1,non_SSB,glass,cont,Coffee + milk,0.8241131335161297,0.002907376093042926,0.06380302170476926
+scen2_1,SSB,glass,cont,Coffee + milk,0,0,0
+scen2_1,non_SSB,plastic,cont,Coffee + milk,0.04210496005232047,0.0012085826763634012,0.23857172615518016
+scen2_1,SSB,plastic,cont,Coffee + milk,0,0,0
+scen2_1,non_SSB,alum_can,cont,Juice,0.16371008159273076,0.002537208895891802,0.01585121511327845
+scen2_1,SSB,alum_can,cont,Juice,0,0,0
+scen2_1,SSB,bag_in_box,cont,Juice,0,0,0
+scen2_1,non_SSB,carton,cont,Juice,0.36260637067867396,0.01434066496859983,0.809246975555649
+scen2_1,SSB,carton,cont,Juice,0,0,0
+scen2_1,non_SSB,glass,cont,Juice,1.2971937736424541,0.004576350032720832,0.10042902986132445
+scen2_1,SSB,glass,cont,Juice,0,0,0
+scen2_1,non_SSB,plastic,cont,Juice,22.36491740835968,0.6419636001187016,126.72228983949248
+scen2_1,SSB,plastic,cont,Juice,0,0,0
+scen2_1,non_SSB,carton,cont,Almond milk,0.16282793533800002,0.006439657593,0.363391338
+scen2_1,SSB,carton,cont,Almond milk,0,0,0
+scen2_1,SSB,plastic,cont,Almond milk,0,0,0
+scen2_1,SSB,bag_in_box,cont,"Milk, animal",0,0,0
+scen2_1,non_SSB,carton,cont,"Milk, animal",0.5046432227488746,0.01995805912778392,1.1262378015582968
+scen2_1,SSB,carton,cont,"Milk, animal",0,0,0
+scen2_1,non_SSB,plastic,cont,"Milk, animal",32.41495989793641,0.9304404739721693,183.6670294067988
+scen2_1,SSB,plastic,cont,"Milk, animal",0,0,0
+scen2_1,non_SSB,bag_in_box,cont,Plant milk,0,0,0
+scen2_1,SSB,bag_in_box,cont,Plant milk,0,0,0
+scen2_1,non_SSB,carton,cont,Plant milk,0,0,0
+scen2_1,SSB,carton,cont,Plant milk,0,0,0
+scen2_1,non_SSB,carton,cont,Soy milk,3.3542518695320003,0.13265680410199998,7.485853532
+scen2_1,SSB,carton,cont,Soy milk,0,0,0
+scen2_1,SSB,glass,cont,Probiotic,0,0,0
+scen2_1,non_SSB,plastic,cont,Probiotic,0.24354605516400002,0.006990756974999999,1.379961
+scen2_1,non_SSB,alum_can,cont,Soda,18.003687937954304,0.2790244605013127,1.7432055958948467
+scen2_1,SSB,alum_can,cont,Soda,0,0,0
+scen2_1,non_SSB,bag_in_box,cont,Soda,2.312733383681967,0.04621932158485446,4.547576057078242
+scen2_1,SSB,bag_in_box,cont,Soda,0,0,0
+scen2_1,SSB,carton,cont,Soda,0,0,0
+scen2_1,non_SSB,glass,cont,Soda,5.600275758385787,0.01975712701593537,0.4335745921685255
+scen2_1,SSB,glass,cont,Soda,0,0,0
+scen2_1,non_SSB,plastic,cont,Soda,10.908805525156316,0.31312684684033265,61.81059336462378
+scen2_1,SSB,plastic,cont,Soda,0,0,0
+scen2_1,non_SSB,alum_can,cont,Tea,0.6995737865364413,0.010842122960689949,0.06773617403469831
+scen2_1,SSB,alum_can,cont,Tea,0,0,0
+scen2_1,non_SSB,bag_in_box,cont,Tea,0.5855222270209306,0.011701495856247825,1.1513246097777063
+scen2_1,SSB,bag_in_box,cont,Tea,0,0,0
+scen2_1,non_SSB,glass,cont,Tea,3.626966493559171,0.012795519504283297,0.2808005509191384
+scen2_1,SSB,glass,cont,Tea,0,0,0
+scen2_1,non_SSB,plastic,cont,Tea,2.9933053485100545,0.08591997201231855,16.960425161695902
+scen2_1,SSB,plastic,cont,Tea,0,0,0
+scen2_1,non_SSB,plastic,cont,"Water, bottled",61.069526175280004,1.7529424395000002,346.02722000000006
+scen2_1,non_SSB,steel_bott_reuse,cont,"Water, Filtered tap",0,0,0
+scen2_2,non_SSB,alum_can,cont,Coffee,0.053102889503483,8.229983293330606e-4,0.005141682885177558
+scen2_2,SSB,alum_can,cont,Coffee,0,0,0
+scen2_2,non_SSB,glass,cont,Coffee,0.9448591460634154,0.0033333541001066475,0.07315120479517748
+scen2_2,SSB,glass,cont,Coffee,0,0,0
+scen2_2,non_SSB,plastic,cont,Coffee,0.059094846173230756,0.001696261135471392,0.3348384475582829
+scen2_2,SSB,plastic,cont,Coffee,0,0,0
+scen2_2,non_SSB,alum_can,cont,Coffee + milk,0.2060525217555696,0.003193439806106504,0.01995101838081333
+scen2_2,SSB,alum_can,cont,Coffee + milk,0,0,0
+scen2_2,non_SSB,glass,cont,Coffee + milk,11.838032579845898,0.04176321370400003,0.9165031097261243
+scen2_2,SSB,glass,cont,Coffee + milk,0,0,0
+scen2_2,non_SSB,plastic,cont,Coffee + milk,0.6048197372439087,0.01736077307394018,3.4269807772694842
+scen2_2,SSB,plastic,cont,Coffee + milk,0,0,0
+scen2_2,non_SSB,alum_can,cont,Juice,0.17540630283154543,0.002718479079662555,0.016983700767583938
+scen2_2,SSB,alum_can,cont,Juice,0,0,0
+scen2_2,SSB,bag_in_box,cont,Juice,0,0,0
+scen2_2,non_SSB,carton,cont,Juice,0.3885126819626195,0.01536522978802089,0.8670634006093447
+scen2_2,SSB,carton,cont,Juice,0,0,0
+scen2_2,non_SSB,glass,cont,Juice,1.389871421949293,0.004903306087767697,0.10760415396259869
+scen2_2,SSB,glass,cont,Juice,0,0,0
+scen2_2,non_SSB,plastic,cont,Juice,23.962772711167176,0.687828510948895,135.77592858569486
+scen2_2,SSB,plastic,cont,Juice,0,0,0
+scen2_2,non_SSB,carton,cont,Almond milk,7.33147466278,0.28995139182999996,16.362022779999997
+scen2_2,SSB,carton,cont,Almond milk,0,0,0
+scen2_2,SSB,plastic,cont,Almond milk,0,0,0
+scen2_2,SSB,bag_in_box,cont,"Milk, animal",0,0,0
+scen2_2,non_SSB,carton,cont,"Milk, animal",0.23571989579096445,0.009322450804282845,0.526068012512031
+scen2_2,SSB,carton,cont,"Milk, animal",0,0,0
+scen2_2,non_SSB,plastic,cont,"Milk, animal",15.141094985064672,0.43461067478470233,85.79125029397444
+scen2_2,SSB,plastic,cont,"Milk, animal",0,0,0
+scen2_2,non_SSB,bag_in_box,cont,Plant milk,0.1111364850692193,0.0022210311743962726,0.21852999664146117
+scen2_2,SSB,bag_in_box,cont,Plant milk,0,0,0
+scen2_2,non_SSB,carton,cont,Plant milk,0.24984477201553063,0.009881073415574315,0.5575912131205422
+scen2_2,SSB,carton,cont,Plant milk,0,0,0
+scen2_2,non_SSB,carton,cont,Soy milk,4.465792326584,0.17661695092399998,9.966534584
+scen2_2,SSB,carton,cont,Soy milk,0,0,0
+scen2_2,SSB,glass,cont,Probiotic,0,0,0
+scen2_2,non_SSB,plastic,cont,Probiotic,1.163276956984,0.03339075435,6.591266000000001
+scen2_2,non_SSB,alum_can,cont,Soda,26.046861955311165,0.4036790478639384,2.5219852550475963
+scen2_2,SSB,alum_can,cont,Soda,0,0,0
+scen2_2,non_SSB,bag_in_box,cont,Soda,3.345950418147976,0.06686787135711868,6.579212336839376
+scen2_2,SSB,bag_in_box,cont,Soda,0,0,0
+scen2_2,SSB,carton,cont,Soda,0,0,0
+scen2_2,non_SSB,glass,cont,Soda,8.1022071751664,0.028583652515590696,0.627274677747338
+scen2_2,SSB,glass,cont,Soda,0,0,0
+scen2_2,non_SSB,plastic,cont,Soda,15.78233040865338,0.45301672536536663,89.42456669392612
+scen2_2,SSB,plastic,cont,Soda,0,0,0
+scen2_2,non_SSB,alum_can,cont,Tea,1.73244903513693,0.026849813162781816,0.16774423457355692
+scen2_2,SSB,alum_can,cont,Tea,0,0,0
+scen2_2,non_SSB,bag_in_box,cont,Tea,1.450007757260066,0.028977994310196084,2.8511806012829912
+scen2_2,SSB,bag_in_box,cont,Tea,0,0,0
+scen2_2,non_SSB,glass,cont,Tea,8.981946898482375,0.031687272802233046,0.6953843223804655
+scen2_2,SSB,glass,cont,Tea,0,0,0
+scen2_2,non_SSB,plastic,cont,Tea,7.412726238029683,0.21277522897004583,42.001391093234716
+scen2_2,SSB,plastic,cont,Tea,0,0,0
+scen2_2,non_SSB,plastic,cont,"Water, bottled",20.285096944596,0.582264339525,114.937779
+scen2_2,non_SSB,steel_bott_reuse,cont,"Water, Filtered tap",0,0,0
+scen2_3,non_SSB,alum_can,cont,Coffee,0.034452864258646944,5.339568146050767e-4,0.0033358957329885346
+scen2_3,SSB,alum_can,cont,Coffee,0,0,0
+scen2_3,non_SSB,glass,cont,Coffee,0.6130194459706145,0.002162661908057677,0.04746010156376574
+scen2_3,SSB,glass,cont,Coffee,0,0,0
+scen2_3,non_SSB,plastic,cont,Coffee,0.03834041297241276,0.0011005249468351637,0.2172413533456582
+scen2_3,SSB,plastic,cont,Coffee,0,0,0
+scen2_3,non_SSB,alum_can,cont,Coffee + milk,0.004764734252399999,7.384472607999999e-5,4.6134499999999994e-4
+scen2_3,SSB,alum_can,cont,Coffee + milk,0,0,0
+scen2_3,non_SSB,glass,cont,Coffee + milk,0.27374127156341993,9.657276364799999e-4,0.02119311
+scen2_3,SSB,glass,cont,Coffee + milk,0,0,0
+scen2_3,non_SSB,plastic,cont,Coffee + milk,0.013985780392399998,4.0144847249999984e-4,0.0792451
+scen2_3,SSB,plastic,cont,Coffee + milk,0,0,0
+scen2_3,non_SSB,alum_can,cont,Juice,0.054378594658649644,8.427694420020777e-4,0.005265202931340449
+scen2_3,SSB,alum_can,cont,Juice,0,0,0
+scen2_3,SSB,bag_in_box,cont,Juice,0,0,0
+scen2_3,non_SSB,carton,cont,Juice,0.12044478055318013,0.004763452561235626,0.26880270802108486
+scen2_3,SSB,carton,cont,Juice,0,0,0
+scen2_3,non_SSB,glass,cont,Juice,0.43088106562741646,0.0015200987075708237,0.033358907732856914
+scen2_3,SSB,glass,cont,Juice,0,0,0
+scen2_3,non_SSB,plastic,cont,Juice,7.428820305330358,0.21323719380524941,42.092581998344436
+scen2_3,SSB,plastic,cont,Juice,0,0,0
+scen2_3,non_SSB,carton,cont,Almond milk,0.054085473286,0.002139018271,0.12070528599999998
+scen2_3,SSB,carton,cont,Almond milk,0,0,0
+scen2_3,SSB,plastic,cont,Almond milk,0,0,0
+scen2_3,SSB,bag_in_box,cont,"Milk, animal",0,0,0
+scen2_3,non_SSB,carton,cont,"Milk, animal",0.16762430902716577,0.006629348656650632,0.3740956477293832
+scen2_3,SSB,carton,cont,"Milk, animal",0,0,0
+scen2_3,non_SSB,plastic,cont,"Milk, animal",10.767082584479224,0.3090588251456732,61.00757427729754
+scen2_3,SSB,plastic,cont,"Milk, animal",0,0,0
+scen2_3,non_SSB,bag_in_box,cont,Plant milk,0,0,0
+scen2_3,SSB,bag_in_box,cont,Plant milk,0,0,0
+scen2_3,non_SSB,carton,cont,Plant milk,0,0,0
+scen2_3,SSB,carton,cont,Plant milk,0,0,0
+scen2_3,non_SSB,carton,cont,Soy milk,1.1141620197260003,0.044063826611,2.486531726
+scen2_3,SSB,carton,cont,Soy milk,0,0,0
+scen2_3,SSB,glass,cont,Probiotic,0,0,0
+scen2_3,non_SSB,plastic,cont,Probiotic,0.0808972202892,0.0023220774674999997,0.45837330000000004
+scen2_3,non_SSB,alum_can,cont,Soda,5.9801769143975685,0.09268187956782512,0.5790301352448091
+scen2_3,SSB,alum_can,cont,Soda,0,0,0
+scen2_3,non_SSB,bag_in_box,cont,Soda,0.7682067606323436,0.015352394514580231,1.5105410317446626
+scen2_3,SSB,bag_in_box,cont,Soda,0,0,0
+scen2_3,SSB,carton,cont,Soda,0,0,0
+scen2_3,non_SSB,glass,cont,Soda,1.8602099703114745,0.006562606243937282,0.1440178687661798
+scen2_3,SSB,glass,cont,Soda,0,0,0
+scen2_3,non_SSB,plastic,cont,Soda,3.623512426454836,0.10400946446117044,20.531253639710634
+scen2_3,SSB,plastic,cont,Soda,0,0,0
+scen2_3,non_SSB,alum_can,cont,Tea,0.2323732332305788,0.0036013630240957877,0.022499519092961492
+scen2_3,SSB,alum_can,cont,Tea,0,0,0
+scen2_3,non_SSB,bag_in_box,cont,Tea,0.1944894100375717,0.003886815769945786,0.38242859755586894
+scen2_3,SSB,bag_in_box,cont,Tea,0,0,0
+scen2_3,non_SSB,glass,cont,Tea,1.2047477294711602,0.004250211050354099,0.09327183660362753
+scen2_3,SSB,glass,cont,Tea,0,0,0
+scen2_3,non_SSB,plastic,cont,Tea,0.9942683034528386,0.028539522320342514,5.6336428088607935
+scen2_3,SSB,plastic,cont,Tea,0,0,0
+scen2_3,non_SSB,plastic,cont,"Water, bottled",142.26720554666798,4.083644298075,806.1029570000001
+scen2_3,non_SSB,steel_bott_reuse,cont,"Water, Filtered tap",0,0,0
+scen2_4,non_SSB,alum_can,cont,Coffee,0.034452864258646944,5.339568146050767e-4,0.0033358957329885346
+scen2_4,SSB,alum_can,cont,Coffee,0,0,0
+scen2_4,non_SSB,glass,cont,Coffee,0.6130194459706145,0.002162661908057677,0.04746010156376574
+scen2_4,SSB,glass,cont,Coffee,0,0,0
+scen2_4,non_SSB,plastic,cont,Coffee,0.03834041297241276,0.0011005249468351637,0.2172413533456582
+scen2_4,SSB,plastic,cont,Coffee,0,0,0
+scen2_4,non_SSB,alum_can,cont,Coffee + milk,0.004764734252399999,7.384472607999999e-5,4.6134499999999994e-4
+scen2_4,SSB,alum_can,cont,Coffee + milk,0,0,0
+scen2_4,non_SSB,glass,cont,Coffee + milk,0.27374127156341993,9.657276364799999e-4,0.02119311
+scen2_4,SSB,glass,cont,Coffee + milk,0,0,0
+scen2_4,non_SSB,plastic,cont,Coffee + milk,0.013985780392399998,4.0144847249999984e-4,0.0792451
+scen2_4,SSB,plastic,cont,Coffee + milk,0,0,0
+scen2_4,non_SSB,alum_can,cont,Juice,0.054378594658649644,8.427694420020777e-4,0.005265202931340449
+scen2_4,SSB,alum_can,cont,Juice,0,0,0
+scen2_4,SSB,bag_in_box,cont,Juice,0,0,0
+scen2_4,non_SSB,carton,cont,Juice,0.12044478055318013,0.004763452561235626,0.26880270802108486
+scen2_4,SSB,carton,cont,Juice,0,0,0
+scen2_4,non_SSB,glass,cont,Juice,0.43088106562741646,0.0015200987075708237,0.033358907732856914
+scen2_4,SSB,glass,cont,Juice,0,0,0
+scen2_4,non_SSB,plastic,cont,Juice,7.428820305330358,0.21323719380524941,42.092581998344436
+scen2_4,SSB,plastic,cont,Juice,0,0,0
+scen2_4,non_SSB,carton,cont,Almond milk,0.054085473286,0.002139018271,0.12070528599999998
+scen2_4,SSB,carton,cont,Almond milk,0,0,0
+scen2_4,SSB,plastic,cont,Almond milk,0,0,0
+scen2_4,SSB,bag_in_box,cont,"Milk, animal",0,0,0
+scen2_4,non_SSB,carton,cont,"Milk, animal",0.16762430902716577,0.006629348656650632,0.3740956477293832
+scen2_4,SSB,carton,cont,"Milk, animal",0,0,0
+scen2_4,non_SSB,plastic,cont,"Milk, animal",10.767082584479224,0.3090588251456732,61.00757427729754
+scen2_4,SSB,plastic,cont,"Milk, animal",0,0,0
+scen2_4,non_SSB,bag_in_box,cont,Plant milk,0,0,0
+scen2_4,SSB,bag_in_box,cont,Plant milk,0,0,0
+scen2_4,non_SSB,carton,cont,Plant milk,0,0,0
+scen2_4,SSB,carton,cont,Plant milk,0,0,0
+scen2_4,non_SSB,carton,cont,Soy milk,1.1141620197260003,0.044063826611,2.486531726
+scen2_4,SSB,carton,cont,Soy milk,0,0,0
+scen2_4,SSB,glass,cont,Probiotic,0,0,0
+scen2_4,non_SSB,plastic,cont,Probiotic,0.0808972202892,0.0023220774674999997,0.45837330000000004
+scen2_4,non_SSB,alum_can,cont,Soda,5.9801769143975685,0.09268187956782512,0.5790301352448091
+scen2_4,SSB,alum_can,cont,Soda,0,0,0
+scen2_4,non_SSB,bag_in_box,cont,Soda,0.7682067606323436,0.015352394514580231,1.5105410317446626
+scen2_4,SSB,bag_in_box,cont,Soda,0,0,0
+scen2_4,SSB,carton,cont,Soda,0,0,0
+scen2_4,non_SSB,glass,cont,Soda,1.8602099703114745,0.006562606243937282,0.1440178687661798
+scen2_4,SSB,glass,cont,Soda,0,0,0
+scen2_4,non_SSB,plastic,cont,Soda,3.623512426454836,0.10400946446117044,20.531253639710634
+scen2_4,SSB,plastic,cont,Soda,0,0,0
+scen2_4,non_SSB,alum_can,cont,Tea,0.2323732332305788,0.0036013630240957877,0.022499519092961492
+scen2_4,SSB,alum_can,cont,Tea,0,0,0
+scen2_4,non_SSB,bag_in_box,cont,Tea,0.1944894100375717,0.003886815769945786,0.38242859755586894
+scen2_4,SSB,bag_in_box,cont,Tea,0,0,0
+scen2_4,non_SSB,glass,cont,Tea,1.2047477294711602,0.004250211050354099,0.09327183660362753
+scen2_4,SSB,glass,cont,Tea,0,0,0
+scen2_4,non_SSB,plastic,cont,Tea,0.9942683034528386,0.028539522320342514,5.6336428088607935
+scen2_4,SSB,plastic,cont,Tea,0,0,0
+scen2_4,non_SSB,plastic,cont,"Water, bottled",20.285096944596,0.582264339525,114.937779
+scen2_4,non_SSB,steel_bott_reuse,cont,"Water, Filtered tap",10.719155079205999,0.126106228386,1.57082995
+scen3_1,non_SSB,alum_can,cont,Coffee,0,0,0
+scen3_1,SSB,alum_can,cont,Coffee,0,0,0
+scen3_1,non_SSB,glass,cont,Coffee,0,0,0
+scen3_1,SSB,glass,cont,Coffee,0,0,0
+scen3_1,non_SSB,plastic,cont,Coffee,0,0,0
+scen3_1,SSB,plastic,cont,Coffee,0,0,0
+scen3_1,non_SSB,alum_can,cont,Coffee + milk,0,0,0
+scen3_1,SSB,alum_can,cont,Coffee + milk,0,0,0
+scen3_1,non_SSB,glass,cont,Coffee + milk,0,0,0
+scen3_1,SSB,glass,cont,Coffee + milk,0,0,0
+scen3_1,non_SSB,plastic,cont,Coffee + milk,0,0,0
+scen3_1,SSB,plastic,cont,Coffee + milk,0,0,0
+scen3_1,non_SSB,alum_can,cont,Juice,0,0,0
+scen3_1,SSB,alum_can,cont,Juice,0,0,0
+scen3_1,SSB,bag_in_box,cont,Juice,0,0,0
+scen3_1,non_SSB,carton,cont,Juice,0,0,0
+scen3_1,SSB,carton,cont,Juice,0,0,0
+scen3_1,non_SSB,glass,cont,Juice,0,0,0
+scen3_1,SSB,glass,cont,Juice,0,0,0
+scen3_1,non_SSB,plastic,cont,Juice,0,0,0
+scen3_1,SSB,plastic,cont,Juice,0,0,0
+scen3_1,non_SSB,carton,cont,Almond milk,0,0,0
+scen3_1,SSB,carton,cont,Almond milk,0,0,0
+scen3_1,SSB,plastic,cont,Almond milk,0,0,0
+scen3_1,SSB,bag_in_box,cont,"Milk, animal",0,0,0
+scen3_1,non_SSB,carton,cont,"Milk, animal",0,0,0
+scen3_1,SSB,carton,cont,"Milk, animal",0,0,0
+scen3_1,non_SSB,plastic,cont,"Milk, animal",0,0,0
+scen3_1,SSB,plastic,cont,"Milk, animal",0,0,0
+scen3_1,non_SSB,bag_in_box,cont,Plant milk,0,0,0
+scen3_1,SSB,bag_in_box,cont,Plant milk,0,0,0
+scen3_1,non_SSB,carton,cont,Plant milk,0,0,0
+scen3_1,SSB,carton,cont,Plant milk,0,0,0
+scen3_1,non_SSB,carton,cont,Soy milk,0,0,0
+scen3_1,SSB,carton,cont,Soy milk,0,0,0
+scen3_1,SSB,glass,cont,Probiotic,0,0,0
+scen3_1,non_SSB,plastic,cont,Probiotic,0,0,0
+scen3_1,non_SSB,alum_can,cont,Soda,0,0,0
+scen3_1,SSB,alum_can,cont,Soda,0,0,0
+scen3_1,non_SSB,bag_in_box,cont,Soda,0,0,0
+scen3_1,SSB,bag_in_box,cont,Soda,0,0,0
+scen3_1,SSB,carton,cont,Soda,0,0,0
+scen3_1,non_SSB,glass,cont,Soda,0,0,0
+scen3_1,SSB,glass,cont,Soda,0,0,0
+scen3_1,non_SSB,plastic,cont,Soda,0,0,0
+scen3_1,SSB,plastic,cont,Soda,0,0,0
+scen3_1,non_SSB,alum_can,cont,Tea,0,0,0
+scen3_1,SSB,alum_can,cont,Tea,0,0,0
+scen3_1,non_SSB,bag_in_box,cont,Tea,0,0,0
+scen3_1,SSB,bag_in_box,cont,Tea,0,0,0
+scen3_1,non_SSB,glass,cont,Tea,0,0,0
+scen3_1,SSB,glass,cont,Tea,0,0,0
+scen3_1,non_SSB,plastic,cont,Tea,0,0,0
+scen3_1,SSB,plastic,cont,Tea,0,0,0
+scen3_1,non_SSB,plastic,cont,"Water, bottled",182.652783484916,5.242873752525,1034.932459
+scen3_1,non_SSB,steel_bott_reuse,cont,"Water, Filtered tap",0,0,0
+scen3_2,non_SSB,alum_can,cont,Coffee,0,0,0
+scen3_2,SSB,alum_can,cont,Coffee,0,0,0
+scen3_2,non_SSB,glass,cont,Coffee,0,0,0
+scen3_2,SSB,glass,cont,Coffee,0,0,0
+scen3_2,non_SSB,plastic,cont,Coffee,0,0,0
+scen3_2,SSB,plastic,cont,Coffee,0,0,0
+scen3_2,non_SSB,alum_can,cont,Coffee + milk,0,0,0
+scen3_2,SSB,alum_can,cont,Coffee + milk,0,0,0
+scen3_2,non_SSB,glass,cont,Coffee + milk,0,0,0
+scen3_2,SSB,glass,cont,Coffee + milk,0,0,0
+scen3_2,non_SSB,plastic,cont,Coffee + milk,0,0,0
+scen3_2,SSB,plastic,cont,Coffee + milk,0,0,0
+scen3_2,non_SSB,alum_can,cont,Juice,0,0,0
+scen3_2,SSB,alum_can,cont,Juice,0,0,0
+scen3_2,SSB,bag_in_box,cont,Juice,0,0,0
+scen3_2,non_SSB,carton,cont,Juice,0,0,0
+scen3_2,SSB,carton,cont,Juice,0,0,0
+scen3_2,non_SSB,glass,cont,Juice,0,0,0
+scen3_2,SSB,glass,cont,Juice,0,0,0
+scen3_2,non_SSB,plastic,cont,Juice,0,0,0
+scen3_2,SSB,plastic,cont,Juice,0,0,0
+scen3_2,non_SSB,carton,cont,Almond milk,0,0,0
+scen3_2,SSB,carton,cont,Almond milk,0,0,0
+scen3_2,SSB,plastic,cont,Almond milk,0,0,0
+scen3_2,SSB,bag_in_box,cont,"Milk, animal",0,0,0
+scen3_2,non_SSB,carton,cont,"Milk, animal",0,0,0
+scen3_2,SSB,carton,cont,"Milk, animal",0,0,0
+scen3_2,non_SSB,plastic,cont,"Milk, animal",0,0,0
+scen3_2,SSB,plastic,cont,"Milk, animal",0,0,0
+scen3_2,non_SSB,bag_in_box,cont,Plant milk,0,0,0
+scen3_2,SSB,bag_in_box,cont,Plant milk,0,0,0
+scen3_2,non_SSB,carton,cont,Plant milk,0,0,0
+scen3_2,SSB,carton,cont,Plant milk,0,0,0
+scen3_2,non_SSB,carton,cont,Soy milk,0,0,0
+scen3_2,SSB,carton,cont,Soy milk,0,0,0
+scen3_2,SSB,glass,cont,Probiotic,0,0,0
+scen3_2,non_SSB,plastic,cont,Probiotic,0,0,0
+scen3_2,non_SSB,alum_can,cont,Soda,0,0,0
+scen3_2,SSB,alum_can,cont,Soda,0,0,0
+scen3_2,non_SSB,bag_in_box,cont,Soda,0,0,0
+scen3_2,SSB,bag_in_box,cont,Soda,0,0,0
+scen3_2,SSB,carton,cont,Soda,0,0,0
+scen3_2,non_SSB,glass,cont,Soda,0,0,0
+scen3_2,SSB,glass,cont,Soda,0,0,0
+scen3_2,non_SSB,plastic,cont,Soda,0,0,0
+scen3_2,SSB,plastic,cont,Soda,0,0,0
+scen3_2,non_SSB,alum_can,cont,Tea,0,0,0
+scen3_2,SSB,alum_can,cont,Tea,0,0,0
+scen3_2,non_SSB,bag_in_box,cont,Tea,0,0,0
+scen3_2,SSB,bag_in_box,cont,Tea,0,0,0
+scen3_2,non_SSB,glass,cont,Tea,0,0,0
+scen3_2,SSB,glass,cont,Tea,0,0,0
+scen3_2,non_SSB,plastic,cont,Tea,0,0,0
+scen3_2,SSB,plastic,cont,Tea,0,0,0
+scen3_2,non_SSB,plastic,cont,"Water, bottled",20.285096944596,0.582264339525,114.937779
+scen3_2,non_SSB,steel_bott_reuse,cont,"Water, Filtered tap",14.26803022036,0.16785721116000002,2.090897
+scen4,non_SSB,alum_can,cont,Coffee,0.034452864258646944,5.339568146050767e-4,0.0033358957329885346
+scen4,SSB,alum_can,cont,Coffee,0.0035735615364370144,5.5383712670920604e-5,3.4600980027314456e-4
+scen4,non_SSB,glass,cont,Coffee,0.6130194459706145,0.002162661908057677,0.04746010156376574
+scen4,SSB,glass,cont,Coffee,0.4133286591625838,0.0014581758418187665,0.031999996528677285
+scen4,non_SSB,plastic,cont,Coffee,0.03834041297241276,0.0011005249468351637,0.2172413533456582
+scen4,SSB,plastic,cont,Coffee,0.007595718161011982,2.1802783739803184e-4,0.04303824515708121
+scen4,non_SSB,alum_can,cont,Coffee + milk,0.004764734252399999,7.384472607999999e-5,4.6134499999999994e-4
+scen4,SSB,alum_can,cont,Coffee + milk,1.1722341556149503,0.01816750012435722,0.11350147518715777
+scen4,non_SSB,glass,cont,Coffee + milk,0.27374127156341993,9.657276364799999e-4,0.02119311
+scen4,SSB,glass,cont,Coffee + milk,9.79490296060381,0.03455528803410039,0.7583235611415992
+scen4,non_SSB,plastic,cont,Coffee + milk,0.013985780392399998,4.0144847249999984e-4,0.0792451
+scen4,SSB,plastic,cont,Coffee + milk,0.3926699447468355,0.011271215841551304,2.224914746649876
+scen4,non_SSB,alum_can,cont,Juice,0.054378594658649644,8.427694420020777e-4,0.005265202931340449
+scen4,SSB,alum_can,cont,Juice,2.042795253922864,0.0316596158300906,0.1977934815454481
+scen4,SSB,bag_in_box,cont,Juice,1.6597371560499354,0.033165353672550676,3.264784381944403
+scen4,non_SSB,carton,cont,Juice,0.12044478055318013,0.004763452561235626,0.26880270802108486
+scen4,SSB,carton,cont,Juice,0.07060617924272629,0.002792393193031112,0.15757538098620272
+scen4,non_SSB,glass,cont,Juice,0.43088106562741646,0.0015200987075708237,0.033358907732856914
+scen4,SSB,glass,cont,Juice,3.220331718737273,0.011360958914436878,0.24931879640179247
+scen4,non_SSB,plastic,cont,Juice,7.428820305330358,0.21323719380524941,42.092581998344436
+scen4,SSB,plastic,cont,Juice,2.3680452419437255,0.06797247765350242,13.417626813611966
+scen4,non_SSB,carton,cont,Almond milk,0.054085473286,0.002139018271,0.12070528599999998
+scen4,SSB,carton,cont,Almond milk,6.4370737244469,0.2545788632662301,14.365942973333864
+scen4,SSB,plastic,cont,Almond milk,1.5413990605158747,0.04424438829979701,8.733750942983708
+scen4,SSB,bag_in_box,cont,"Milk, animal",2.886625813358962,0.05768391579716204,5.678274472027494
+scen4,non_SSB,carton,cont,"Milk, animal",0.16762430902716577,0.006629348656650632,0.3740956477293832
+scen4,SSB,carton,cont,"Milk, animal",0.03426351870273087,0.0013550827621741956,0.07646762749971212
+scen4,non_SSB,plastic,cont,"Milk, animal",10.767082584479224,0.3090588251456732,61.00757427729754
+scen4,SSB,plastic,cont,"Milk, animal",0.08408009019540323,0.002413438709144109,0.47640782055783226
+scen4,non_SSB,bag_in_box,cont,Plant milk,0,0,0
+scen4,SSB,bag_in_box,cont,Plant milk,0.1111364850692193,0.0022210311743962726,0.21852999664146117
+scen4,non_SSB,carton,cont,Plant milk,0,0,0
+scen4,SSB,carton,cont,Plant milk,0.24984477201553063,0.009881073415574315,0.5575912131205422
+scen4,non_SSB,carton,cont,Soy milk,1.1141620197260003,0.044063826611,2.486531726
+scen4,SSB,carton,cont,Soy milk,3.35163136522,0.13255316617,7.480005219999999
+scen4,SSB,glass,cont,Probiotic,3.6007130048960003,0.012702900224,0.278768
+scen4,non_SSB,plastic,cont,Probiotic,0.0808972202892,0.0023220774674999997,0.45837330000000004
+scen4,non_SSB,alum_can,cont,Soda,5.9801769143975685,0.09268187956782512,0.5790301352448091
+scen4,SSB,alum_can,cont,Soda,5.357040343233703,0.08302439460214249,0.5186949882680835
+scen4,non_SSB,bag_in_box,cont,Soda,0.7682067606323436,0.015352394514580231,1.5105410317446626
+scen4,SSB,bag_in_box,cont,Soda,3.782539666515904,0.07559298382065807,7.437686913573725
+scen4,SSB,carton,cont,Soda,3.094438820182244e-4,1.2238149678122248e-5,6.906015610226426e-4
+scen4,non_SSB,glass,cont,Soda,1.8602099703114745,0.006562606243937282,0.1440178687661798
+scen4,SSB,glass,cont,Soda,0.7959988171421248,0.00280819202719837,0.06162640509125637
+scen4,non_SSB,plastic,cont,Soda,3.623512426454836,0.10400946446117044,20.531253639710634
+scen4,SSB,plastic,cont,Soda,13.95696346591523,0.40062131013973995,79.08181985710435
+scen4,non_SSB,alum_can,cont,Tea,0.2323732332305788,0.0036013630240957877,0.022499519092961492
+scen4,SSB,alum_can,cont,Tea,13.89274885648612,0.2153123719940312,1.3451642592589914
+scen4,non_SSB,bag_in_box,cont,Tea,0.1944894100375717,0.003886815769945786,0.38242859755586894
+scen4,SSB,bag_in_box,cont,Tea,0.023884607459858393,4.773271147051574e-4,0.04696480354524981
+scen4,non_SSB,glass,cont,Tea,1.2047477294711602,0.004250211050354099,0.09327183660362753
+scen4,SSB,glass,cont,Tea,21.890546980885134,0.07722732519055624,1.6947710057618557
+scen4,non_SSB,plastic,cont,Tea,0.9942683034528386,0.028539522320342514,5.6336428088607935
+scen4,SSB,plastic,cont,Tea,3.999201973163244,0.11479327418996217,22.65995542556454
+scen4,non_SSB,plastic,cont,"Water, bottled",0,0,0
+scen4,non_SSB,steel_bott_reuse,cont,"Water, Filtered tap",1.7825491167329999,0.020970920222999997,0.261222225
+scen5_1,non_SSB,alum_can,cont,Coffee,0.08544493966877625,0.0013242413596487002,0.00827319921811713
+scen5_1,SSB,alum_can,cont,Coffee,0.013675733193771609,2.1194902341689894e-4,0.0013241517356613539
+scen5_1,non_SSB,glass,cont,Coffee,0.6130194459706145,0.002162661908057677,0.04746010156376574
+scen5_1,SSB,glass,cont,Coffee,0.4133286591625838,0.0014581758418187665,0.031999996528677285
+scen5_1,non_SSB,alum_can,cont,Coffee + milk,0.023365576370399994,3.621239916799999e-4,0.0022623699999999997
+scen5_1,SSB,alum_can,cont,Coffee + milk,1.6944782808472272,0.026261335442715528,0.1640677194292004
+scen5_1,non_SSB,glass,cont,Coffee + milk,0.27374127156341993,9.657276364799999e-4,0.02119311
+scen5_1,SSB,glass,cont,Coffee + milk,9.79490296060381,0.03455528803410039,0.7583235611415992
+scen5_1,non_SSB,alum_can,cont,Juice,9.934579037211861,0.15396792955525213,0.9619147938028048
+scen5_1,SSB,alum_can,cont,Juice,5.192253806669211,0.08047050260949935,0.5027395454911746
+scen5_1,SSB,bag_in_box,cont,Juice,1.6597371560499354,0.033165353672550676,3.264784381944403
+scen5_1,non_SSB,carton,cont,Juice,0.12044478055318013,0.004763452561235626,0.26880270802108486
+scen5_1,SSB,carton,cont,Juice,0.07060617924272629,0.002792393193031112,0.15757538098620272
+scen5_1,non_SSB,glass,cont,Juice,0.43088106562741646,0.0015200987075708237,0.033358907732856914
+scen5_1,SSB,glass,cont,Juice,3.220331718737273,0.011360958914436878,0.24931879640179247
+scen5_1,SSB,alum_can,cont,Almond milk,2.0500336599786424,0.031771797975857816,0.19849433961326607
+scen5_1,non_SSB,carton,cont,Almond milk,0.054085473286,0.002139018271,0.12070528599999998
+scen5_1,SSB,carton,cont,Almond milk,6.4370737244469,0.2545788632662301,14.365942973333864
+scen5_1,non_SSB,alum_can,cont,"Milk, animal",14.320030602954244,0.22193446293457617,1.3865357790294894
+scen5_1,SSB,alum_can,cont,"Milk, animal",0.1118250422294465,0.0017330850315856558,0.01082745046722346
+scen5_1,SSB,bag_in_box,cont,"Milk, animal",2.886625813358962,0.05768391579716204,5.678274472027494
+scen5_1,non_SSB,carton,cont,"Milk, animal",0.16762430902716577,0.006629348656650632,0.3740956477293832
+scen5_1,SSB,carton,cont,"Milk, animal",0.03426351870273087,0.0013550827621741956,0.07646762749971212
+scen5_1,SSB,bag_in_box,cont,Plant milk,0.1111364850692193,0.0022210311743962726,0.21852999664146117
+scen5_1,SSB,carton,cont,Plant milk,0.24984477201553063,0.009881073415574315,0.5575912131205422
+scen5_1,non_SSB,carton,cont,Soy milk,1.1141620197260003,0.044063826611,2.486531726
+scen5_1,SSB,carton,cont,Soy milk,3.35163136522,0.13255316617,7.480005219999999
+scen5_1,non_SSB,alum_can,cont,Probiotic,0.10759188119399998,0.0016674787247999998,0.010417575
+scen5_1,SSB,glass,cont,Probiotic,3.6007130048960003,0.012702900224,0.278768
+scen5_1,non_SSB,alum_can,cont,Soda,10.799384757366665,0.1673708473538852,1.0456495361473235
+scen5_1,SSB,alum_can,cont,Soda,23.91955645547427,0.37070967672958677,2.316009075929546
+scen5_1,non_SSB,bag_in_box,cont,Soda,0.7682067606323436,0.015352394514580231,1.5105410317446626
+scen5_1,SSB,bag_in_box,cont,Soda,3.782539666515904,0.07559298382065807,7.437686913573725
+scen5_1,SSB,carton,cont,Soda,3.094438820182244e-4,1.2238149678122248e-5,6.906015610226426e-4
+scen5_1,non_SSB,glass,cont,Soda,1.8602099703114745,0.006562606243937282,0.1440178687661798
+scen5_1,SSB,glass,cont,Soda,0.7959988171421248,0.00280819202719837,0.06162640509125637
+scen5_1,non_SSB,alum_can,cont,Tea,1.5547326022871595,0.02409553126403883,0.15053685565797953
+scen5_1,SSB,alum_can,cont,Tea,19.211617193731495,0.2977451698403394,1.86016324620364
+scen5_1,non_SSB,bag_in_box,cont,Tea,0.1944894100375717,0.003886815769945786,0.38242859755586894
+scen5_1,SSB,bag_in_box,cont,Tea,0.023884607459858403,4.773271147051575e-4,0.046964803545249824
+scen5_1,non_SSB,glass,cont,Tea,1.2047477294711602,0.004250211050354099,0.09327183660362753
+scen5_1,SSB,glass,cont,Tea,21.890546980885137,0.07722732519055625,1.6947710057618561
+scen5_1,non_SSB,alum_can,cont,"Water, bottled",26.97882242022,0.418122742224,2.6122222500000003
+scen5_2,non_SSB,alum_can,cont,Coffee,0.034452932341094165,5.339578697593414e-4,0.003335902325065858
+scen5_2,SSB,alum_can,cont,Coffee,0.0035735652388487384,5.538377005157713e-5,3.4601015875885356e-4
+scen5_2,non_SSB,glass,cont,Coffee,0.6130206573608712,0.0021626661817027975,0.04746019534986828
+scen5_2,SSB,glass,cont,Coffee,0.41332908739443547,0.001458177352571353,0.03200002968248229
+scen5_2,non_SSB,alum_can,cont,Coffee + milk,0.004764734252399999,7.384472607999999e-5,4.6134499999999994e-4
+scen5_2,SSB,alum_can,cont,Coffee + milk,1.172234141914569,0.018167499912026198,0.1135014738606195
+scen5_2,non_SSB,glass,cont,Coffee + milk,0.27374127156341993,9.657276364799999e-4,0.02119311
+scen5_2,SSB,glass,cont,Coffee + milk,9.794902846126766,0.03455528763023858,0.7583235522787609
+scen5_2,non_SSB,alum_can,cont,Juice,0.054378692712472546,8.427709616582241e-4,0.0052652124253937446
+scen5_2,SSB,alum_can,cont,Juice,2.0427950576442075,0.031659612788127955,0.19779346254078342
+scen5_2,SSB,bag_in_box,cont,Juice,1.6597369965767927,0.03316535048591166,3.2647840682529106
+scen5_2,non_SSB,carton,cont,Juice,0.12044499773553388,0.0047634611505479605,0.26880319271792735
+scen5_2,SSB,carton,cont,Juice,0.0706061724586465,0.0027923929247285584,0.15757536584582876
+scen5_2,non_SSB,glass,cont,Juice,0.4308818425790086,0.001520101448566438,0.03335896788462162
+scen5_2,SSB,glass,cont,Juice,3.220331409316943,0.011360957822837638,0.24931877244640183
+scen5_2,non_SSB,carton,cont,Almond milk,0.054085473286,0.002139018271,0.12070528599999998
+scen5_2,SSB,carton,cont,Almond milk,6.43707410382,0.25457887827,14.365943819999998
+scen5_2,SSB,bag_in_box,cont,"Milk, animal",2.8866255618607535,0.0576839107714322,5.6782739773059925
+scen5_2,non_SSB,carton,cont,"Milk, animal",0.167624431922,0.006629353516999999,0.37409592199999997
+scen5_2,SSB,carton,cont,"Milk, animal",0.03426351571751072,0.0013550826441121714,0.07646762083744532
+scen5_2,SSB,bag_in_box,cont,Plant milk,0.1111364850692193,0.0022210311743962726,0.21852999664146117
+scen5_2,SSB,carton,cont,Plant milk,0.24984477201553063,0.009881073415574315,0.5575912131205422
+scen5_2,non_SSB,carton,cont,Soy milk,1.1141620197260003,0.044063826611,2.486531726
+scen5_2,SSB,carton,cont,Soy milk,3.35163136522,0.13255316617,7.480005219999999
+scen5_2,SSB,glass,cont,Probiotic,3.6007130048960003,0.012702900224,0.278768
+scen5_2,non_SSB,alum_can,cont,Soda,5.980176531050061,0.09268187362663508,0.5790300981272184
+scen5_2,SSB,alum_can,cont,Soda,5.357040437992686,0.08302439607073461,0.5186949974431141
+scen5_2,non_SSB,bag_in_box,cont,Soda,0.7682067113879566,0.015352393530445103,1.5105409349143937
+scen5_2,SSB,bag_in_box,cont,Soda,3.782539733424045,0.07559298515779832,7.437687045136603
+scen5_2,SSB,carton,cont,Soda,0.00030944388749187877,1.2238149894598985e-5,6.906015732384739e-4
+scen5_2,non_SSB,glass,cont,Soda,1.8602098510663643,0.006562605823254286,0.14401785953419693
+scen5_2,SSB,glass,cont,Soda,0.7959988312222948,0.002808192076871585,0.06162640618134624
+scen5_2,non_SSB,alum_can,cont,Tea,0.23237330125862152,0.0036013640784068814,0.0224995256797711
+scen5_2,SSB,alum_can,cont,Tea,13.892748774799504,0.215312370728037,1.3451642513496915
+scen5_2,non_SSB,bag_in_box,cont,Tea,0.19448946697499822,0.0038868169078241275,0.3824287095131224
+scen5_2,SSB,bag_in_box,cont,Tea,0.023884607319421627,4.7732711189856837e-4,0.046964803269106056
+scen5_2,non_SSB,glass,cont,Tea,1.204748082165095,0.004250212294617627,0.09327186390927025
+scen5_2,SSB,glass,cont,Tea,21.890546852173046,0.07722732473647483,1.6947709957969372
+scen5_2,non_SSB,steel_bott_reuse,cont,"Water, Filtered tap",5.763002254457,0.067799231667,0.844534525
+scen6_1,non_SSB,alum_can,cont,Coffee,0.034452864258646944,5.339568146050767e-4,0.0033358957329885346
+scen6_1,SSB,alum_can,cont,Coffee,0.0035735615364370144,5.5383712670920604e-5,3.4600980027314456e-4
+scen6_1,non_SSB,glass,cont,Coffee,0.6130194459706145,0.002162661908057677,0.04746010156376574
+scen6_1,SSB,glass,cont,Coffee,0.4133286591625838,0.0014581758418187665,0.031999996528677285
+scen6_1,non_SSB,plastic,cont,Coffee,0.03834041297241276,0.0011005249468351637,0.2172413533456582
+scen6_1,SSB,plastic,cont,Coffee,0.007595718161011982,2.1802783739803184e-4,0.04303824515708121
+scen6_1,non_SSB,alum_can,cont,Coffee + milk,0.17599715825197043,0.0027276362654284113,0.017040910294809645
+scen6_1,SSB,alum_can,cont,Coffee + milk,1.001001729623679,0.015513708554141064,0.09692190969950186
+scen6_1,non_SSB,glass,cont,Coffee + milk,4.878462219213234,0.017210652093892508,0.37769162776273946
+scen6_1,SSB,glass,cont,Coffee + milk,5.190184056184161,0.01831037078496826,0.4018252015661926
+scen6_1,non_SSB,plastic,cont,Coffee + milk,0.013985786789742858,4.014486561296185e-4,0.07924513624810774
+scen6_1,SSB,plastic,cont,Coffee + milk,0.3926699080578456,0.01127121478842888,2.224914538765683
+scen6_1,non_SSB,alum_can,cont,Juice,0.07041371757406382,0.0010912847204253085,0.006817802381705497
+scen6_1,SSB,alum_can,cont,Juice,2.026759988927751,0.031411098349690116,0.196240868338228
+scen6_1,SSB,bag_in_box,cont,Juice,1.6597370449483793,0.033165351452486856,3.264784163402193
+scen6_1,non_SSB,carton,cont,Juice,0.12044476859618373,0.00476345208835017,0.26880268133605134
+scen6_1,SSB,carton,cont,Juice,0.07060617451640178,0.0027923930061104127,0.15757537043822528
+scen6_1,non_SSB,glass,cont,Juice,0.43088102285226826,0.001520098556665034,0.03335890442119545
+scen6_1,SSB,glass,cont,Juice,3.220331503170691,0.011360958153942837,0.24931877971257985
+scen6_1,non_SSB,plastic,cont,Juice,7.428819567844044,0.21323717263640887,42.092577819659006
+scen6_1,SSB,plastic,cont,Juice,2.3680450834285587,0.06797247310347593,13.417625915446123
+scen6_1,non_SSB,carton,cont,Almond milk,0.054085473286,0.002139018271,0.12070528599999998
+scen6_1,SSB,carton,cont,Almond milk,6.4370737244469,0.2545788632662301,14.365942973333864
+scen6_1,SSB,plastic,cont,Almond milk,1.5413990605158747,0.04424438829979701,8.733750942983708
+scen6_1,SSB,bag_in_box,cont,"Milk, animal",2.886625813358962,0.05768391579716204,5.678274472027494
+scen6_1,non_SSB,carton,cont,"Milk, animal",0.16762430902716577,0.006629348656650632,0.3740956477293832
+scen6_1,SSB,carton,cont,"Milk, animal",0.03426351870273087,0.0013550827621741956,0.07646762749971212
+scen6_1,non_SSB,plastic,cont,"Milk, animal",10.767082584479224,0.3090588251456732,61.00757427729754
+scen6_1,SSB,plastic,cont,"Milk, animal",0.08408009019540323,0.002413438709144109,0.47640782055783226
+scen6_1,non_SSB,bag_in_box,cont,Plant milk,0,0,0
+scen6_1,SSB,bag_in_box,cont,Plant milk,0.1111364850692193,0.0022210311743962726,0.21852999664146117
+scen6_1,non_SSB,carton,cont,Plant milk,0,0,0
+scen6_1,SSB,carton,cont,Plant milk,0.24984477201553063,0.009881073415574315,0.5575912131205422
+scen6_1,non_SSB,carton,cont,Soy milk,1.1141620197260003,0.044063826611,2.486531726
+scen6_1,SSB,carton,cont,Soy milk,3.35163136522,0.13255316617,7.480005219999999
+scen6_1,SSB,glass,cont,Probiotic,3.6007130048960003,0.012702900224,0.278768
+scen6_1,non_SSB,plastic,cont,Probiotic,0.0808972202892,0.0023220774674999997,0.45837330000000004
+scen6_1,non_SSB,alum_can,cont,Soda,8.173864105934758,0.12668004634547333,0.7914337161727394
+scen6_1,SSB,alum_can,cont,Soda,3.163352562338185,0.049026218690510694,0.30629135027558163
+scen6_1,non_SSB,bag_in_box,cont,Soda,0.7682066955978823,0.015352393214884944,1.5105409038660402
+scen6_1,SSB,bag_in_box,cont,Soda,3.782539633444305,0.07559298315973154,7.437686848544347
+scen6_1,SSB,carton,cont,Soda,3.0944387931268664e-4,1.2238149571121341e-5,6.906015549845571e-4
+scen6_1,non_SSB,glass,cont,Soda,1.8602098128307558,0.006562605688363468,0.1440178565739876
+scen6_1,SSB,glass,cont,Soda,0.7959988101825272,0.0028081920026457124,0.06162640455244278
+scen6_1,non_SSB,plastic,cont,Soda,11.644475232410878,0.3342435433674963,65.97898568043894
+scen6_1,SSB,plastic,cont,Soda,5.936000098615358,0.17038721512057542,33.63408463573495
+scen6_1,non_SSB,alum_can,cont,Tea,0.23237317756249246,0.003601362161341567,0.022499513702903633
+scen6_1,SSB,alum_can,cont,Tea,13.892748262477614,0.2153123627879783,1.3451642017441667
+scen6_1,non_SSB,bag_in_box,cont,Tea,0.19448936344505707,0.0038868148388075787,0.38242850594003225
+scen6_1,SSB,bag_in_box,cont,Tea,0.023884606438630693,4.77327094296211e-4,0.0469648015371884
+scen6_1,non_SSB,glass,cont,Tea,1.221354339555864,0.004308797255552355,0.09455752404214263
+scen6_1,SSB,glass,cont,Tea,21.873939143579964,0.0771687346558657,1.6934852233116597
+scen6_1,non_SSB,plastic,cont,Tea,2.530273294440779,0.07262907900461345,14.33683031046654
+scen6_1,SSB,plastic,cont,Tea,2.4631963289072316,0.07070369875425499,13.956764222463974
+scen6_1,non_SSB,plastic,cont,"Water, bottled",20.285096944596,0.582264339525,114.937779
+scen6_2,non_SSB,alum_can,cont,Coffee,0.034452864258646944,5.339568146050767e-4,0.0033358957329885346
+scen6_2,SSB,alum_can,cont,Coffee,0.0035735615364370144,5.5383712670920604e-5,3.4600980027314456e-4
+scen6_2,non_SSB,glass,cont,Coffee,0.6130194459706145,0.002162661908057677,0.04746010156376574
+scen6_2,SSB,glass,cont,Coffee,0.4133286591625838,0.0014581758418187665,0.031999996528677285
+scen6_2,non_SSB,plastic,cont,Coffee,0.03834041297241276,0.0011005249468351637,0.2172413533456582
+scen6_2,SSB,plastic,cont,Coffee,0.007595718161011982,2.1802783739803184e-4,0.04303824515708121
+scen6_2,non_SSB,alum_can,cont,Coffee + milk,0.004764734252399999,7.384472607999999e-5,4.6134499999999994e-4
+scen6_2,SSB,alum_can,cont,Coffee + milk,1.001001729623679,0.015513708554141064,0.09692190969950186
+scen6_2,non_SSB,glass,cont,Coffee + milk,0.27374127156341993,9.657276364799999e-4,0.02119311
+scen6_2,SSB,glass,cont,Coffee + milk,5.190184056184161,0.01831037078496826,0.4018252015661926
+scen6_2,non_SSB,plastic,cont,Coffee + milk,0.013985780392399998,4.0144847249999984e-4,0.0792451
+scen6_2,SSB,plastic,cont,Coffee + milk,0.3926699080578456,0.01127121478842888,2.224914538765683
+scen6_2,non_SSB,alum_can,cont,Juice,0.054378594658649644,8.427694420020777e-4,0.005265202931340449
+scen6_2,SSB,alum_can,cont,Juice,2.026759988927751,0.031411098349690116,0.196240868338228
+scen6_2,SSB,bag_in_box,cont,Juice,1.6597370449483793,0.033165351452486856,3.264784163402193
+scen6_2,non_SSB,carton,cont,Juice,0.12044478055318013,0.004763452561235626,0.26880270802108486
+scen6_2,SSB,carton,cont,Juice,0.07060617451640178,0.0027923930061104127,0.15757537043822528
+scen6_2,non_SSB,glass,cont,Juice,0.43088106562741646,0.0015200987075708237,0.033358907732856914
+scen6_2,SSB,glass,cont,Juice,3.220331503170691,0.011360958153942837,0.24931877971257985
+scen6_2,non_SSB,plastic,cont,Juice,7.428820305330358,0.21323719380524941,42.092581998344436
+scen6_2,SSB,plastic,cont,Juice,2.3680450834285587,0.06797247310347593,13.417625915446123
+scen6_2,non_SSB,carton,cont,Almond milk,0.054085473286,0.002139018271,0.12070528599999998
+scen6_2,SSB,carton,cont,Almond milk,6.4370737244469,0.2545788632662301,14.365942973333864
+scen6_2,SSB,plastic,cont,Almond milk,1.5413990605158747,0.04424438829979701,8.733750942983708
+scen6_2,SSB,bag_in_box,cont,"Milk, animal",2.886625813358962,0.05768391579716204,5.678274472027494
+scen6_2,non_SSB,carton,cont,"Milk, animal",0.16762430902716577,0.006629348656650632,0.3740956477293832
+scen6_2,SSB,carton,cont,"Milk, animal",0.03426351870273087,0.0013550827621741956,0.07646762749971212
+scen6_2,non_SSB,plastic,cont,"Milk, animal",10.767082584479224,0.3090588251456732,61.00757427729754
+scen6_2,SSB,plastic,cont,"Milk, animal",0.08408009019540323,0.002413438709144109,0.47640782055783226
+scen6_2,SSB,bag_in_box,cont,Plant milk,0.1111364850692193,0.0022210311743962726,0.21852999664146117
+scen6_2,SSB,carton,cont,Plant milk,0.24984477201553063,0.009881073415574315,0.5575912131205422
+scen6_2,non_SSB,carton,cont,Soy milk,1.1141620197260003,0.044063826611,2.486531726
+scen6_2,SSB,carton,cont,Soy milk,3.35163136522,0.13255316617,7.480005219999999
+scen6_2,SSB,glass,cont,Probiotic,3.6007130048960003,0.012702900224,0.278768
+scen6_2,non_SSB,plastic,cont,Probiotic,0.0808972202892,0.0023220774674999997,0.45837330000000004
+scen6_2,non_SSB,alum_can,cont,Soda,5.9801769143975685,0.09268187956782512,0.5790301352448091
+scen6_2,SSB,alum_can,cont,Soda,3.163352562338185,0.049026218690510694,0.30629135027558163
+scen6_2,non_SSB,bag_in_box,cont,Soda,0.7682067606323438,0.015352394514580234,1.5105410317446628
+scen6_2,SSB,bag_in_box,cont,Soda,3.782539633444305,0.07559298315973154,7.437686848544347
+scen6_2,SSB,carton,cont,Soda,3.0944387931268664e-4,1.2238149571121341e-5,6.906015549845571e-4
+scen6_2,non_SSB,glass,cont,Soda,1.8602099703114747,0.006562606243937283,0.14401786876617984
+scen6_2,SSB,glass,cont,Soda,0.7959988101825272,0.0028081920026457124,0.06162640455244278
+scen6_2,non_SSB,plastic,cont,Soda,3.623512426454836,0.10400946446117044,20.531253639710634
+scen6_2,SSB,plastic,cont,Soda,5.936000098615358,0.17038721512057542,33.63408463573495
+scen6_2,non_SSB,alum_can,cont,Tea,0.2323732332305788,0.0036013630240957877,0.022499519092961492
+scen6_2,SSB,alum_can,cont,Tea,13.892748262477614,0.2153123627879783,1.3451642017441667
+scen6_2,non_SSB,bag_in_box,cont,Tea,0.1944894100375717,0.003886815769945786,0.38242859755586894
+scen6_2,SSB,bag_in_box,cont,Tea,0.023884606438630693,4.77327094296211e-4,0.0469648015371884
+scen6_2,non_SSB,glass,cont,Tea,1.2047477294711602,0.004250211050354099,0.09327183660362753
+scen6_2,SSB,glass,cont,Tea,21.873939143579964,0.0771687346558657,1.6934852233116597
+scen6_2,non_SSB,plastic,cont,Tea,0.9942683034528386,0.028539522320342514,5.6336428088607935
+scen6_2,SSB,plastic,cont,Tea,2.4631963289072316,0.07070369875425499,13.956764222463974
+scen6_2,non_SSB,plastic,cont,"Water, bottled",33.021460117968,0.9478494837,187.103532

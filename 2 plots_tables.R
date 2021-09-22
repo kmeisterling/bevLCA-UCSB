@@ -49,7 +49,7 @@ flow_s0 <- read_csv("./data/flow_dbsc_scen0.csv") %>%
   left_join(bev_names) %>%
   select(!bev_type) %>%
   rename(bev_type = bev_name) %>%
-  write_csv("./tbls/flow_dbsc_scen0_scaled.csv")
+  write_csv("./data/data_tbls/flow_dbsc_scen0_scaled.csv")
 #View(flow_s0)
 
 temp0 <- flow_s0 %>% # for vol fig, we want a row with distrib = "total"
@@ -67,7 +67,7 @@ flow_s0_fig <- flow_s0 %>%
   mutate(distrib = factor(distrib, levels=c("Dining + Vending", "dining", "vending"))) %>%
   mutate(SSB_status = as_factor(SSB_status)) %>%
   mutate(SSB_status = fct_rev(SSB_status)) %>%
-  write_csv("./tbls/vol_scen0_dbsc_DATA.csv")
+  write_csv("./data/data_tbls/vol_scen0_dbsc_DATA.csv")
 #View(flow_s0_fig)
 
 flow_s0_fig %>%
@@ -97,7 +97,7 @@ ggsave("./figs/vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
 # vol_bsc_s0 --------------------------------------------
 
 #Scale the Flow data for allscen (not including distrib)
-flow_scl <- read_csv("./data_gen/flow_bsc_allscen.csv") %>%
+flow_scl <- read_csv("./data/flow_bsc_allscen.csv") %>%
   mutate(vol_kL = vol/1000) %>%   #Resacle values
   select(!vol) %>%
   left_join(bev_names) %>%
@@ -214,16 +214,16 @@ flow_scl %>%
   arrange(cont_type) %>%
   arrange(scen) %>%
   replace(is.na(.), 0) %>%
-  write_csv("./tbls/flow_kL_bc_allscen.csv")
+  write_csv("./data/data_tbls/flow_kL_bc_allscen.csv")
     
 # IMPACTS: format data -----------------------------------------------------------------
 
 ## Impact data
-imp <- read_csv("./data_gen/imp_bsc_allscen.csv")
+imp <- read_csv("./data/data_gen/imp_bsc_allscen.csv")
 #View(imp)
 
 ## Rescale impact values
-imp_scl <- read_csv("./data_gen/imp_bsc_allscen.csv") %>%
+imp_scl <- read_csv("./data/data_gen/imp_bsc_allscen.csv") %>%
   mutate(
     value = case_when(
       impact_type == "ghg" ~ value / 10^6,
@@ -303,7 +303,7 @@ imp_s0 %>%
   pivot_wider(names_from = bev_type, values_from = value) %>%
   relocate(impact_name) %>%
   arrange(impact_name) %>%
-  write_csv("./tbls/imp_ibs_scen0.csv")
+  write_csv("./data/data_tbls/imp_ibs_scen0.csv")
 
 
 # imp_i_allscen -------------------------------------------------------
@@ -349,7 +349,7 @@ imp_i_allscen %>%
   pivot_wider(names_from = scen, values_from = value) %>%
   relocate(impact_name) %>%
   arrange(impact_name) %>%
-  write_csv("./tbls/imp_i_allscen_wide.csv")
+  write_csv("./data/data_tbls/imp_i_allscen_wide.csv")
 
 
 # imp_is_allscen ----------------------------------------------
@@ -396,7 +396,7 @@ summ_imp_wide <- imp_scl %>%
   pivot_wider(names_from = impact_name, values_from = value) %>%
   replace(is.na(.), 0)
 #View(summ_imp_wide)
-write_csv(summ_imp_wide, "./tbls/imp_bsc_allscen_wide.csv")
+write_csv(summ_imp_wide, "./data/data_tbls/imp_bsc_allscen_wide.csv")
 
 #df_imp_scen_bev %>% pivot_wider(names_from = scen, values_from = value))
 #Totals by scenario
@@ -406,21 +406,21 @@ imp_i_allscen %>%
   summarize(value = sum(value)) %>%
   ungroup() %>%
   pivot_wider(names_from = impact_name, values_from = value) %>%
-  write_csv("./tbls/imp_allscen.csv")
+  write_csv("./data/data_tbls/imp_allscen.csv")
 
 imp_s0 %>%
   group_by(impact_name, item) %>%
   summarize(value = sum(value)) %>%
   pivot_wider(names_from = item, values_from = value) %>%
   replace_na(list(bev = 0)) %>%
-  write_csv("./tbls/imp_scen0_summ.csv")
+  write_csv("./data/data_tbls/imp_scen0_summ.csv")
 
 tbl_imp_scen0 <- imp_s0 %>%
   group_by(impact_name, item) %>%
   summarize(value = sum(value)) %>%
   pivot_wider(names_from = item, values_from = value) %>%
   replace_na(list(bev = 0)) %>%
-  write_csv("./tbls/result_overview.csv")
+  write_csv("./data/data_tbls/result_overview.csv")
 
 #View(tbl_imp_scen0)
 
