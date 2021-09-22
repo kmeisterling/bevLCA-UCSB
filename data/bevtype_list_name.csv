@@ -1,0 +1,14 @@
+﻿bev_type,bev_name
+coffee,Coffee
+coffee_milk,Coffee + milk
+juice,Juice
+milk_almond,Almond milk
+milk_an,"Milk, animal"
+milk_other_plant,Plant milk
+milk_soy,Soy milk
+probiotic,Probiotic
+soda,Soda
+tea,Tea
+water_bottled,"Water, bottled"
+water_ucsb,"Water, Filtered tap"
+water_tap,"Water, tap"
