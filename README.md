@@ -1,5 +1,9 @@
 # bevLCA-UCSB
-Code and input tables to calculate environmental impacts of beverage sold through UCSB Dining
+R code and associated data (input tables, tidy intermediate tables, pivoted tables for viewing) to calculate environmental impacts of beverages sold through UC Santa Barbara Dining. Three environmental impacts are estimated:
+
+* Climate impact (g CO2 eq)
+* Plastic pollution (mg plastic entering the environment)
+* Blue water use (liter blue water)
 
 # Source (input) data
 data/
