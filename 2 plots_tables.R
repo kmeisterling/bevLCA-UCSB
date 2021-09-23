@@ -4,6 +4,7 @@
 
 
 library(tidyverse)
+library(ggtext)
 
 
 # Definitions ------------------------------------------------------
@@ -18,18 +19,19 @@ col_cont <- c("#440154")
     #(should probably do something similar with 'the 'bev_type', 'scen', etc, but not right now)
 
 # BIG impacts (tonnes, M liter, kg)
+ # Formatted in markdown, to use element_markdown
 impnames <- c(
-  ghg = "Climate\n[ t CO2eq (100yr) ]",
-  h2o = "Water Use\n[ M Liter (Blue) ]",
-  plastic = "Plastic Pollution\n[ kg plastic ]"
+  ghg = "Climate<br>[ t CO2eq (100yr) ]",
+  h2o = "Blue Water Use<br>[ M liter (Blue) water ]",
+  plastic = "Plastic Pollution<br>[ kg plastic ]"
 )
 #View(impnames)
 
 # Impacts per liter
 impname_l <- c(
-  ghg = "Climate\n[ g CO2eq / liter ]",
-  h2o = "Water Use\n[ liter (Blue) / liter ]",
-  plastic = "Plastic Pollution\n[ g plastic / liter ]"
+  ghg = "Climate<br>[ g CO<sub>2</sub>eq / liter ]",
+  h2o = "Blue Water Use<br>[ liter (Blue) water / liter ]",
+  plastic = "Plastic Pollution<br>[ g plastic / liter ]"
 )
 
 ## Get names
@@ -38,13 +40,13 @@ bev_names <- read_csv("./data/bevtype_list_name.csv")
 #View(bev_names)
 cont_names <- read_csv("./data/conttype_list_name.csv")
 #View(cont_names)
-impact_names <- read_csv("./data/imptype_list_name.csv")
+#impact_names <- read_csv("./data/imptype_list_name.csv") #NOT USED
 
 
 # vol_dbsc_s0 ------------------------------------------------------
 
 flow_s0 <- read_csv("./data/flow_dbsc_scen0.csv") %>%
-  mutate(vol_kL = vol/1000) %>%   #Resacle values
+  mutate(vol_kL = vol/1000) %>%   # Resacle as-consumed volume
   select(!vol) %>%
   left_join(bev_names) %>%
   select(!bev_type) %>%
@@ -240,13 +242,13 @@ imp_scl <- read_csv("./data/data_gen/imp_bsc_allscen.csv") %>%
   left_join(bev_names) %>%
   select(!bev_type) %>%
   rename(bev_type = bev_name)
-
+View(imp_scl)
 ## Give impacts nicer names
 ## Seems like there should be a neater way to do this
 ## But not now
 imp_scl$impact_name <- impnames[ 
   match(imp_scl$impact_type, names(impnames)) ]
-#View(imp_scl)
+View(imp_scl)
 
 # imp_ibs_s0 ----------------------------------------------------------
 #View(imp_scl)
@@ -254,7 +256,7 @@ temp_s0 <- imp_scl %>%
   select(-impact_type) %>%
   filter(scen == "scen0") %>%
   filter(bev_type != "Water, Filtered tap")
-#View(temp_s0)
+View(temp_s0)
 
 ## Make a "hack" to give SSB impacts = 0 for water bev types
 ## For aesthetic and plot readability reasons
@@ -269,7 +271,7 @@ imp_s0 <- temp_s0 %>%
   group_by(bev_type, SSB_status, item, impact_name) %>%
   summarize(value = sum(value)) %>%
   ungroup()
-#View(imp_s0)
+View(imp_s0)
 
 FIG4 <- imp_s0 %>%
   filter(bev_type != "Water, Filtered tap") %>%
@@ -280,9 +282,7 @@ ggplot() + theme_bw() +
   facet_grid(vars(impact_name),
              vars(bev_type),
              switch = "y",
-             scales = "free",
-             labeller = labeller(bev_type = label_wrap_gen(10))
-             # labeller = labeller(impact_names = label_wrap_gen(20))
+             scales = "free"
   ) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0.5) +
@@ -291,11 +291,13 @@ ggplot() + theme_bw() +
   theme(
     text = element_text(size = 14),
     axis.text.x = element_text(angle = 45, hjust = 1),
-    panel.border = element_blank(),
     legend.title=element_blank(),
+    legend.text=element_text(size=18),
+#    strip.text.x = ggtext::element_markdown(),
+#    strip.text.y = ggtext::element_markdown(),
+    panel.border = element_blank(),
     strip.placement = "outside",
     legend.position = c(0.93, 0.25),
-    legend.text=element_text(size=18),
     legend.key.size = unit(1, 'cm'),
     legend.box.background = element_rect(colour = "black")
     ) +

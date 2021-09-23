@@ -1,4 +1,4 @@
-﻿imp_type,imp_name
-ghg,Climate\n[ t CO2eq (100yr) ]
-h2o,Water Use\n[ M Liter (Blue) ]
-plastic,Plastic Pollution\n[ kg plastic ]
+﻿imp_type,imp_name_simple,imp_name_regex
+ghg,Climate\n[ t CO2eq (100yr) ],Climate\n\\[t CO[2]eq \(100yr\) ]
+h2o,Water Use\n[ M Liter (Blue) ],Climate\n\\[t CO[2]eq \(100yr\) ]
+plastic,Plastic Pollution\n[ kg plastic ],Climate\n\\[t CO[2]eq \(100yr\) ]

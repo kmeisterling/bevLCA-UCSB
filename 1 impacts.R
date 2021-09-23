@@ -1,21 +1,28 @@
 # Calculating impacts
-# Use summaries saved as csv for input
-# Actually, using the scenarios, which are kind of hand-built
+# 
 
 library(tidyverse)
 
 
-# Read data & clean up ---------------------------------------------------------------
-cont_imp_l <- read_csv("./data/cont_imp_l.csv")
-binb_imp_l <- read_csv("./data/cont_imp_l_binb.csv")   # per liter of beverage volume, as drunk
-bev_imp_l <- read_csv("./data/bev_imp_l.csv")     # per liter of beverage volume, as drunk
-flow <- read_csv("./data/flow_bsc_allscen.csv")   # "vol" is liter of beverage, as drunk
-bev_name <- read_csv("./data/bevtype_list_name.csv")  # List of the beverage types in the dataset
-#bev_SSB <- read_csv("./data/bevtype_SSB.csv")  # List of the beverage types in the dataset
-#View(bev_name)
+# Read data ---------------------------------------------------------------
+flow <- read_csv("./data/flow_bsc_allscen.csv")   # "vol" is liter of beverage, as drank
+View(flow)
+# beverage flows are in liters
+ # data contains volume as packaged and volume as drank
+
+bev_imp_l <- read_csv("./data/bev_imp_l.csv")     # impact of beverage per liter of beverage, as drank
+cont_imp_l <- read_csv("./data/cont_imp_l.csv")      # impact of container per liter of beverage, as drank
+binb_imp_l <- read_csv("./data/cont_imp_l_binb.csv")   # impact of bag-in-box container per liter of beverage, as drank
+#Impacts are 
+ # g CO2e
+ # g plastic pollution
+ # liter blue water
 #View(bev_imp_l)
 #View(cont_imp_l)
-#View(flow)
+#View(binb_imp_l)
+
+bev_name <- read_csv("./data/bevtype_list_name.csv")  # List of the beverage types in the dataset, with nicely formatted names
+#View(bev_name)
 
 # Beverage (bev) impacts: all scenarios ---------------------------------------------------
 
@@ -28,7 +35,7 @@ bev_imp_allscen <- flow %>%
     names_to = "impact_type",
     values_to = "value") %>%
   add_column(item = "bev", .before = "value")
-#View(bev_imp_allscen)
+View(bev_imp_allscen)
 
 
 # Container (cont) impacts: all scenarios --------------------------------------------------
