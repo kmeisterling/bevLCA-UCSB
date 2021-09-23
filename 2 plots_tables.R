@@ -19,12 +19,12 @@ col_cont <- c("#440154")
 
 # BIG impacts (tonnes, M liter, kg)
  # Formatted in markdown, to use element_markdown
-impnames <- c(
+impnames_hand <- c(
   ghg = "Climate<br> t CO2eq (100yr) ",
   h2o = "Blue Water Use<br>[ M liter (Blue) water ]",
   plastic = "Plastic Pollution<br>[ kg plastic ]"
 )
-#View(impnames)
+#View(impnames_hand)
 
 # Impacts per liter
 impname_l <- c(
@@ -39,8 +39,8 @@ bev_names <- read_csv("./data/bevtype_list_name.csv")
 #View(bev_names)
 cont_names <- read_csv("./data/conttype_list_name.csv")
 #View(cont_names)
-impNames <- read_csv("./data/imptype_list_name.csv")  ## For experimenting
-View(impNames)
+imp_names <- read_csv("./data/imptype_list_name.csv")
+View(imp_names)
 
 # vol_dbsc_s0 ------------------------------------------------------
 
@@ -227,11 +227,11 @@ flow_scl %>%
 # IMPACTS: format data -----------------------------------------------------------------
 
 ## Impact data
-imp <- read_csv("./data/data_gen/imp_bsc_allscen.csv")
-#View(imp)
+imp_temp <- read_csv("./data/data_gen/imp_bsc_allscen.csv")
+#View(imp_temp)
 
 ## Rescale impact values
-imp_scl <- read_csv("./data/data_gen/imp_bsc_allscen.csv") %>%
+imp_scl <- imp_temp %>%
   mutate(
     value = case_when(
       impact_type == "ghg" ~ value / 10^6,
@@ -242,11 +242,13 @@ imp_scl <- read_csv("./data/data_gen/imp_bsc_allscen.csv") %>%
   select(!bev_type) %>%
   rename(bev_type = bev_name)
 View(imp_scl)
+remove(imp_temp)
+
 ## Give impacts nicer names
 ## Seems like there should be a neater way to do this
 ## But not now
-imp_scl$impact_name <- impnames[ 
-  match(imp_scl$impact_type, names(impnames)) ]
+imp_scl$impact_name <- impnames_hand[ 
+  match(imp_scl$impact_type, names(impnames_hand)) ]
 View(imp_scl)
 
 # imp_ibs_s0 ----------------------------------------------------------
@@ -258,12 +260,13 @@ temp_s0 <- imp_scl %>%
 View(temp_s0)
 
 ## Make a "hack" to give SSB impacts = 0 for water bev types
-## For aesthetic and plot readability reasons
+ # For aesthetic and plot readability reasons
 h1 <- temp_s0 %>%
   filter(bev_type == "Water, bottled")%>%
   mutate(SSB_status = "SSB") %>%
   mutate(value = 0)
 View(h1)
+remove(temp_s0)
 
 imp_s0 <- temp_s0 %>%
   bind_rows(h1) %>%
@@ -271,6 +274,7 @@ imp_s0 <- temp_s0 %>%
   summarize(value = sum(value)) %>%
   ungroup()
 View(imp_s0)
+remove(h1)
 
 FIG4 <- imp_s0 %>%
   filter(bev_type != "Water, Filtered tap") %>%
