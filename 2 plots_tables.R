@@ -2,7 +2,6 @@
   # Flow (in liter) of beverages by scenario, beverage type, container type, and SSB status
   # This is where we rescale as necessary, and give nicer names
 
-
 library(tidyverse)
 library(ggtext)
 
@@ -21,7 +20,7 @@ col_cont <- c("#440154")
 # BIG impacts (tonnes, M liter, kg)
  # Formatted in markdown, to use element_markdown
 impnames <- c(
-  ghg = "Climate<br>[ t CO2eq (100yr) ]",
+  ghg = "Climate<br> t CO2eq (100yr) ",
   h2o = "Blue Water Use<br>[ M liter (Blue) water ]",
   plastic = "Plastic Pollution<br>[ kg plastic ]"
 )
@@ -29,7 +28,7 @@ impnames <- c(
 
 # Impacts per liter
 impname_l <- c(
-  ghg = "Climate<br>[ g CO<sub>2</sub>eq / liter ]",
+  ghg = "Climate<br>[ g CO2eq / liter ]",
   h2o = "Blue Water Use<br>[ liter (Blue) water / liter ]",
   plastic = "Plastic Pollution<br>[ g plastic / liter ]"
 )
@@ -40,8 +39,8 @@ bev_names <- read_csv("./data/bevtype_list_name.csv")
 #View(bev_names)
 cont_names <- read_csv("./data/conttype_list_name.csv")
 #View(cont_names)
-#impact_names <- read_csv("./data/imptype_list_name.csv") #NOT USED
-
+impNames <- read_csv("./data/imptype_list_name.csv")  ## For experimenting
+View(impNames)
 
 # vol_dbsc_s0 ------------------------------------------------------
 
@@ -264,7 +263,7 @@ h1 <- temp_s0 %>%
   filter(bev_type == "Water, bottled")%>%
   mutate(SSB_status = "SSB") %>%
   mutate(value = 0)
-#View(h1)
+View(h1)
 
 imp_s0 <- temp_s0 %>%
   bind_rows(h1) %>%
@@ -281,7 +280,7 @@ ggplot() + theme_bw() +
            width = 0.8) +
   facet_grid(vars(impact_name),
              vars(bev_type),
-             switch = "y",
+#             switch = "y",
              scales = "free"
   ) +
   geom_hline(yintercept = 0) +
@@ -293,13 +292,13 @@ ggplot() + theme_bw() +
     axis.text.x = element_text(angle = 45, hjust = 1),
     legend.title=element_blank(),
     legend.text=element_text(size=18),
-#    strip.text.x = ggtext::element_markdown(),
-#    strip.text.y = ggtext::element_markdown(),
     panel.border = element_blank(),
     strip.placement = "outside",
     legend.position = c(0.93, 0.25),
     legend.key.size = unit(1, 'cm'),
-    legend.box.background = element_rect(colour = "black")
+    legend.box.background = element_rect(colour = "black"),
+#    strip.text = element_markdown(),
+    strip.text.y = element_markdown(size = 12)
     ) +
   scale_fill_manual(values = col_vir1)
 #  scale_fill_brewer(palette = "Dark2")
@@ -577,3 +576,17 @@ b1 %>%
 ggsave("./figs/figsBW/FIG2bw_bev_imp_liter.pdf", width=8, height=8, units="in")
 
 
+orig_sum_labs <- c("peak_time","peak_vir","eq_vir","rel_peak")
+new_sum_labs <- c("peak\ntime","peak\nvirulence","equilibrium\nvirulence",
+                  "relative\npeak")
+orig_symb_labs <- c("beta","gamma","x[1]")
+
+fake <- data.frame(f1=rep(orig_sum_labs,each=12),
+                   f2=factor(rep(1:3,16),levels=1:3,
+                             labels=c("beta","gamma","x[1]")),
+                   x=rep(1:4,12),y=rep(1:4,12))
+View(fake)
+
+fake <- data.frame(f1=rep(new_sum_labs,each=12),
+                   f2=rep(orig_symb_labs, each = 16),
+                   x=rep(1:4,12),y=rep(1:4,12))
