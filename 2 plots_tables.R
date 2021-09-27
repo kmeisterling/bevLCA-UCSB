@@ -260,8 +260,6 @@ temp_s0 <- imp_scl %>%
   filter(bev_type != "water_ucsb")
 #View(temp_s0)
 
-## Make a "hack" to give SSB impacts = 0 for water bev types
-# For aesthetic and plot readability reasons
 h1 <- temp_s0 %>%
   filter(bev_type == "water_bottled")%>%
   mutate(SSB_status = "SSB") %>%
@@ -482,9 +480,16 @@ c1 <- read_csv("./data/cont_imp_l.csv") %>%
   pivot_longer(!cont_type, names_to = "imp_type", values_to = "val")
 #View(c1)
 
-c1$imp_type <- impname_l[
-  match(c1$imp_type, names(impname_l)) ]
-#View(c1)
+## The previous way to get good impact names
+# c1$imp_type <- impname_l[
+#   match(c1$imp_type, names(impname_l)) ]
+
+View(c1)
+View(impNames)
+
+## New way to get good iompact names (in progress)
+# c1 <- c1 %>%
+#   left_join(impNames)
 
 FIG3 <- c1 %>%
   ggplot() + theme_bw() +
@@ -542,8 +547,10 @@ b1 <- read_csv("./data/bev_imp_l.csv") %>%
   pivot_longer(!c("bev_type", "SSB_status"), names_to = "imp_type", values_to = "val")
 #View(b1)
 
-b1$imp_type <- impname_l[
-  match(b1$imp_type, names(impname_l)) ]
+
+## The previous way to get good impact names
+# b1$imp_type <- impname_l[
+#   match(b1$imp_type, names(impname_l)) ]
 #View(b1)
   
 b1 %>%
