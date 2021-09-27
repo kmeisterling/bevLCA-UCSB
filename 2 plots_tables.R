@@ -28,64 +28,61 @@ bevNames <- bevNames_temp %>%
   #  mutate(bev_regex = str_replace(bev_regex, "+ ", "+~")) %>%
   mutate(bev_regex = str_replace(bev_regex, " ", "~")) %>%
   mutate(bev_regex = str_replace(bev_regex, ",", "*','*"))
-View(bevNames)
+#View(bevNames)
 remove(bevNames_temp)
+
 contNames <- read_csv("./data/conttype_list_name.csv")
 #View(contNames)
+
 impNames <- read_csv("./data/imptype_list_name.csv")
 #View(impNames)
 
-
-
 # BIG impacts (tonnes, M liter, kg)
  # Formatted in markdown, to use element_markdown
-impnames_hand <- c(
-  ghg = "Climate<br> t CO2eq (100yr) ",
-  h2o = "Blue Water Use<br>[ M liter (Blue) water ]",
-  plastic = "Plastic Pollution<br>[ kg plastic ]"
-)
+# impnames_hand <- c(
+#   ghg = "Climate<br> t CO2eq (100yr) ",
+#   h2o = "Blue Water Use<br>[ M liter (Blue) water ]",
+#   plastic = "Plastic Pollution<br>[ kg plastic ]"
+#)
 #View(impnames_hand)
 
 # Impacts per liter
-impname_l <- c(
-  ghg = "Climate<br>[ g CO2eq / liter ]",
-  h2o = "Blue Water Use<br>[ liter (Blue) water / liter ]",
-  plastic = "Plastic Pollution<br>[ g plastic / liter ]"
-)
+# impname_l <- c(
+#   ghg = "Climate<br>[ g CO2eq / liter ]",
+#   h2o = "Blue Water Use<br>[ liter (Blue) water / liter ]",
+#   plastic = "Plastic Pollution<br>[ g plastic / liter ]"
+#)
 
 # vol_dbsc_s0 ------------------------------------------------------
 
 flow_s0 <- read_csv("./data/flow_dbsc_scen0.csv") %>%
   mutate(vol_kL = vol/1000) %>%   # Resacle as-consumed volume
-  select(!vol) %>%
-  left_join(bevNames) %>%
-  select(!bev_type) %>%
-  rename(bev_type = bev_name) %>%
-  write_csv("./data/data_tbls/flow_dbsc_scen0_scaled.csv")
+  select(!vol)
 #View(flow_s0)
 
-temp0 <- flow_s0 %>% # for vol fig, we want a row with distrib = "total"
+## Make tibble with "total" (to add to figure)
+flow_s0_din_vend <- flow_s0 %>% # for vol fig, we want a row with distrib = "total"
   group_by(bev_type, SSB_status, cont_type) %>%
   summarize(vol_kL = sum(vol_kL)) %>%
   ungroup() %>%
-  mutate(distrib = "Dining + Vending") %>%
-  mutate(bev_type = fct_reorder(bev_type, vol_kL, .fun = (sum), .desc =  TRUE))
-#View(temp0)
+  mutate(distrib = "Dining + Vending")
+#  mutate(bev_type = fct_reorder(bev_type, vol_kL, .fun = (sum), .desc =  TRUE))
+#View(flow_s0_din_vend)
 
 # Make table for plotting with distrib = 'total', "vend", and "dining"
 flow_s0_fig <- flow_s0 %>%
-#  mutate(bev_type = fct_reorder(bev_type, vol_kL, .fun = (sum), .desc =  TRUE)) %>%
-  bind_rows(temp0) %>%
+  bind_rows(flow_s0_din_vend) %>%
   mutate(distrib = factor(distrib, levels=c("Dining + Vending", "dining", "vending"))) %>%
   mutate(SSB_status = as_factor(SSB_status)) %>%
-  mutate(SSB_status = fct_rev(SSB_status)) %>%
-  write_csv("./data/data_tbls/vol_scen0_dbsc_DATA.csv")
-#View(flow_s0_fig)
+  mutate(SSB_status = fct_rev(SSB_status))
+View(flow_s0_fig)
+remove(flow_s0_din_vend)
 
 FIG1 <- flow_s0_fig %>%
   left_join(contNames) %>%
+  left_join(bevNames) %>%
   ggplot() + theme_bw() +
-  geom_col(aes(y = vol_kL, x = bev_type, fill = cont_name), width = 0.8) +
+  geom_col(aes(y = vol_kL, x = bev_name, fill = cont_name), width = 0.8) +
   facet_grid(rows = vars(distrib),
              cols = vars(SSB_status),
              switch = "y") +
@@ -94,7 +91,7 @@ FIG1 <- flow_s0_fig %>%
   labs(
     x ="Beverage Category",
     y = "thousand liters / yr",
-    fill = "container \ntype") +
+    fill = "container\ntype") +
   theme(
     text = element_text(size=14),
     axis.text.x = element_text(angle = 45, hjust = 1),
@@ -109,8 +106,23 @@ ggsave("./figs/figsTest/FIG1_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="
 ## Make B&W version
 FIG1 +
   scale_fill_grey()
-#ggsave("./figs/figsTest/figsBW/FIG1bw_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
+ggsave("./figs/figsTest/figsBW/FIG1bw_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
 
+
+## Table for 
+ # Actually it's a table for EXCEL PIVOTS because we have two column headings: 
+  # SSB_status nested in cont_type SUPP
+View(flow_s0_fig)
+flow_s0_fig %>% 
+  write_csv("./data/data_tbls/vol_scen0_dbsc_DATA.csv") %>%
+  write_css("../data/data_tbls/vol_scen0_dbsc_DATA.csv") # Need for hand-shaping for pasting into "Manuscript + Tables" Dropbox folder
+###!!!!!!!#### This is WRONG -- CANNOT write from public to private repo
+## This has to have a tidy version written from private,
+ # with perhaps a formatting update here (make a nice table that doesn't need hand-wrangling to be pub-ready)
+
+
+
+write_csv("./data/data_tbls/flow_dbsc_scen0_scaled.csv")
 
 # vol_bsc_s0 --------------------------------------------
 
