@@ -33,22 +33,24 @@ col_cont <- c("#440154")
 
 # data --------------------------------------------------------------------
 
-imp_temp <- read_csv("./data/data_gen/imp_bsc_allscen.csv")
+imp_temp <- read_csv("./data/data_gen/imp_bsc_allscen.csv") %>%
+  rename(imp_type = impact_type) %>%
+  mutate(item = recode(item, bev = "beverage", cont = "container"))
+  
 #View(imp_temp)
 
 ## Rescale impact values
 imp_scl <- imp_temp %>%
   mutate(
     value = case_when(
-      impact_type == "ghg" ~ value / 10^6,
-      impact_type == "h2o" ~ value / 10^6,
-      impact_type == "plastic" ~ value / 10^3
+      imp_type == "ghg" ~ value / 10^6,
+      imp_type == "h2o" ~ value / 10^6,
+      imp_type == "plastic" ~ value / 10^3
     ))
 #View(imp_scl)
 remove(imp_temp)
 
-## Hack 1: give "SSB" versions of bottled water and ucsb water (filtered tap)
- # To have names line up in facet figures
+
 
 temp_s0 <- imp_scl %>%
 #  select(-impact_type) %>%
@@ -66,19 +68,12 @@ h1 <- temp_s0 %>%
 
 imp_s0 <- temp_s0 %>%
   bind_rows(h1) %>%
-  group_by(bev_type, SSB_status, item, impact_type) %>%
+  group_by(bev_type, SSB_status, item, imp_type) %>%
   summarize(value = sum(value)) %>%
   ungroup()
-#View(imp_s0)
+View(imp_s0)
 remove(h1)
 remove(temp_s0)
-
-## Make sure column names are same as the "names" file (up next)
-imp_s0 <- imp_s0 %>%
-  rename(imp_type = impact_type) %>%
-  filter(bev_type != "Water, Filtered tap") %>%
-  mutate(item = recode(item, bev = "beverage", cont = "container"))
-View(imp_s0)
 
 # Names -------------------------------------------------------------------
 
@@ -93,6 +88,8 @@ View(bevNames)
 remove(bevNames_temp)
 contNames <- read_csv("./data/conttype_list_name.csv")
 #View(contNames)
+impNames <- read_csv("./data/imptype_list_name.csv")
+#View(impNames)
 
 #View(imp_s0)
 impact_Pdata_temp <- imp_s0 %>%
@@ -104,8 +101,7 @@ impact_Pdata_temp <- imp_s0 %>%
 
 
 
-impNames <- read_csv("./data/imptype_list_name.csv")
-View(impNames)
+
 impact_Pdata <- impact_Pdata_temp %>%
   left_join(impNames)
 
@@ -115,13 +111,13 @@ impact_Pdata <- impact_Pdata_temp %>%
 
 
 # Plot --------------------------------------------------------------------
-#View(impact_Pdata)
+View(impact_Pdata)
 
 FIG4 <- impact_Pdata %>%
   ggplot() + theme_bw() +
   geom_col(aes(y = value, x = SSB_status, fill = item),
            width = 0.8) +
-  facet_grid(vars(imp_regex),
+  facet_grid(vars(imp_regex_abs),
              vars(bev_regex),
              switch = "y",
              scales = "free",
@@ -147,3 +143,4 @@ FIG4 <- impact_Pdata %>%
 #  scale_fill_brewer(palette = "Dark2")
 FIG4
 ggsave("./figs/figsTest/FIG4_imp_ibs_scen0_exp.pdf", width=13, height=8, units="in")
+

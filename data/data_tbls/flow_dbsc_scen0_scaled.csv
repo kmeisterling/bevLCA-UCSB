@@ -1,66 +1,66 @@
-distrib,cont_type,SSB_status,vol_cont,mix_r_avg,vol_kL,bev_type
-dining,alum_can,non_SSB,133.4356,0,0.1334356,Coffee
-dining,alum_can,SSB,13.8404,0,0.013840400000000001,Coffee
-dining,glass,non_SSB,949.2004,0,0.9492003999999999,Coffee
-dining,glass,SSB,640.0003,0,0.6400003000000001,Coffee
-dining,plastic,non_SSB,197.4918,0,0.19749180000000002,Coffee
-dining,plastic,SSB,39.12570000000001,0,0.039125700000000006,Coffee
-dining,alum_can,non_SSB,18.4538,0,0.0184538,Coffee + milk
-dining,alum_can,SSB,3876.877,0,3.876877,Coffee + milk
-dining,glass,non_SSB,423.86220000000003,0,0.4238622,Coffee + milk
-dining,glass,SSB,8036.5053,0,8.0365053,Coffee + milk
-dining,plastic,non_SSB,72.041,0,0.072041,Coffee + milk
-dining,plastic,SSB,2022.6499,0,2.0226499,Coffee + milk
-dining,alum_can,non_SSB,210.6081,0,0.21060810000000002,Juice
-dining,alum_can,SSB,7849.634899999999,0,7.849634899999999,Juice
-dining,bag_in_box,SSB,12889.3129,3.956827636638412,63.8901024,Juice
-dining,carton,non_SSB,1138.03,0,1.1380299999999999,Juice
-dining,carton,SSB,667.1269,0,0.6671269,Juice
-dining,glass,non_SSB,667.1781,0,0.6671781,Juice
-dining,glass,SSB,4986.3757,0,4.9863757,Juice
-dining,plastic,non_SSB,37195.2288,0,37.195228799999995,Juice
-dining,plastic,SSB,12197.842,0,12.197842000000001,Juice
-dining,carton,non_SSB,511.03,0,0.51103,Almond milk
-dining,carton,SSB,60821.097299999994,0,60.82109729999999,Almond milk
-dining,plastic,SSB,7939.7737,0,7.9397737,Almond milk
-dining,bag_in_box,SSB,22417.19,0,22.417189999999998,"Milk, animal"
-dining,carton,non_SSB,1583.8086999999998,0,1.5838086999999998,"Milk, animal"
-dining,carton,SSB,323.741,0,0.323741,"Milk, animal"
-dining,plastic,non_SSB,55461.4263,0,55.4614263,"Milk, animal"
-dining,plastic,SSB,433.098,0,0.43309800000000004,"Milk, animal"
-dining,bag_in_box,SSB,863.0730000000001,4.999999999999999,5.178438,Plant milk
-dining,carton,SSB,2360.675,0,2.360675,Plant milk
-dining,carton,non_SSB,10527.227299999999,0,10.527227299999998,Soy milk
-dining,carton,SSB,31668.0968,0,31.6680968,Soy milk
-dining,glass,SSB,5575.3618,0,5.5753618,Probiotic
-dining,plastic,non_SSB,416.7025,0,0.4167025,Probiotic
-dining,alum_can,non_SSB,18130.4921,0,18.130492099999998,Soda
-dining,alum_can,SSB,12251.6541,0,12.2516541,Soda
-dining,bag_in_box,non_SSB,5965.8015,5.000000000000001,35.794809,Soda
-dining,bag_in_box,SSB,29374.7508,4.999999999999999,176.2485048,Soda
-dining,carton,SSB,2.9238,0,0.0029238,Soda
-dining,glass,non_SSB,2880.3572,0,2.8803571999999997,Soda
-dining,glass,SSB,1232.5281,0,1.2325281,Soda
-dining,plastic,non_SSB,11166.6967,0,11.166696700000001,Soda
-dining,plastic,SSB,30576.4408,0,30.5764408,Soda
-dining,alum_can,non_SSB,899.9807,0,0.8999807,Tea
-dining,alum_can,SSB,53806.5686,0,53.8065686,Tea
-dining,bag_in_box,non_SSB,1510.3814,5.000000000000001,9.062288400000002,Tea
-dining,bag_in_box,SSB,185.48499999999999,5,1.1129099999999998,Tea
-dining,glass,non_SSB,1865.4366,0,1.8654366,Tea
-dining,glass,SSB,33869.7048,0,33.8697048,Tea
-dining,plastic,non_SSB,4082.5295,0,4.0825295,Tea
-dining,plastic,SSB,12687.9676,0,12.6879676,Tea
-dining,plastic,non_SSB,80328.7545,0,80.3287545,"Water, bottled"
-vending,alum_can,SSB,663.1822999999999,0,0.6631822999999999,Coffee + milk
-vending,glass,SSB,7129.9669,0,7.1299669,Coffee + milk
-vending,alum_can,SSB,62.10399999999999,0,0.06210399999999999,Juice
-vending,plastic,non_SSB,1070.7517,0,1.0707517,Juice
-vending,alum_can,non_SSB,5030.7119,0,5.0307119,Soda
-vending,alum_can,SSB,8496.1454,0,8.4961454,Soda
-vending,plastic,non_SSB,7498.0782,0,7.4980782,Soda
-vending,plastic,SSB,41316.1226,0,41.3161226,Soda
-vending,glass,SSB,25.7142,0,0.025714200000000003,Tea
-vending,plastic,non_SSB,1038.9636,0,1.0389636,Tea
-vending,plastic,SSB,7911.9912,0,7.9119912,Tea
-vending,plastic,non_SSB,24160.1348,0,24.1601348,"Water, bottled"
+distrib,cont_type,SSB_status,vol_cont,mix_r_avg,vol_kL,bev_type,bev_regex
+dining,alum_can,non_SSB,133.4356,0,0.1334356,Coffee,Coffee
+dining,alum_can,SSB,13.8404,0,0.013840400000000001,Coffee,Coffee
+dining,glass,non_SSB,949.2004,0,0.9492003999999999,Coffee,Coffee
+dining,glass,SSB,640.0003,0,0.6400003000000001,Coffee,Coffee
+dining,plastic,non_SSB,197.4918,0,0.19749180000000002,Coffee,Coffee
+dining,plastic,SSB,39.12570000000001,0,0.039125700000000006,Coffee,Coffee
+dining,alum_can,non_SSB,18.4538,0,0.0184538,Coffee + milk,Coffee~+ milk
+dining,alum_can,SSB,3876.877,0,3.876877,Coffee + milk,Coffee~+ milk
+dining,glass,non_SSB,423.86220000000003,0,0.4238622,Coffee + milk,Coffee~+ milk
+dining,glass,SSB,8036.5053,0,8.0365053,Coffee + milk,Coffee~+ milk
+dining,plastic,non_SSB,72.041,0,0.072041,Coffee + milk,Coffee~+ milk
+dining,plastic,SSB,2022.6499,0,2.0226499,Coffee + milk,Coffee~+ milk
+dining,alum_can,non_SSB,210.6081,0,0.21060810000000002,Juice,Juice
+dining,alum_can,SSB,7849.634899999999,0,7.849634899999999,Juice,Juice
+dining,bag_in_box,SSB,12889.3129,3.956827636638412,63.8901024,Juice,Juice
+dining,carton,non_SSB,1138.03,0,1.1380299999999999,Juice,Juice
+dining,carton,SSB,667.1269,0,0.6671269,Juice,Juice
+dining,glass,non_SSB,667.1781,0,0.6671781,Juice,Juice
+dining,glass,SSB,4986.3757,0,4.9863757,Juice,Juice
+dining,plastic,non_SSB,37195.2288,0,37.195228799999995,Juice,Juice
+dining,plastic,SSB,12197.842,0,12.197842000000001,Juice,Juice
+dining,carton,non_SSB,511.03,0,0.51103,Almond milk,Almond~milk
+dining,carton,SSB,60821.097299999994,0,60.82109729999999,Almond milk,Almond~milk
+dining,plastic,SSB,7939.7737,0,7.9397737,Almond milk,Almond~milk
+dining,bag_in_box,SSB,22417.19,0,22.417189999999998,"Milk, animal","Milk*','*~animal"
+dining,carton,non_SSB,1583.8086999999998,0,1.5838086999999998,"Milk, animal","Milk*','*~animal"
+dining,carton,SSB,323.741,0,0.323741,"Milk, animal","Milk*','*~animal"
+dining,plastic,non_SSB,55461.4263,0,55.4614263,"Milk, animal","Milk*','*~animal"
+dining,plastic,SSB,433.098,0,0.43309800000000004,"Milk, animal","Milk*','*~animal"
+dining,bag_in_box,SSB,863.0730000000001,4.999999999999999,5.178438,Plant milk,Plant~milk
+dining,carton,SSB,2360.675,0,2.360675,Plant milk,Plant~milk
+dining,carton,non_SSB,10527.227299999999,0,10.527227299999998,Soy milk,Soy~milk
+dining,carton,SSB,31668.0968,0,31.6680968,Soy milk,Soy~milk
+dining,glass,SSB,5575.3618,0,5.5753618,Probiotic,Probiotic
+dining,plastic,non_SSB,416.7025,0,0.4167025,Probiotic,Probiotic
+dining,alum_can,non_SSB,18130.4921,0,18.130492099999998,Soda,Soda
+dining,alum_can,SSB,12251.6541,0,12.2516541,Soda,Soda
+dining,bag_in_box,non_SSB,5965.8015,5.000000000000001,35.794809,Soda,Soda
+dining,bag_in_box,SSB,29374.7508,4.999999999999999,176.2485048,Soda,Soda
+dining,carton,SSB,2.9238,0,0.0029238,Soda,Soda
+dining,glass,non_SSB,2880.3572,0,2.8803571999999997,Soda,Soda
+dining,glass,SSB,1232.5281,0,1.2325281,Soda,Soda
+dining,plastic,non_SSB,11166.6967,0,11.166696700000001,Soda,Soda
+dining,plastic,SSB,30576.4408,0,30.5764408,Soda,Soda
+dining,alum_can,non_SSB,899.9807,0,0.8999807,Tea,Tea
+dining,alum_can,SSB,53806.5686,0,53.8065686,Tea,Tea
+dining,bag_in_box,non_SSB,1510.3814,5.000000000000001,9.062288400000002,Tea,Tea
+dining,bag_in_box,SSB,185.48499999999999,5,1.1129099999999998,Tea,Tea
+dining,glass,non_SSB,1865.4366,0,1.8654366,Tea,Tea
+dining,glass,SSB,33869.7048,0,33.8697048,Tea,Tea
+dining,plastic,non_SSB,4082.5295,0,4.0825295,Tea,Tea
+dining,plastic,SSB,12687.9676,0,12.6879676,Tea,Tea
+dining,plastic,non_SSB,80328.7545,0,80.3287545,"Water, bottled","Water*','*~bottled"
+vending,alum_can,SSB,663.1822999999999,0,0.6631822999999999,Coffee + milk,Coffee~+ milk
+vending,glass,SSB,7129.9669,0,7.1299669,Coffee + milk,Coffee~+ milk
+vending,alum_can,SSB,62.10399999999999,0,0.06210399999999999,Juice,Juice
+vending,plastic,non_SSB,1070.7517,0,1.0707517,Juice,Juice
+vending,alum_can,non_SSB,5030.7119,0,5.0307119,Soda,Soda
+vending,alum_can,SSB,8496.1454,0,8.4961454,Soda,Soda
+vending,plastic,non_SSB,7498.0782,0,7.4980782,Soda,Soda
+vending,plastic,SSB,41316.1226,0,41.3161226,Soda,Soda
+vending,glass,SSB,25.7142,0,0.025714200000000003,Tea,Tea
+vending,plastic,non_SSB,1038.9636,0,1.0389636,Tea,Tea
+vending,plastic,SSB,7911.9912,0,7.9119912,Tea,Tea
+vending,plastic,non_SSB,24160.1348,0,24.1601348,"Water, bottled","Water*','*~bottled"
