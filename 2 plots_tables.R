@@ -37,6 +37,9 @@ contNames <- read_csv("./data/conttype_list_name.csv")
 impNames <- read_csv("./data/imptype_list_name.csv")
 #View(impNames)
 
+scenNames <- read_csv("./data/scen_list_name.csv")
+#View(scenNames)
+
 # BIG impacts (tonnes, M liter, kg)
  # Formatted in markdown, to use element_markdown
 # impnames_hand <- c(
@@ -53,30 +56,14 @@ impNames <- read_csv("./data/imptype_list_name.csv")
 #   plastic = "Plastic Pollution<br>[ g plastic / liter ]"
 #)
 
-# vol_dbsc_s0 ------------------------------------------------------
+# FIG 1 vol_dbsc_s0 ------------------------------------------------------
 
-flow_s0 <- read_csv("./data/flow_dbsc_scen0.csv") %>%
-  mutate(vol_kL = vol/1000) %>%   # Resacle as-consumed volume
-  select(!vol)
-#View(flow_s0)
-
-## Make tibble with "total" (to add to figure)
-flow_s0_din_vend <- flow_s0 %>% # for vol fig, we want a row with distrib = "total"
-  group_by(bev_type, SSB_status, cont_type) %>%
-  summarize(vol_kL = sum(vol_kL)) %>%
-  ungroup() %>%
-  mutate(distrib = "Dining + Vending")
-#  mutate(bev_type = fct_reorder(bev_type, vol_kL, .fun = (sum), .desc =  TRUE))
-#View(flow_s0_din_vend)
-
-# Make table for plotting with distrib = 'total', "vend", and "dining"
-flow_s0_fig <- flow_s0 %>%
-  bind_rows(flow_s0_din_vend) %>%
+flow_s0_fig <- read_csv("./data/vol_scen0_dbsc_din+vend.csv") %>%
   mutate(distrib = factor(distrib, levels=c("Dining + Vending", "dining", "vending"))) %>%
   mutate(SSB_status = as_factor(SSB_status)) %>%
   mutate(SSB_status = fct_rev(SSB_status))
 View(flow_s0_fig)
-remove(flow_s0_din_vend)
+
 
 FIG1 <- flow_s0_fig %>%
   left_join(contNames) %>%
@@ -101,28 +88,15 @@ FIG1 <- flow_s0_fig %>%
     strip.placement = "outside") +
   scale_fill_brewer(palette = "Dark2")
 FIG1
-ggsave("./figs/figsTest/FIG1_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
+ggsave("./figs/FIG1_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
 
 ## Make B&W version
 FIG1 +
   scale_fill_grey()
-ggsave("./figs/figsTest/figsBW/FIG1bw_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
+ggsave("./figs/figsBW/FIG1bw_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
 
+remove(FIG1)
 
-## Table for 
- # Actually it's a table for EXCEL PIVOTS because we have two column headings: 
-  # SSB_status nested in cont_type SUPP
-View(flow_s0_fig)
-flow_s0_fig %>% 
-  write_csv("./data/data_tbls/vol_scen0_dbsc_DATA.csv") %>%
-  write_css("../data/data_tbls/vol_scen0_dbsc_DATA.csv") # Need for hand-shaping for pasting into "Manuscript + Tables" Dropbox folder
-###!!!!!!!#### This is WRONG -- CANNOT write from public to private repo
-## This has to have a tidy version written from private,
- # with perhaps a formatting update here (make a nice table that doesn't need hand-wrangling to be pub-ready)
-
-
-
-write_csv("./data/data_tbls/flow_dbsc_scen0_scaled.csv")
 
 # vol_bsc_s0 --------------------------------------------
 
@@ -130,29 +104,30 @@ write_csv("./data/data_tbls/flow_dbsc_scen0_scaled.csv")
 flow_scl <- read_csv("./data/flow_bsc_allscen.csv") %>%
   mutate(vol_kL = vol/1000) %>%   #Resacle values
   select(!vol) %>%
-  left_join(bevNames) %>%
-  select(!bev_type) %>%
-  rename(bev_type = bev_name)
-#View(flow_scl)
+  mutate(SSB_status = as_factor(SSB_status)) %>%
+  mutate(SSB_status = fct_rev(SSB_status))
+View(flow_scl)
 
 # !!! Test that all scenarios have same volume
 flow_scl %>%
   group_by(scen) %>%
   summarize(TOTAL = sum(vol_kL))
 
-flow_0 <- flow_scl %>%
+flow_bsc_scen0 <- flow_scl %>%
   filter(scen == "scen0") %>%
-  mutate(bev_type = fct_reorder(bev_type, vol_kL, .fun = (sum), .desc =  TRUE))
-#View(flow_0)
-
-## By bev type, cont type, and SSB status
-flow_0 %>%
   group_by(bev_type, SSB_status, cont_type) %>%
   summarize(vol_kL = sum(vol_kL)) %>%
   ungroup() %>%
-  filter(bev_type != "Water, Filtered tap") %>%
+  filter(bev_type != "water_ucsb") %>%
+  left_join(bevNames) %>%
+  left_join(contNames) %>%
+  mutate(bev_name = fct_reorder(bev_name, vol_kL, .fun = (sum), .desc =  TRUE))
+#View(flow_0)
+
+## By bev type, cont type, and SSB status
+flow_bsc_scen0 %>%
   ggplot() + theme_bw() +
-  geom_col(aes(y = vol_kL, x = bev_type, fill = cont_type), width = 0.8) +
+  geom_col(aes(y = vol_kL, x = bev_name, fill = cont_name), width = 0.8) +
   facet_wrap(vars(SSB_status)) +
   #             cols = vars(distrib),
   #             switch = "y") 
@@ -160,8 +135,8 @@ flow_0 %>%
   geom_vline(xintercept = 0.5) +
   labs(
     x ="Beverage Category",
-    y = "thousand liters / yr") +
-  #    title = "Beverages purchased at UCSB") +
+    y = "thousand liters / yr",
+    fill = "container\ntype") +
   theme(
     text = element_text(size=14),
     axis.text.x = element_text(angle = 45, hjust = 1),
@@ -171,18 +146,24 @@ flow_0 %>%
     strip.placement = "outside") +
   scale_fill_brewer(palette = "Dark2")
 
-#ggsave("./figs/figsTest/vol_scen0_bsc.pdf", width=8.5, height=7, units="in")
+ggsave("./figs/vol_scen0_bsc.pdf", width=8.5, height=7, units="in")
 
+remove(flow_bsc_scen0)
 
 # vol_bs_s0 -------------------------------------------------------
 
-flow_0 %>%
+flow_bs_s0 <- flow_scl %>%
+  filter(scen == "scen0") %>%
   group_by(bev_type, SSB_status) %>%
   summarize(vol_kL = sum(vol_kL)) %>%
   ungroup() %>%
-  filter(bev_type != "Water, Filtered tap") %>%
+  filter(bev_type != "water_ucsb") %>%
+  left_join(bevNames) %>%
+  mutate(bev_name = fct_reorder(bev_name, vol_kL, .fun = (sum), .desc =  TRUE))
+
+flow_bs_s0 %>%
   ggplot() + theme_bw() +
-  geom_col(aes(y = vol_kL, x = bev_type, fill = SSB_status), width = 0.8) +
+  geom_col(aes(y = vol_kL, x = bev_name, fill = SSB_status), width = 0.8) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0.5) +
   labs(
@@ -195,27 +176,29 @@ flow_0 %>%
     panel.border = element_blank(),
     strip.placement = "outside")
 
-#ggsave("./figs/figsTest/vol_scen0_bs.pdf", width=7, height=4, units="in")
-
+ggsave("./figs/vol_scen0_bs.pdf", width=7, height=4, units="in")
+remove(flow_bs_s0)
 
 # vol_bc_allscen ---------------------------------------------------------------
 
 ## Bevtype, container type, scenario
 
-flow_scl %>%
-  left_join(contNames) %>%
-  group_by(scen, bev_type, cont_name) %>%
+flow_bc_allscen <- flow_scl %>%
+  group_by(scen, bev_type, cont_type) %>%
   summarize(vol_kL = sum(vol_kL)) %>%
   ungroup() %>%
-  mutate(scen = recode(scen, scen0 = "Baseline")) %>%
-#  mutate(bev_type = recode(bev_type, "Water, UCSB" = "Water, tap")) %>%
-#  select(!vol) %>% 
-  ggplot() + theme_bw() +
-  geom_col(aes(y = vol_kL, x = bev_type, fill = cont_name),
+  left_join(contNames) %>%
+  left_join(bevNames) %>%
+  left_join(scenNames)
+
+FIGSI1 <- flow_bc_allscen %>% 
+  ggplot() + 
+  theme_bw() +
+  geom_col(aes(y = vol_kL, x = bev_name, fill = cont_name),
            width = 0.8) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0.5) +
-  facet_grid(rows = vars(scen),
+  facet_grid(rows = vars(scen_name),
              scales = "free_y",
              switch = "y") +
   labs(
@@ -228,24 +211,22 @@ flow_scl %>%
     panel.border = element_blank(),
     strip.placement = "outside") +
   scale_fill_brewer(palette = "Dark2")
+FIGSI1  
+ggsave("./figs/FIGSI1_vol_bc_allscen.pdf", width=9, height=11, units = "in")
+remove(FIGSI1)
   
-#ggsave("./figs/figsTest/vol_bc_allscen.pdf", width=9, height=11, units = "in")
-  
-# Make tbl for reporting
+## Make tbl for reporting
 
-#View(flow_scl) # Note the units = kilo liters / yr
-
-flow_scl %>%
-#  group_by(scen, cont_type, bev_type) %>%
-  group_by(across(c(-SSB_status, -vol_kL)))%>%
-  summarize(vol_kL = sum(vol_kL)) %>%
-  ungroup() %>%
-  pivot_wider(names_from = bev_type, values_from = vol_kL) %>%
-  mutate(scen = recode(scen, scen0 = "Baseline")) %>%
-  arrange(cont_type) %>%
-  arrange(scen) %>%
+#View(flow_bc_allscen) # Note the units = kilo liters / yr
+flow_bc_allscen %>%
+  select(c("scen_name", "vol_kL", "cont_name", "bev_name")) %>%
+  pivot_wider(names_from = bev_name, values_from = vol_kL) %>%
+  arrange(cont_name) %>%
+  arrange(scen_name) %>%
   replace(is.na(.), 0) %>%
-  write_csv("./data/data_tbls/flow_kL_bc_allscen.csv")
+  write_csv("./data/data_tbls/TSI9_flow_kL_bc_allscen.csv")
+
+remove(flow_bc_allscen)
     
 # IMPACTS: format data -----------------------------------------------------------------
 
@@ -260,7 +241,9 @@ imp_scl <- imp_temp %>%
       imp_type == "ghg" ~ value / 10^6,
       imp_type == "h2o" ~ value / 10^6,
       imp_type == "plastic" ~ value / 10^3
-    ))
+    )) %>%
+  mutate(item = recode(item, bev = "beverage", cont = "container"))
+  
 #View(imp_scl)
 remove(imp_temp)
 
@@ -278,83 +261,74 @@ h1 <- temp_s0 %>%
   mutate(value = 0)
 #View(h1)
 
-imp_s0 <- temp_s0 %>%
+imp_temp <- temp_s0 %>%
   bind_rows(h1) %>%
   group_by(bev_type, SSB_status, item, imp_type) %>%
   summarize(value = sum(value)) %>%
   ungroup()
-#View(imp_s0)
-remove(h1)
-remove(temp_s0)
+#View(imp_temp)
 
 ## Make sure column names are same as the "names" file (up next)
-imp_s0 <- imp_s0 %>%
-  rename(imp_type = impact_type) %>%
-  filter(bev_type != "Water, Filtered tap") %>%
-  mutate(item = recode(item, bev = "beverage", cont = "container"))
-View(imp_s0)
-
-# Want names that are nice for printing
-impact_Pdata <- imp_s0 %>%
+imp_s0 <- imp_temp %>%
   left_join(bevNames) %>%
   left_join(impNames)
-View(impact_Pdata)
+View(imp_s0)
 
+remove(h1)
+remove(temp_s0)
+remove(imp_temp)
 
-## Give impacts nicer names -- NOT USING NOW
-# imp_scl$impact_name <- impnames_hand[ 
-#   match(imp_scl$impact_type, names(impnames_hand)) ]
-# View(imp_scl)
+# FIG 4 imp_ibs_s0 ----------------------------------------------------------
 
-# imp_ibs_s0 ----------------------------------------------------------
-
-FIG4 <- impact_Pdata %>%
+FIG4 <- imp_s0 %>%
   ggplot() + theme_bw() +
   geom_col(aes(y = value, x = SSB_status, fill = item),
            width = 0.8) +
   facet_grid(vars(imp_regex_abs),
-             vars(bev_regex),
+             vars(bev_name),
              switch = "y",
              scales = "free",
-             labeller = label_parsed
+#             labeller = label_parsed
+             labeller = labeller(
+               imp_regex_abs = label_parsed,
+               bev_name = label_wrap_gen(11)
+             )
   ) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0.5) +
   xlab("") +
   ylab("") +
   theme(
-    text = element_text(size = 14),
+    text = element_text(size = 16),
     axis.text.x = element_text(angle = 45, hjust = 1),
     legend.title=element_blank(),
     legend.text=element_text(size=18),
     panel.border = element_blank(),
     strip.placement = "outside",
     legend.position = c(0.93, 0.25),
-    legend.key.size = unit(1, 'cm'),
+    legend.key.size = unit(0.92, 'cm'),
     legend.box.background = element_rect(colour = "black")
     #    strip.text = element_markdown()
   ) +
   scale_fill_manual(values = col_vir1)
-#  scale_fill_brewer(palette = "Dark2")
-
 FIG4
-ggsave("./figs/figsTest/FIG4_imp_ibs_scen0.pdf", width=13, height=8, units="in")
+ggsave("./figs/FIG4_imp_ibs_scen0.pdf", width=13, height=8, units="in")
 
 ## BW version
 FIG4 +
   scale_fill_grey(
     start = 0.7,
     end = 0.4)
-ggsave("./figs/figsTest/figsBW/FIG4bw_imp_ibs_scen0.pdf", width=13, height=8, units="in")
+ggsave("./figs/figsBW/FIG4bw_imp_ibs_scen0.pdf", width=13, height=8, units="in")
 
 ## Data table for SUPP
 
 #View(imp_s0)
 imp_s0 %>%
-  pivot_wider(names_from = bev_type, values_from = value) %>%
-  relocate(imp_type) %>%
+  select(imp_type, SSB_status, item, bev_name, value) %>%
+  pivot_wider(names_from = bev_name, values_from = value) %>%
   arrange(imp_type) %>%
-  write_csv("./data/data_tbls/imp_ibs_scen0.csv")
+  write_csv("./data/data_tbls/TSI10_imp_ibs_scen0.csv")
 
 
 # imp_i_allscen -------------------------------------------------------
@@ -364,17 +338,22 @@ imp_i_allscen <- imp_scl %>%
   group_by(scen, item, imp_type) %>%
   summarize(value = sum(value)) %>%
   ungroup() %>%
-  mutate(scen = recode(scen, scen0 = "Baseline")) %>%
-  mutate(item = recode(item, bev = "beverage", cont = "container"))
-#View(imp_i_allscen)
+  left_join(scenNames) %>%
+  relocate(scen_name) %>%
+  select(-scen) %>%
+  left_join(impNames)
+View(imp_i_allscen)
 
 FIG5 <- ggplot() + theme_bw() +
   geom_col(data = imp_i_allscen,
-           aes(y = value, x = scen, fill = item),
+           aes(y = value, x = scen_name, fill = item),
            width = 0.8) +
-  facet_grid(rows = vars(impact_name),
+  facet_grid(rows = vars(imp_regex_abs),
              switch = "y",
-             scales = "free"
+             scales = "free",
+             labeller = labeller(
+               imp_regex_abs = label_parsed
+             )
   ) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0.5) +
@@ -392,22 +371,22 @@ FIG5 <- ggplot() + theme_bw() +
     ) +
   scale_fill_manual(values = col_vir1)
 FIG5
-ggsave("./figs/figsTest/FIG5_imp_i_allscen.pdf", width=10, height=10, units="in")
+ggsave("./figs/FIG5_imp_i_allscen.pdf", width=10, height=10, units="in")
 
 ## BW version
 FIG5 + 
   scale_fill_grey(
     start = 0.7,
     end = 0.35)
-ggsave("./figs/figsTest/figsBW/FIG5bw_imp_ibs_scen0.pdf", width=13, height=8, units="in")
+ggsave("./figs/figsBW/FIG5bw_imp_ibs_scen0.pdf", width=13, height=8, units="in")
 
 ## Make a data table for SUPP
 
 imp_i_allscen %>%
-  pivot_wider(names_from = scen, values_from = value) %>%
-  relocate(impact_name) %>%
-  arrange(impact_name) %>%
-  write_csv("./data/data_tbls/imp_i_allscen_wide.csv")
+  select(scen_name, imp_name, item, value) %>%
+  pivot_wider(names_from = scen_name, values_from = value) %>%
+  arrange(imp_name) %>%
+  write_csv("./data/data_tbls/TSI11_imp_i_allscen_wide.csv")
 
 
 # imp_is_allscen ----------------------------------------------
@@ -415,21 +394,25 @@ imp_i_allscen %>%
 imp_is_allscen <- imp_scl %>%
   group_by(scen, item, SSB_status, imp_type) %>%
   summarize(value = sum(value)) %>%
-  ungroup()
-#View(imp_is_allscen)
+  ungroup() %>%
+  left_join(scenNames) %>%
+  relocate(scen_name) %>%
+  select(-scen) %>%
+  left_join(impNames)
+View(imp_is_allscen)
 
-imp_is_allscen %>%
-  mutate(scen = recode(scen, scen0 = "Baseline")) %>%
-  mutate(item = recode(item, bev = "beverage", cont = "container")) %>%
-ggplot() + theme_bw() +
+imp_is_allscen %>% ggplot() +
+  theme_bw() +
   geom_col(aes(y = value, x = SSB_status, fill = item),
            width = 0.8) +
-  facet_grid(vars(impact_name),
-             vars(scen),
+  facet_grid(vars(imp_regex_abs),
+             vars(scen_name),
              switch = "y",
              scales = "free",
-             labeller = label_wrap_gen()
-             ) +
+             labeller = labeller(
+               imp_regex_abs = label_parsed
+             )
+  ) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0.5) +
   xlab("") +
@@ -443,7 +426,7 @@ ggplot() + theme_bw() +
     ) +
   scale_fill_manual(values = col_vir1)
 
-ggsave("./figs/figsTest/imp_is_allscen.pdf", width=13, height=8, units="in")
+ggsave("./figs/imp_is_allscen.pdf", width=13, height=8, units="in")
 
 
 # Impact tables for reporting ---------------------------------------------
@@ -451,31 +434,32 @@ ggsave("./figs/figsTest/imp_is_allscen.pdf", width=13, height=8, units="in")
 summ_imp_wide <- imp_scl %>%
   pivot_wider(names_from = imp_type, values_from = value) %>%
   replace(is.na(.), 0)
-#View(summ_imp_wide)
+View(summ_imp_wide)
 write_csv(summ_imp_wide, "./data/data_tbls/imp_bsc_allscen_wide.csv")
 
 #df_imp_scen_bev %>% pivot_wider(names_from = scen, values_from = value))
 #Totals by scenario
 
+View(imp_i_allscen)
 imp_i_allscen %>%
-  group_by(scen, impact_name) %>%
+  group_by(scen_name, imp_name) %>%
   summarize(value = sum(value)) %>%
   ungroup() %>%
-  pivot_wider(names_from = impact_name, values_from = value) %>%
+  pivot_wider(names_from = imp_name, values_from = value) %>%
   write_csv("./data/data_tbls/imp_allscen.csv")
 
 imp_s0 %>%
-  group_by(impact_name, item) %>%
+  group_by(imp_name, item) %>%
   summarize(value = sum(value)) %>%
   pivot_wider(names_from = item, values_from = value) %>%
-  replace_na(list(bev = 0)) %>%
+  replace_na(list(beverage = 0)) %>%
   write_csv("./data/data_tbls/imp_scen0_summ.csv")
 
-tbl_imp_scen0 <- imp_s0 %>%
-  group_by(impact_name, item) %>%
+ tbl_imp_scen0 <- imp_s0 %>%
+  group_by(imp_name, item) %>%
   summarize(value = sum(value)) %>%
   pivot_wider(names_from = item, values_from = value) %>%
-  replace_na(list(bev = 0)) %>%
+  replace_na(list(beverage = 0)) %>%
   write_csv("./data/data_tbls/result_overview.csv")
 
 #View(tbl_imp_scen0)
@@ -488,27 +472,20 @@ c1 <- read_csv("./data/cont_imp_l.csv") %>%
   left_join(contNames) %>%
   select(!cont_name_2) %>%
   select(!cont_type) %>%
-  rename(cont_type = cont_name)  %>%
-  pivot_longer(!cont_type, names_to = "imp_type", values_to = "val")
-#View(c1)
-
-## The previous way to get good impact names
-# c1$imp_type <- impname_l[
-#   match(c1$imp_type, names(impname_l)) ]
-
+  pivot_longer(!cont_name, names_to = "imp_type", values_to = "val") %>%
+  left_join(impNames)
 View(c1)
 View(impNames)
 
-## New way to get good iompact names (in progress)
-# c1 <- c1 %>%
-#   left_join(impNames)
-
 FIG3 <- c1 %>%
   ggplot() + theme_bw() +
-  geom_col(aes(y = val, x = cont_type), width = 0.8, fill = col_cont) +
-  facet_grid(rows = vars(imp_type),
+  geom_col(aes(y = val, x = cont_name), width = 0.8, fill = col_cont) +
+  facet_grid(rows = vars(imp_regex_perL),
              switch = "y",
-             scales = "free") +
+             scales = "free",
+             labeller = labeller(
+               imp_regex_perL = label_parsed
+             )) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0.4) +
   labs(
@@ -521,17 +498,22 @@ FIG3 <- c1 %>%
     #    axis.text.y = element_text(size = 16),
     panel.border = element_blank(),
     strip.placement = "outside")
-ggsave("./figs/figsTest/FIG3_cont_imp_liter.pdf", width=4, height=8, units="in")
+FIG3
+ggsave("./figs/FIG3_cont_imp_liter.pdf", width=4, height=8, units="in")
 
 
 ## B&W version
 
+
 c1 %>%
   ggplot() + theme_bw() +
-  geom_col(aes(y = val, x = cont_type), width = 0.8) +
-  facet_grid(rows = vars(imp_type),
+  geom_col(aes(y = val, x = cont_name), width = 0.8) +
+  facet_grid(rows = vars(imp_regex_perL),
              switch = "y",
-             scales = "free") +
+             scales = "free",
+             labeller = labeller(
+               imp_regex_perL = label_parsed
+             )) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0.4) +
   labs(
@@ -544,20 +526,24 @@ c1 %>%
     #    axis.text.y = element_text(size = 16),
     panel.border = element_blank(),
     strip.placement = "outside")
-ggsave("./figs/figsTest/figsBW/FIG3bw_cont_imp_liter.pdf", width=4, height=8, units="in")
-
+ggsave("./figs/figsBW/FIG3bw_cont_imp_liter.pdf", width=4, height=8, units="in")
 
 
 # Per liter beverage impacts ----------------------------------------------
   
-#View(bevNames)
+View(bevNames)
 
-b1 <- read_csv("./data/bev_imp_l.csv") %>%
+temp1 <- read_csv("./data/bev_imp_l.csv")
+View(temp1)
+b1 <- temp1 %>%
+  filter(bev_type != "water_tap") %>%
   left_join(bevNames) %>%
-  select(!bev_type) %>%
-  rename(bev_type = bev_name)   %>%
-  pivot_longer(!c("bev_type", "SSB_status"), names_to = "imp_type", values_to = "val")
-#View(b1)
+  select(-c("bev_type", "bev_regex")) %>%
+  pivot_longer(!c("bev_name", "SSB_status"), names_to = "imp_type", values_to = "val") %>%
+  drop_na() %>%
+  left_join(impNames)
+View(b1)
+remove(temp1)
 
 
 ## The previous way to get good impact names
@@ -565,16 +551,16 @@ b1 <- read_csv("./data/bev_imp_l.csv") %>%
 #   match(b1$imp_type, names(impname_l)) ]
 #View(b1)
   
-b1 %>%
-  drop_na() %>%
-  filter(bev_type != "Water, tap") %>%
-#  mutate(bev_type = recode(bev_type, "Water, UCSB" = "Water, tap")) %>%
-    ggplot() + theme_bw() +
-    geom_col(aes(y = val, x = bev_type), width = 0.8, fill = col_bev) +
-    facet_grid(rows = vars(imp_type),
+FIG2 <- b1 %>% ggplot() +
+  theme_bw() +
+    geom_col(aes(y = val, x = bev_name), width = 0.8, fill = col_bev) +
+    facet_grid(rows = vars(imp_regex_perL),
                cols = vars(SSB_status),
                switch = "y",
-               scales = "free") +
+               scales = "free",
+               labeller = labeller(
+                 imp_regex_perL = label_parsed
+               )) +
     geom_hline(yintercept = 0) +
     geom_vline(xintercept = 0.41) +
     labs(
@@ -588,19 +574,20 @@ b1 %>%
       #    axis.text.y = element_text(size = 16),
       panel.border = element_blank() ) +
   scale_y_continuous(labels=function(x) format(x, big.mark = ",", scientific=FALSE))
-ggsave("./figs/figsTest/FIG2_bev_imp_liter.pdf", width=8, height=8, units="in")
+FIG2
+ggsave("./figs/FIG2_bev_imp_liter.pdf", width=8, height=8, units="in")
 
 ## Make BW version
-b1 %>%
-  drop_na() %>%
-  filter(bev_type != "Water, tap") %>%
-  #  mutate(bev_type = recode(bev_type, "Water, UCSB" = "Water, tap")) %>%
-  ggplot() + theme_bw() +
-  geom_col(aes(y = val, x = bev_type), width = 0.8) +
-  facet_grid(rows = vars(imp_type),
+b1 %>% ggplot() +
+  theme_bw() +
+  geom_col(aes(y = val, x = bev_name), width = 0.8) +
+  facet_grid(rows = vars(imp_regex_perL),
              cols = vars(SSB_status),
              switch = "y",
-             scales = "free") +
+             scales = "free",
+             labeller = labeller(
+               imp_regex_perL = label_parsed
+             )) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0.41) +
   labs(
@@ -614,20 +601,4 @@ b1 %>%
     #    axis.text.y = element_text(size = 16),
     panel.border = element_blank() ) +
   scale_y_continuous(labels=function(x) format(x, big.mark = ",", scientific=FALSE))
-ggsave("./figs/figsTest/figsBW/FIG2bw_bev_imp_liter.pdf", width=8, height=8, units="in")
-
-
-orig_sum_labs <- c("peak_time","peak_vir","eq_vir","rel_peak")
-new_sum_labs <- c("peak\ntime","peak\nvirulence","equilibrium\nvirulence",
-                  "relative\npeak")
-orig_symb_labs <- c("beta","gamma","x[1]")
-
-fake <- data.frame(f1=rep(orig_sum_labs,each=12),
-                   f2=factor(rep(1:3,16),levels=1:3,
-                             labels=c("beta","gamma","x[1]")),
-                   x=rep(1:4,12),y=rep(1:4,12))
-View(fake)
-
-fake <- data.frame(f1=rep(new_sum_labs,each=12),
-                   f2=rep(orig_symb_labs, each = 16),
-                   x=rep(1:4,12),y=rep(1:4,12))
+ggsave("./figs/figsBW/FIG2bw_bev_imp_liter.pdf", width=8, height=8, units="in")
