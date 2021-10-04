@@ -5,7 +5,7 @@ library(tidyverse)
 
 
 # Read data ---------------------------------------------------------------
-flow <- read_csv("./data/flow_bsc_allscen.csv")   # "vol" is liter of beverage, as drank
+flow <- read_csv("./data/vol_bsc_allscen.csv")   # "vol" is liter of beverage, as drank
 View(flow)
 # beverage flows are in liters
  # data contains volume as packaged and volume as drank

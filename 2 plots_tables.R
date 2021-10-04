@@ -124,7 +124,7 @@ remove(FIG1)
 # vol_bsc_s0 --------------------------------------------
 
 #Scale the Flow data for allscen (not including distrib)
-flow_scl <- read_csv("./data/flow_bsc_allscen.csv") %>%
+flow_scl <- read_csv("./data/vol_bsc_allscen.csv") %>%
   mutate(vol_kL = vol/1000) %>%   #Resacle values
   select(!vol) %>%
   mutate(SSB_status = as_factor(SSB_status)) %>%
