@@ -4,6 +4,7 @@
 
 library(tidyverse)
 #library(ggtext)
+library(viridis)
 
 
 # Definitions ------------------------------------------------------
@@ -58,12 +59,29 @@ scenNames <- read_csv("./data/scen_list_name.csv")
 
 # FIG 1 vol_dbsc_s0 ------------------------------------------------------
 
-flow_s0_fig <- read_csv("./data/vol_scen0_dbsc_din+vend.csv") %>%
-  mutate(distrib = factor(distrib, levels=c("Dining + Vending", "dining", "vending"))) %>%
+View(read_csv("./data/vol_scen0_dbsc_din+vend.csv"))
+
+## Make a table to replace "distrib" values
+distrib_corr <- tribble(~distrib, ~distrib_name,
+                        "Dining + Vending", "Dining + Vending",
+                        "dining",  "Dining",
+                        "vending", "Vending"
+                        )
+temp_flow <- read_csv("./data/vol_scen0_dbsc_din+vend.csv") %>%
+  left_join(distrib_corr) %>%
+  select(-distrib) %>% 
+  mutate(distrib = distrib_name) %>%
+  select(-distrib_name) %>%
+  relocate(distrib)
+#View(temp_flow)
+remove(distrib_corr)
+
+flow_s0_fig <- temp_flow %>%
+  mutate(distrib = factor(distrib, levels=c("Dining + Vending", "Dining", "Vending"))) %>%
   mutate(SSB_status = as_factor(SSB_status)) %>%
   mutate(SSB_status = fct_rev(SSB_status))
-View(flow_s0_fig)
-
+#View(flow_s0_fig)
+remove(temp_flow)
 
 FIG1 <- flow_s0_fig %>%
   left_join(contNames) %>%
@@ -86,9 +104,14 @@ FIG1 <- flow_s0_fig %>%
     #    axis.text.y = element_text(size = 16),
     panel.border = element_blank(),
     strip.placement = "outside") +
+#  scale_fill_viridis(discrete=TRUE)
   scale_fill_brewer(palette = "Dark2")
 FIG1
 ggsave("./figs/FIG1_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
+
+FIG1 +
+  scale_fill_viridis(discrete=TRUE)
+ggsave("./figs/FIG1_vol_scen0_dbsc_ALTCOLOR.pdf", width=8.5, height=8.5, units="in")
 
 ## Make B&W version
 FIG1 +

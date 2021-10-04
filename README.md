@@ -1,12 +1,53 @@
 # bevLCA-UCSB
-R code and associated data (input tables, tidy intermediate tables, pivoted tables for viewing) to calculate environmental impacts of beverages sold through UC Santa Barbara Dining. Three environmental impacts are estimated:
+R code and associated data to calculate environmental impacts of beverages sold through UC Santa Barbara Dining. 
+
+## Kyle need to do
+
+I like imp_is_allscen.pdf, but it need a "net total" indicator for each panel -- could I add the total as a diamond or dot at x = 1.5 for each?
+
+## Overview
+
+### Three environmental impacts are estimated:
 
 * Climate impact (g CO2 eq)
-  * and what?
 * Plastic pollution (g plastic entering the environment)
 * Blue water use (liter blue water)
 
+### Calculations and results
+
+Impacts of the different scenarios are calcula*ed in the script "1 impacts.R". 
+There are two main type of data input:
+
+* Beverage flow, in liters of beverage per year; reported by type of beverage, type of container, 
+  * also reports beverage container volume
+* Impacts of different types of beverages and containers, per liter of beverage (as-consumed) 
+
+Note: container volume and beverage volume as-drank is different for "fountain"-type drink concentrates, which are diluted before being served and consumed. See descriptions of data inputs below for more description.
+
+### data organization
+
+* data is stored as csv when needed, and table inputs are also supplied as csv
+  * csv files that are directly in */data* folder are inputs
+  * csv files in */data/data_gen* are intermediate, tidy objects, which are not meant meant for consumption
+  * csv files in */data/data_tbls* are tables that are meant for publication, and/or to be supplied as underlying data for a figure
+* figures are 
+
+
+
+## naming approach 
+Objects are typically named to indicate the variables included, as follows:
+ # "d" = distribution [vending, dining(retail), water station]
+ # "b" = beverage type
+ # "s" = SSB_status [yes, no]
+ # "c" = container type
+ # "i" = "item"; refers to whether an impact is due to the beverage (liquid without container), or from the container
+ 
+Example: A chart to show the amount of beverages consumed for the baseline scenario, by beverage type (e.g. bars along the x-axis), and the distribution channel (different color stacks, which make up each bar); It would have the code "_db_", to denote "distribution" and "beverage type".
+
 # Source (input) data
+
+The volume of beverage 
+
 data_raw/
 - bev_flow_ucsb_18_19.csv; various units; Beverage sales (flow) data; each row represents a purchase of beverage (or beverage concentrate) by UCSB dining; includes 
   - liter_cont; container volume; [liter / yr]
