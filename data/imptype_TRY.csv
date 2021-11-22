@@ -1,4 +1,0 @@
-﻿imp_type,imp_name_simple,imp_regex
-ghg,Climate\n[ t CO2eq (100yr) ],Climate~*'\\[t~'*'CO'[2]*'eq'*\\]
-h2o,Blue water use\n[ M liter (Blue) ],Climate~t~'CO'
-plastic,Plastic Pollution\n[ kg plastic ],Climate~t

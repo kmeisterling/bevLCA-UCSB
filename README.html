@@ -169,25 +169,102 @@ pre code {
 
 <div id="bevlca-ucsb" class="section level1">
 <h1>bevLCA-UCSB</h1>
-<p>R code and associated data (input tables, tidy intermediate tables, pivoted tables for viewing) to calculate environmental impacts of beverages sold through UC Santa Barbara Dining. Three environmental impacts are estimated:</p>
+<p>R code and associated data to calculate environmental impacts of beverages sold through UC Santa Barbara Dining.</p>
+<div id="kyle-need-to-do" class="section level2">
+<h2>Kyle need to do</h2>
+<p>I like imp_is_allscen.pdf, but it need a “net total” indicator for each panel – could I add the total as a diamond or dot at x = 1.5 for each?</p>
+</div>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<div id="three-environmental-impacts-are-estimated" class="section level3">
+<h3>Three environmental impacts are estimated:</h3>
 <ul>
 <li>Climate impact (g CO2 eq)</li>
-<li>Plastic pollution (mg plastic entering the environment)</li>
+<li>Plastic pollution (g plastic entering the environment)</li>
 <li>Blue water use (liter blue water)</li>
 </ul>
 </div>
+<div id="calculations-and-results" class="section level3">
+<h3>Calculations and results</h3>
+<p>Impacts of the different scenarios are calculated in the script <strong>1 impacts.R</strong>. There are two main type of data input:</p>
+<ul>
+<li>Beverage flow, in liters of beverage per year; reported by type of beverage, type of container,
+<ul>
+<li>also reports beverage container volume</li>
+</ul></li>
+<li>Impacts of different types of beverages and containers, per liter of beverage (as-consumed)</li>
+</ul>
+<p>Note: container volume and beverage volume as-drank is different for “fountain”-type drink concentrates, which are diluted before being served and consumed. See descriptions of data inputs below for more description.</p>
+</div>
+<div id="data-organization" class="section level3">
+<h3>data organization</h3>
+<ul>
+<li>data is stored as csv when needed, and table inputs are also supplied as csv
+<ul>
+<li>csv files that are directly in <em>/data</em> folder are inputs</li>
+<li>csv files in <em>/data/data_gen</em> are intermediate, tidy objects, which are not meant meant for consumption</li>
+<li>csv files in <em>/data/data_tbls</em> are tables that are meant for publication, and/or to be supplied as underlying data for a figure</li>
+</ul></li>
+<li>figures are in <em>/figs</em>
+<ul>
+<li>Figures used in manuscript and SI are named with “FIG” followed by number</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="naming-approach" class="section level2">
+<h2>naming approach</h2>
+<p>Objects are typically named to indicate the variables included, as follows: # “d” = distribution [vending, dining(retail), water station] # “b” = beverage type # “s” = SSB_status [yes, no] # “c” = container type # “i” = “item”; refers to whether an impact is due to the beverage (liquid without container), or from the container</p>
+<p>Example: A chart to show the amount of beverages consumed for the baseline scenario, by beverage type (e.g. bars along the x-axis), and the distribution channel (different color stacks, which make up each bar); It would have the code “<em>db</em>”, to denote “distribution” and “beverage type”.</p>
+</div>
+</div>
 <div id="source-input-data" class="section level1">
 <h1>Source (input) data</h1>
-<p>data/ - dfucsb.csv - [various units]; Beverage sales (flow) data; each row represents one entry in the original data source; includes container volume (liter_cont) [liter / yr], beverage volume (as drank) [liter / yr], and sugar contents [g sugar / liter of container volume] - [[maybe not necessary]] flow_bs_allscen_wide.csv - [liter / yr]; Beverage flow for scenarios, by bev_type and SSB_status - flow_bsc_allscen.csv - [liter / yr]; Beverage flows , by bev_type, SSB_status, and container type</p>
+<div id="data_raw" class="section level2">
+<h2><em>/data_raw/</em></h2>
+<div id="data-from-campus-purchases" class="section level3">
+<h3>Data from campus purchases</h3>
 <ul>
-<li>bev_imp_l - [various units / liter as-consumed volume]; impacts of beverages (not including container); three columns of impacts per liter; climate [gCO2e], blue water [liter h2o], plastic pollution [g plastic to enviroment]</li>
-<li>cont_imp_l - [various units / liter as-consumed volume]; impacts of containers, excluding bag-in-box containers; three columns of impacts per liter; climate [gCO2e], blue water [liter h2o], plastic pollution [g plastic to enviroment]</li>
-<li>cont_imp_l_binb - [various units / liter as-consumed volume]; impacts of bag-in-box containers, corrected for bag-in-box dilution; three columns of impacts per liter; climate [gCO2e], blue water [liter h2o], plastic pollution [g plastic to enviroment]</li>
+<li>bev_ucsb_18_19.csv; various units; Beverage sales (volume) data; each row represents a purchase of beverage (or beverage concentrate) by UCSB dining; includes
+<ul>
+<li>liter_cont; container volume; [liter / yr]</li>
+<li>liter_drink; beverage volume, as drank; [liter / yr]</li>
+<li>distrib; whether the beverage was “purchased”&quot; through UCSB Dining (including in cafeterias and from stores), or whether it as purchased through a vending machine; [factor]</li>
+<li>sug_add, sug_other, sug_unspec, sug_total; [g sugar / liter of container volume]; sugar content of purchased substane; sug_agg = added sugar, sug_other = sugar not added (i.e. “natural” sugar), sug_unspec = unspecified sugar (don’t know whether it is added or natural sugar), sug_total = sum of added, other, and unspecified sugar; [g sugar / liter of originally packaged beverage product]</li>
+<li>mix_r; mixing ratio for beverags that require dilution (e.g. fountain bag-in-box containers); the mixing ratio is equal to zero for all beverages that do not need dilution (i.e. bought by UC Dining in a ready-to-drink format); in our data, all the beverage products in bag-in-box containers required dilution, and thus have a non-zero mixing ratio (although this does not have to be the case; bag-in-box is relatively common for large-volume fresh coffee purchases, and bag-in-box alternative to plastic bottles are also being developed) [volume of dilution water / volume as originally packaged]</li>
+</ul></li>
 </ul>
+</div>
+<div id="data-synthesized-from-life-cycle-assessment-studies" class="section level3">
+<h3>Data synthesized from life cycle assessment studies</h3>
+<p>Provides the environmental impacts of beverages and containers</p>
+<ul>
+<li>bev_imp_l; impacts of beverages (not including container); three columns of impacts per liter; climate [gCO2e], blue water [liter h2o], plastic pollution [g plastic to enviroment]; [(impact) / liter as-consumed volume]</li>
+<li>cont_imp_l; impacts of containers, excluding bag-in-box containers; three columns of impacts per liter; climate [gCO2e], blue water [liter h2o], plastic pollution [g plastic to enviroment]; [(impact) / liter as originally packaged volume]</li>
+<li>cont_imp_l_binb; impacts of bag-in-box containers, corrected for bag-in-box dilution; three columns of impacts per liter; climate [gCO2e], blue water [liter h2o], plastic pollution [g plastic to enviroment]; [(impact) / liter as-consumed volume]</li>
+</ul>
+<p>See Supp Info document for details.</p>
+</div>
+</div>
+<div id="data_gen" class="section level2">
+<h2>/data_gen/</h2>
+<p>Objects that are generated by one script, and used by others, but that at not meant to be used directly as figure sources or a manuscript table</p>
+<ul>
+<li>imp_bsc_allscen.csv; impacts of beverages, for each scenario by Beverage type (“b”), Sugar sweetened beverage status (“s”), and Container type (“c”); [ (impact {g CO2e, g plastic pollution, liter blue water use}) / yr ]</li>
+</ul>
+</div>
+<div id="data_tbls" class="section level2">
+<h2>/data_tbls/</h2>
+<p>Objects that * Will be published as-is or with minor formatting * Are used directly as figure source data</p>
+<ul>
+<li>flow_bs_allscen_wide.csv - [liter / yr]; Beverage flow for scenarios, by bev_type and SSB_status</li>
+<li>flow_bsc_allscen.csv - [liter / yr]; Beverage flows , by bev_type, SSB_status, and container type</li>
+</ul>
+</div>
 </div>
 <div id="procedure" class="section level1">
 <h1>Procedure</h1>
-<p>run scripts in main directory, in order - 1_impacts.R - Use source data to calculate impacts of beverages in the scenarios, and write intermediate objects [[either data-gen/ or data-tbls/]] - 2_polots_tables.R - Use output of “1_impacts.R” to make tables and figures for the manuscript and supplemental info docs - 3_scen6_scpecial.R - Calculate impacts for scenarios 5 and 6, by distribution channel (vending and dining)</p>
+<p>run scripts in main directory, in order - 1_impacts.R - Use source data to calculate impacts of beverages in the scenarios, and write intermediate objects (to data-gen/) - 2_polots_tables.R - Use output of “1_impacts.R” to make tables and figures for the manuscript and supplemental info docs - 3_scen6_scpecial.R - Calculate impacts for scenarios 5 and 6, by distribution channel (vending and dining)</p>
 </div>
 
 
