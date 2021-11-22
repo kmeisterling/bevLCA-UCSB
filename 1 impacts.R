@@ -5,7 +5,7 @@ library(tidyverse)
 
 
 # Read data ---------------------------------------------------------------
-flow <- read_csv("./data/vol_bsc_allscen.csv")   # "vol" is liter of beverage, as drank
+flow <- read_csv("./data/flow_bsc_allscen.csv")   # "flow" is volume liter of beverage, as drank
 View(flow)
 # beverage flows are in liters
  # data contains volume as packaged and volume as drank
@@ -35,7 +35,7 @@ bev_imp_allscen <- flow %>%
     names_to = "impact_type",
     values_to = "value") %>%
   add_column(item = "bev", .before = "value")
-View(bev_imp_allscen)
+#View(bev_imp_allscen)
 
 
 # Container (cont) impacts: all scenarios --------------------------------------------------
