@@ -59,7 +59,7 @@ scenNames <- read_csv("./data/scen_list_name.csv")
 
 # FIG 1 vol_dbsc_s0 ------------------------------------------------------
 
-View(read_csv("./data/vol_scen0_dbsc_din+vend.csv"))
+View(read_csv("./data/vol_dbsc_din+vend_scen0.csv"))
 
 ## Make a table to replace "distrib" values
 distrib_corr <- tribble(~distrib, ~distrib_name,
@@ -67,7 +67,7 @@ distrib_corr <- tribble(~distrib, ~distrib_name,
                         "dining",  "Dining",
                         "vending", "Vending"
                         )
-temp_flow <- read_csv("./data/vol_scen0_dbsc_din+vend.csv") %>%
+temp_flow <- read_csv("./data/vol_dbsc_din+vend_scen0.csv") %>%
   left_join(distrib_corr) %>%
   select(-distrib) %>% 
   mutate(distrib = distrib_name) %>%

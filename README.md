@@ -63,11 +63,13 @@ Example: A chart to show the amount of beverages consumed for the baseline scena
   - vol_cont; volume of beverage container, as delivered to a dining service provider (e.g. UCSB); [L]
   - mix_r_avg; the added water mixing ratio for "bag-in-box" containers (BinB); mixing ratio = 0 indicates no water is added before consumption; only beverages that are served in a fountain-dispenser type of setting would have a mixing ratio > 0; in our data set, all bag-in-box containers were dispensed in a fountain setting, but not all bag-in-box beverages had mixing ratio > 0 (e.g. fresh animal milk is not diluted, and so has mixing ratio = 0); [L / L]
 
-- vol_scen0_dbsc_din+vend.csv; Similar with flow_dbsc_scen0.csv, no mixing ratio, no vol
+- vol_dbsc_din+vend_scen0.csv; Similar with flow_dbsc_scen0.csv (but no mix_r, no vol)
   - vol_kL; volume of beverage, as drank by the consumer [kilo L]
   
 - vol_bsc_allscen.csv; beverage amount, by bev_type, SSB_status, cont_type; all scenarios
   - vol; volume of beverage, as drank by drinker [L]
+  
+- vol_dbsc_scen0_scen6.csv; beverage amount; scenarios 0 (baseline) and 6; we want to calculate impacts separately for vending and dining (distrib) for scenarios 6 (6.1 and 6.2), since only beverages from vending are changed in these scenarios
 
 ### Data synthesized from life cycle assessment studies
 
@@ -103,6 +105,5 @@ Objects that
 run scripts in main directory, in order
 - 1_impacts.R - Use source data to calculate impacts of beverages in the scenarios, and write intermediate objects (to data-gen/)
 - 2_polots_tables.R - Use output of "1_impacts.R" to make tables and figures for the manuscript and supplemental info docs
-
-
-[[- 3_scen6_scpecial.R - Calculate impacts for scenarios 5 and 6, by distribution channel (vending and dining) ]]
+- 3_scen6_special.R - Calculate impacts for scenarios 6 (6.1 and 6.1), by distribution channel (vending and dining)
+  - These are used to calculate results that are mentioned in the text (not found in tables [[CHECK??]])
