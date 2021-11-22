@@ -478,15 +478,6 @@ imp_s0 %>%
   replace_na(list(beverage = 0)) %>%
   write_csv("./data/data_tbls/imp_scen0_summ.csv")
 
- tbl_imp_scen0 <- imp_s0 %>%
-  group_by(imp_name, item) %>%
-  summarize(value = sum(value)) %>%
-  pivot_wider(names_from = item, values_from = value) %>%
-  replace_na(list(beverage = 0)) %>%
-  write_csv("./data/data_tbls/result_overview.csv")
-
-#View(tbl_imp_scen0)
-
 # Per liter container impacts -------------------------------------------------
 
 #View(contNames)

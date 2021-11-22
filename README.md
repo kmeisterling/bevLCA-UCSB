@@ -47,7 +47,7 @@ Example: A chart to show the amount of beverages consumed for the baseline scena
 
 # Source (input) data
 
-## */data_raw/*
+## */data/*
 
 ### Data from campus purchases
 
@@ -57,6 +57,17 @@ Example: A chart to show the amount of beverages consumed for the baseline scena
   - distrib; whether the beverage was "purchased"" through UCSB Dining (including in cafeterias and from stores), or whether it as purchased through a vending machine; [factor]
   - sug_add, sug_other, sug_unspec, sug_total; [g sugar / liter of container volume]; sugar content of purchased substane; sug_agg = added sugar, sug_other = sugar not added (i.e. "natural" sugar), sug_unspec = unspecified sugar (don't know whether it is added or natural sugar), sug_total = sum of added, other, and unspecified sugar; [g sugar / liter of originally packaged beverage product]
   - mix_r; mixing ratio for beverags that require dilution (e.g. fountain bag-in-box containers); the mixing ratio is equal to zero for all beverages that do not need dilution (i.e. bought by UC Dining in a ready-to-drink format); in our data, all the beverage products in bag-in-box containers required dilution, and thus have a non-zero mixing ratio (although this does not have to be the case; bag-in-box is relatively common for large-volume fresh coffee purchases, and bag-in-box alternative to plastic bottles are also being developed) [volume of dilution water / volume as originally packaged]
+
+- flow_dbsc_scen0.csv; various uniss; Beverage sales (volume) data, summarized by distribution channel (distrib), bev_type, SSB_status, cont_type
+  - vol; volume of beverage, as drank by the consumer; [L]
+  - vol_cont; volume of beverage container, as delivered to a dining service provider (e.g. UCSB); [L]
+  - mix_r_avg; the added water mixing ratio for "bag-in-box" containers (BinB); mixing ratio = 0 indicates no water is added before consumption; only beverages that are served in a fountain-dispenser type of setting would have a mixing ratio > 0; in our data set, all bag-in-box containers were dispensed in a fountain setting, but not all bag-in-box beverages had mixing ratio > 0 (e.g. fresh animal milk is not diluted, and so has mixing ratio = 0); [L / L]
+
+- vol_scen0_dbsc_din+vend.csv; Similar with flow_dbsc_scen0.csv, no mixing ratio, no vol
+  - vol_kL; volume of beverage, as drank by the consumer [kilo L]
+  
+- vol_bsc_allscen.csv; beverage amount, by bev_type, SSB_status, cont_type; all scenarios
+  - vol; volume of beverage, as drank by drinker [L]
 
 ### Data synthesized from life cycle assessment studies
 
@@ -81,11 +92,17 @@ Objects that
 * Will be published as-is or with minor formatting
 * Are used directly as figure source data
 
-- flow_bs_allscen_wide.csv - [liter / yr]; Beverage flow for scenarios, by bev_type and SSB_status
-- flow_bsc_allscen.csv - [liter / yr]; Beverage flows , by bev_type, SSB_status, and container type
+- flow_kL_bc_allscen.csv - [thousand liter / yr]; Beverage flow for scenarios, by bev_type and cont_type
+- imp_scen0_summ.csv - [impacts / yr]; total impacts for the baseline scenario
+- imp_allscen.csv - [impacts / yr]; total impacts for each scenario, by item (beverage and container)
+- imp_bsc_allscen_wide.csv - [impacts / yr]; impacts by bev_type, SSB_status, cont_type
+- imp_ibs_scen0.csv - [impacts / yr]; impacts for the baseline scenario, by bev_type, SSB_status, and item
+- imp_i_allscen_wide.csv - [impacts / yr]; impacts by item
 
 # Procedure
 run scripts in main directory, in order
 - 1_impacts.R - Use source data to calculate impacts of beverages in the scenarios, and write intermediate objects (to data-gen/)
 - 2_polots_tables.R - Use output of "1_impacts.R" to make tables and figures for the manuscript and supplemental info docs
-- 3_scen6_scpecial.R - Calculate impacts for scenarios 5 and 6, by distribution channel (vending and dining)
+
+
+[[- 3_scen6_scpecial.R - Calculate impacts for scenarios 5 and 6, by distribution channel (vending and dining) ]]
