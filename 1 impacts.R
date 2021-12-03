@@ -1,17 +1,20 @@
-# Calculating impacts
-# 
+## Calculating impacts
+
+## ¡¡ ISSUES
+  # Make sure all b-in-b beverage combos are contained in the binb_impact_l file
+  
 
 library(tidyverse)
 
 
 # Read data ---------------------------------------------------------------
-flow <- read_csv("./data/flow_bsc_allscen.csv")   # "flow" is volume liter of beverage, as drank
+flow <- read_csv("./data/flow_bsc_allscen.csv")   # column 'vol' = volume liter of beverage, as drank
 View(flow)
 # beverage flows are in liters
  # data contains volume as packaged and volume as drank
 
 bev_impact_l <- read_csv("./data/bev_imp_l.csv")     # impact of beverage per liter of beverage, as drank
-cont_impact_l <- read_csv("./data/cont_imp_l.csv")      # impact of container per liter of beverage, as drank
+cont_impact_l <- read_csv("./data/cont_imp_l.csv")      # impact of container per liter of beverage, as packaged
 binb_impact_l <- read_csv("./data/cont_imp_l_binb.csv")   # impact of bag-in-box container per liter of beverage, as drank
 #Impacts are 
  # g CO2e
@@ -22,9 +25,21 @@ binb_impact_l <- read_csv("./data/cont_imp_l_binb.csv")   # impact of bag-in-box
 #View(binb_imp_l)
 
 bev_name <- read_csv("./data/bevtype_list_name.csv")  # List of the beverage types in the dataset, with nicely formatted names
-#View(bev_name)
+View(bev_name)
+
+## CHECK THAT ALL NAMES ARE CONSISTENT:
+  # names from 'flow' are in 'bev_name'
+  # names from 'bev_imp_l' are in 'bev_name'
 
 # Beverage (bev) impacts: all scenarios ---------------------------------------------------
+
+## Should I test that all joining values are known? (no NA in these joins?)
+  # Actually some NA in bev_impact_l are lost?
+  # But those don't actually show up in the flow data (e.g. SSB tap water is "NA" in bev_impact_l, but is not in flow data)
+
+test1 <- flow %>%
+  left_join(bev_impact_l)
+View(test1)
 
 bev_imp_allscen <- flow %>%
   left_join(bev_impact_l) %>%
@@ -45,7 +60,7 @@ bev_imp_allscen <- flow %>%
 
 ## containers except BinB
 
-xBinB <- flow %>%   # Not including BinB (needs custom treatment)
+xBinB <- flow %>%   # Not including BinB (BinB needs container impact per volume DRANK, not per volume PACKAGED)
   filter(cont_type != "bag_in_box") %>%
   left_join(cont_impact_l) %>%
   mutate(across(ghg:plastic, ~.x * vol)) %>%
@@ -67,7 +82,7 @@ BinB <- flow %>%
     names_to = "impact_type",
     values_to = "value") %>%
   add_column(item = "cont", .before = "value")
-#View(BinB)
+View(BinB)
 
 cont_imp_allscen <- bind_rows(xBinB, BinB) %>%
   arrange(scen, bev_type, cont_type)
