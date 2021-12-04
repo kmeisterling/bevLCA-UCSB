@@ -51,7 +51,7 @@ imp_di <- df_imp %>%
   mutate(across(ghg:h2o, ~ .x/10^6)) %>%
   mutate(plastic = plastic/1000) %>%
   ungroup() %>%
-  write_csv("./tbls_s6/imp_di.csv")
+  write_csv("./data/data_tbls_s6/imp_di.csv")
 #View(imp_di)
 
 imp_i <- df_imp %>%
@@ -60,7 +60,7 @@ imp_i <- df_imp %>%
   mutate(across(ghg:h2o, ~ .x/10^6)) %>%
   mutate(plastic = plastic/1000) %>%
   ungroup() %>%
-  write_csv("./tbls_s6/imp_i.csv")
+  write_csv("./data/data_tbls_s6/imp_i.csv")
 #View(imp_i)
 
 imp_d <- df_imp %>%
@@ -69,7 +69,7 @@ imp_d <- df_imp %>%
   mutate(across(ghg:h2o, ~ .x/10^6)) %>%
   mutate(plastic = plastic/1000) %>%
   ungroup() %>%
-  write_csv("./tbls_s6/imp_d.csv")
+  write_csv("./data/data_tbls_s6/imp_d.csv")
 #View(imp_d)
 
 imp <- df_imp %>%
@@ -78,7 +78,7 @@ imp <- df_imp %>%
   mutate(across(ghg:h2o, ~ .x/10^6)) %>%
   mutate(plastic = plastic/1000) %>%
   ungroup() %>%
-  write_csv("./tbls_s6/imp.csv")
+  write_csv("./data/data_tbls_s6/imp.csv")
 #view(imp)
 
 imp_s <- df_imp %>%
@@ -87,7 +87,7 @@ imp_s <- df_imp %>%
   mutate(across(ghg:h2o, ~ .x/10^6)) %>%
   mutate(plastic = plastic/1000) %>%
   ungroup() %>%
-  write_csv("./tbls_s6/imp_s.csv")
+  write_csv("./data/data_tbls_s6/imp_s.csv")
 #View(imp_s)
 
 imp_ds <- df_imp %>%
@@ -96,5 +96,5 @@ imp_ds <- df_imp %>%
   mutate(across(ghg:h2o, ~ .x/10^6)) %>%
   mutate(plastic = plastic/1000) %>%
   ungroup() %>%
-  write_csv("./tbls_s6/imp_ds.csv")
+  write_csv("./data/data_tbls_s6/imp_ds.csv")
 #View(imp_ds)

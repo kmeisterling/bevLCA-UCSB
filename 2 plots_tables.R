@@ -59,7 +59,7 @@ scenNames <- read_csv("./data/scen_list_name.csv")
 
 # FIG 1 vol_dbsc_s0 ------------------------------------------------------
 
-View(read_csv("./data/vol_dbsc_din+vend_scen0.csv"))
+#View(read_csv("./data/vol_dbsc_din+vend_scen0.csv"))
 
 ## Make a table to replace "distrib" values
 distrib_corr <- tribble(~distrib, ~distrib_name,
@@ -129,7 +129,7 @@ flow_scl <- read_csv("./data/flow_bsc_allscen.csv") %>%
   select(!vol) %>%
   mutate(SSB_status = as_factor(SSB_status)) %>%
   mutate(SSB_status = fct_rev(SSB_status))
-View(flow_scl)
+#View(flow_scl)
 
 # !!! Test that all scenarios have same volume
 flow_scl %>%
@@ -145,7 +145,7 @@ flow_bsc_scen0 <- flow_scl %>%
   left_join(bevNames) %>%
   left_join(contNames) %>%
   mutate(bev_name = fct_reorder(bev_name, vol_kL, .fun = (sum), .desc =  TRUE))
-#View(flow_0)
+#View(flow_bsc_scen0)
 
 ## By bev type, cont type, and SSB status
 flow_bsc_scen0 %>%
@@ -158,8 +158,8 @@ flow_bsc_scen0 %>%
   geom_vline(xintercept = 0.5) +
   labs(
     x ="Beverage Category",
-    y = "thousand liters / yr",
-    fill = "container\ntype") +
+    y = "thousand Liters / yr",
+    fill = "Container\ntype") +
   theme(
     text = element_text(size=14),
     axis.text.x = element_text(angle = 45, hjust = 1),
@@ -295,7 +295,7 @@ imp_temp <- temp_s0 %>%
 imp_s0 <- imp_temp %>%
   left_join(bevNames) %>%
   left_join(impNames)
-View(imp_s0)
+#View(imp_s0)
 
 remove(h1)
 remove(temp_s0)
@@ -346,16 +346,17 @@ ggsave("./figs/figsBW/FIG4bw_imp_ibs_scen0.pdf", width=13, height=8, units="in")
 
 ## Data table for SUPP
 
-#View(imp_s0)
+View(imp_s0)
 imp_s0 %>%
-  select(imp_type, SSB_status, item, bev_name, value) %>%
+  select(imp_name, SSB_status, item, bev_name, value) %>%
+  arrange(bev_name) %>%
   pivot_wider(names_from = bev_name, values_from = value) %>%
-  arrange(imp_type) %>%
+  arrange(imp_name) %>%
   write_csv("./data/data_tbls/TSI10_imp_ibs_scen0.csv")
 
 
 # imp_i_allscen -------------------------------------------------------
-View(imp_scl)
+#View(imp_scl)
 
 imp_i_allscen <- imp_scl %>%
   group_by(scen, item, imp_type) %>%
@@ -365,7 +366,7 @@ imp_i_allscen <- imp_scl %>%
   relocate(scen_name) %>%
   select(-scen) %>%
   left_join(impNames)
-View(imp_i_allscen)
+#View(imp_i_allscen)
 
 FIG5 <- ggplot() + theme_bw() +
   geom_col(data = imp_i_allscen,
@@ -422,7 +423,7 @@ imp_is_allscen <- imp_scl %>%
   relocate(scen_name) %>%
   select(-scen) %>%
   left_join(impNames)
-View(imp_is_allscen)
+#View(imp_is_allscen)
 
 imp_is_allscen %>% ggplot() +
   theme_bw() +
@@ -457,13 +458,13 @@ ggsave("./figs/imp_is_allscen.pdf", width=13, height=8, units="in")
 summ_imp_wide <- imp_scl %>%
   pivot_wider(names_from = imp_type, values_from = value) %>%
   replace(is.na(.), 0)
-View(summ_imp_wide)
+#View(summ_imp_wide)
 write_csv(summ_imp_wide, "./data/data_tbls/imp_bsc_allscen_wide.csv")
 
 #df_imp_scen_bev %>% pivot_wider(names_from = scen, values_from = value))
 #Totals by scenario
 
-View(imp_i_allscen)
+#View(imp_i_allscen)
 imp_i_allscen %>%
   group_by(scen_name, imp_name) %>%
   summarize(value = sum(value)) %>%
@@ -488,8 +489,8 @@ c1 <- read_csv("./data/cont_imp_l.csv") %>%
   select(!cont_type) %>%
   pivot_longer(!cont_name, names_to = "imp_type", values_to = "val") %>%
   left_join(impNames)
-View(c1)
-View(impNames)
+#View(c1)
+#View(impNames)
 
 FIG3 <- c1 %>%
   ggplot() + theme_bw() +
@@ -517,7 +518,7 @@ ggsave("./figs/FIG3_cont_imp_liter.pdf", width=4, height=8, units="in")
 
 
 ## B&W version
-
+## NOT SURE WHY scale_fill_grey() is not working here
 
 c1 %>%
   ggplot() + theme_bw() +
@@ -540,15 +541,16 @@ c1 %>%
     #    axis.text.y = element_text(size = 16),
     panel.border = element_blank(),
     strip.placement = "outside")
+
 ggsave("./figs/figsBW/FIG3bw_cont_imp_liter.pdf", width=4, height=8, units="in")
 
 
 # Per liter beverage impacts ----------------------------------------------
   
-View(bevNames)
+#View(bevNames)
 
 temp1 <- read_csv("./data/bev_imp_l.csv")
-View(temp1)
+#View(temp1)
 b1 <- temp1 %>%
   filter(bev_type != "water_tap") %>%
   left_join(bevNames) %>%
