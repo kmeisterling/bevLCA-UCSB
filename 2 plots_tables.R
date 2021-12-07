@@ -9,10 +9,58 @@ library(viridis)
 
 # Definitions ------------------------------------------------------
 
-# Colors --
+# Colors -- Various
 col_vir1 <- c("beverage" = "#21908C", "container" = "#440154")
 col_bev <- c("#21908C")
 col_cont <- c("#440154")
+
+# Colors -- Container types 
+
+col_bev5_B <- c( # Adapted from Brewer Dark2, 5 classes
+  "Alum. can" = "#1b9e77",
+  "Bag-in-box" = "#d95f02",
+  "Carton" = "#7570b3",
+  "Glass" = "#e7298a",
+  "PET plastic" = "#a6d854"
+)
+
+col_bev6_B <- c( # Adapted from Brewer Dark2, 5 classes
+  "Alum. can" = "#1b9e77",
+  "Bag-in-box" = "#d95f02",
+  "Carton" = "#7570b3",
+  "Glass" = "#e7298a",
+  "PET plastic" = "#a6d854",
+  "Steel (reusable)" = "#e6ab02"
+)
+
+
+col_bev5_C <- c( # Based on http://tsitsul.in/blog/coloropt/
+  "Alum. can" = "#cacaca",
+  "Bag-in-box" = "#ddb310",
+  "Carton" = "#4043d3",
+  "Glass" = "#00beff",
+  "PET plastic" = "#b51d14"
+)
+
+col_bev6_C <- c( # Based on http://tsitsul.in/blog/coloropt/
+  "Alum. can" = "#cacaca",
+  "Bag-in-box" = "#ddb310",
+  "Carton" = "#4043d3",
+  "Glass" = "#00beff",
+  "PET plastic" = "#b51d14",
+  "Steel (reusable)" = "#4d4d4d"
+)
+  
+
+col_bev5_D <- c( # Based on http://tsitsul.in/blog/coloropt/
+  "Alum. can" = "#A9A9A9",
+  "Bag-in-box" = "tan3",
+  "Carton" = "#4043d3",
+  "Glass" = "#00beff",
+  "PET plastic" = "#b51d14"
+)
+
+
 
 
 # Names -------------------------------------------------------------------------
@@ -105,13 +153,34 @@ FIG1 <- flow_s0_fig %>%
     panel.border = element_blank(),
     strip.placement = "outside") +
 #  scale_fill_viridis(discrete=TRUE)
+#  scale_fill_brewer(palette = "Set2")
   scale_fill_brewer(palette = "Dark2")
+#  scale_fill_manual(values = col_bev5_C)
 FIG1
 ggsave("./figs/FIG1_vol_scen0_dbsc.pdf", width=8.5, height=8.5, units="in")
+ggsave("./figs/FIG1_ORIG.pdf", width=8.5, height=8.5, units="in")
 
 FIG1 +
-  scale_fill_viridis(discrete=TRUE)
-ggsave("./figs/FIG1_vol_scen0_dbsc_ALTCOLOR.pdf", width=8.5, height=8.5, units="in")
+  scale_fill_manual(values = col_bev5_B)
+ggsave("./figs/FIG1_ALT1.pdf", width=8.5, height=8.5, units="in")
+
+FIG1 +
+  scale_fill_manual(values = col_bev5_C)
+ggsave("./figs/FIG1_ALT2.pdf", width=8.5, height=8.5, units="in")
+
+FIG1 +
+  scale_fill_brewer(palette = "Set1")
+ggsave("./figs/FIG1_ALT3.pdf", width=8.5, height=8.5, units="in")
+
+FIG1 +
+  scale_fill_manual(values = col_bev5_D)
+#ggsave("./figs/FIG1_ALT4.pdf", width=8.5, height=8.5, units="in")
+
+
+FIG1 +
+  scale_fill_brewer(palette = "Set2")
+  #scale_fill_viridis(discrete=TRUE)
+#ggsave("./figs/FIG1_ALT4.pdf", width=8.5, height=8.5, units="in")
 
 ## Make B&W version
 FIG1 +
@@ -236,6 +305,17 @@ FIGSI1 <- flow_bc_allscen %>%
   scale_fill_brewer(palette = "Dark2")
 FIGSI1  
 ggsave("./figs/FIGSI1_vol_bc_allscen.pdf", width=9, height=11, units = "in")
+
+FIGSI1 +
+  scale_fill_manual(values = col_bev6_B)
+ggsave("./figs/FIGSI1_ALT1.pdf", width=9, height=11, units = "in")
+
+
+FIGSI1 +
+  scale_fill_manual(values = col_bev6_C)
+ggsave("./figs/FIGSI1_ALT2.pdf", width=9, height=11, units = "in")
+
+
 remove(FIGSI1)
   
 ## Make tbl for reporting
